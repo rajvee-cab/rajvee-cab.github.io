@@ -1,6 +1,5 @@
 import './globals.css';
 import { Outfit } from 'next/font/google';
-import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MobileStickyBar from '@/components/MobileStickyBar';
@@ -138,20 +137,12 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="preload" as="image" href="/frontend/imgs/Banner1.webp" type="image/webp" fetchPriority="high" />
+        {/* Google tag (gtag.js) */}
         <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaTaxiService) }}
-        />
-      </head>
-      <body className={`${outfit.className} bg-white text-slate-900 antialiased min-h-screen flex flex-col pb-16 md:pb-0`}>
-        {/* Google Analytics (GA4) */}
-        <Script
-          strategy="afterInteractive"
+          async
           src="https://www.googletagmanager.com/gtag/js?id=G-Q1G8Y8TLVZ"
         />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -161,6 +152,12 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaTaxiService) }}
+        />
+      </head>
+      <body className={`${outfit.className} bg-white text-slate-900 antialiased min-h-screen flex flex-col pb-16 md:pb-0`}>
         <Navbar />
         <main className="flex-grow pt-[68px] sm:pt-[76px]">{children}</main>
         <Footer />
