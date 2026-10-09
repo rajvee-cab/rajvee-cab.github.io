@@ -150,17 +150,20 @@ export default function Footer() {
           {/* Popular Corridors */}
           <div className="lg:col-span-4">
             <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4">
-              Popular Gujarat Routes
+              Top Rajkot & Ahmedabad Routes
             </h4>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <Link href="/rajkot-to-ahmedabad-cab" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Ahmedabad
               </Link>
+              <Link href="/rajkot-to-surat-cab" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Surat
+              </Link>
+              <Link href="/rajkot-to-vadodara-cab" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Vadodara
+              </Link>
               <Link href="/rajkot-to-hirasar-airport-cab" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Hirasar Airport
-              </Link>
-              <Link href="/ahmedabad-to-surat-cab" className="hover:text-amber-400 transition py-1">
-                Ahmedabad ➔ Surat
               </Link>
               <Link href="/rajkot-to-somnath-cab" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Somnath
@@ -168,14 +171,23 @@ export default function Footer() {
               <Link href="/rajkot-to-dwarka-cab" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Dwarka
               </Link>
+              <Link href="/rajkot-to-jamnagar-cab" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Jamnagar
+              </Link>
+              <Link href="/rajkot-to-morbi-cab" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Morbi
+              </Link>
+              <Link href="/ahmedabad-to-surat-cab" className="hover:text-amber-400 transition py-1">
+                Ahmedabad ➔ Surat
+              </Link>
               <Link href="/ahmedabad-to-vadodara-cab" className="hover:text-amber-400 transition py-1">
                 Ahmedabad ➔ Vadodara
               </Link>
-              <Link href="/surat-to-mumbai-cab" className="hover:text-amber-400 transition py-1">
-                Surat ➔ Mumbai
-              </Link>
               <Link href="/ahmedabad-to-statue-of-unity-cab" className="hover:text-amber-400 transition py-1">
                 Ahmedabad ➔ Statue of Unity
+              </Link>
+              <Link href="/ahmedabad-to-mumbai-cab" className="hover:text-amber-400 transition py-1">
+                Ahmedabad ➔ Mumbai
               </Link>
             </div>
             

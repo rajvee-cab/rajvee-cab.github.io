@@ -11,18 +11,18 @@ export default function sitemap() {
       priority: 1.0,
     },
 
-    // Key Gujarat Cities (Local & Outstation Hubs)
+    // Priority Departure Hubs & Cities
     {
       url: `${baseUrl}/cab-service-rajkot/`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.95,
+      priority: 0.98,
     },
     {
       url: `${baseUrl}/cab-service-ahmedabad/`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.95,
+      priority: 0.98,
     },
     {
       url: `${baseUrl}/cab-service-surat/`,
@@ -49,13 +49,13 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/cab-service-bhavnagar/`,
+      url: `${baseUrl}/cab-service-morbi/`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/cab-service-morbi/`,
+      url: `${baseUrl}/cab-service-bhavnagar/`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -85,7 +85,7 @@ export default function sitemap() {
       priority: 0.9,
     },
 
-    // High Demand Outstation Routes
+    // Key Routes from Rajkot (HQ)
     {
       url: `${baseUrl}/rajkot-to-ahmedabad-cab/`,
       lastModified: now,
@@ -93,43 +93,75 @@ export default function sitemap() {
       priority: 0.95,
     },
     {
-      url: `${baseUrl}/ahmedabad-to-surat-cab/`,
+      url: `${baseUrl}/rajkot-to-hirasar-airport-cab/`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/rajkot-to-surat-cab/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/rajkot-to-vadodara-cab/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.92,
     },
     {
       url: `${baseUrl}/rajkot-to-somnath-cab/`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.92,
     },
     {
       url: `${baseUrl}/rajkot-to-dwarka-cab/`,
       lastModified: now,
       changeFrequency: 'weekly',
-      priority: 0.9,
+      priority: 0.92,
     },
     {
-      url: `${baseUrl}/ahmedabad-to-vadodara-cab/`,
+      url: `${baseUrl}/rajkot-to-jamnagar-cab/`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/rajkot-to-hirasar-airport-cab/`,
+      url: `${baseUrl}/rajkot-to-morbi-cab/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+
+    // Key Routes from Ahmedabad (Hub)
+    {
+      url: `${baseUrl}/ahmedabad-to-surat-cab/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/ahmedabad-to-vadodara-cab/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/ahmedabad-to-statue-of-unity-cab/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.92,
+    },
+    {
+      url: `${baseUrl}/ahmedabad-to-mumbai-cab/`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
       url: `${baseUrl}/surat-to-mumbai-cab/`,
-      lastModified: now,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/ahmedabad-to-statue-of-unity-cab/`,
       lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.9,
