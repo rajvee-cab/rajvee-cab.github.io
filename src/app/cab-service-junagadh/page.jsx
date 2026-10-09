@@ -21,21 +21,29 @@ export default function JunagadhCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Junagadh',
+    serviceType: 'Cab and Taxi Service in Junagadh',
     url: 'https://rajvee-cab.github.io/cab-service-junagadh/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab service in Junagadh covering Girnar Ropeway, Bhavnath Taleti, Sasan Gir, Somnath Temple, and Rajkot highway travel.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Junagadh',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 21.5222,
       longitude: 70.4579,
     },
-    areaServed: 'Junagadh',
-    description: 'Premier cab service in Junagadh covering Girnar Ropeway, Bhavnath Taleti, Sasan Gir, Somnath Temple, and Rajkot highway travel.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Junagadh',
+    },
   };
 
   return (

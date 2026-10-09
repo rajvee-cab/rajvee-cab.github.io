@@ -75,30 +75,37 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab',
-    alternateName: 'Rajvee Travels',
+    serviceType: 'One-Way Outstation & Airport Cab Service',
     url: 'https://rajvee-cab.github.io/',
-    logo: 'https://rajvee-cab.github.io/images/new-logo.png',
-    image: 'https://rajvee-cab.github.io/images/welcome.jpg',
-    telephone: '+919737872972',
-    priceRange: '₹₹',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Greenland Chokdi',
-      addressLocality: 'Rajkot',
-      addressRegion: 'Gujarat',
-      postalCode: '360003',
-      addressCountry: 'IN',
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 22.3039,
-      longitude: 70.8022,
-    },
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '00:00',
-      closes: '23:59',
+    description: 'Rajvee Cab provides professional, on-time, and budget-friendly outstation, one-way, round-trip, and airport taxi services across Rajkot, Ahmedabad, Surat, Vadodara, and all 33 districts of Gujarat.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      alternateName: 'Rajvee Travels',
+      url: 'https://rajvee-cab.github.io/',
+      logo: 'https://rajvee-cab.github.io/frontend/imgs/logo-w.png',
+      image: 'https://rajvee-cab.github.io/images/welcome.jpg',
+      telephone: '+919737872972',
+      priceRange: '₹₹',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Greenland Chokdi',
+        addressLocality: 'Rajkot',
+        addressRegion: 'Gujarat',
+        postalCode: '360003',
+        addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 22.3039,
+        longitude: 70.8022,
+      },
+      openingHoursSpecification: {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        opens: '00:00',
+        closes: '23:59',
+      },
     },
     areaServed: [
       { '@type': 'City', name: 'Rajkot' },
@@ -123,7 +130,6 @@ export default function RootLayout({ children }) {
       { '@type': 'State', name: 'Gujarat' },
       { '@type': 'City', name: 'Mumbai' },
     ],
-    description: 'Rajvee Cab provides professional, on-time, and budget-friendly outstation, one-way, round-trip, and airport taxi services across Rajkot, Ahmedabad, Surat, Vadodara, and all 33 districts of Gujarat.',
   };
 
   return (

@@ -21,21 +21,29 @@ export default function BhavnagarCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Bhavnagar',
+    serviceType: 'Cab and Taxi Service in Bhavnagar',
     url: 'https://rajvee-cab.github.io/cab-service-bhavnagar/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab service in Bhavnagar covering Bhavnagar Airport, Palitana pilgrimage, Alang, Sihor, and direct drops to Ahmedabad.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Bhavnagar',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 21.7645,
       longitude: 72.1519,
     },
-    areaServed: 'Bhavnagar',
-    description: 'Premier cab service in Bhavnagar covering Bhavnagar Airport, Palitana pilgrimage, Alang, Sihor, and direct drops to Ahmedabad.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Bhavnagar',
+    },
   };
 
   return (

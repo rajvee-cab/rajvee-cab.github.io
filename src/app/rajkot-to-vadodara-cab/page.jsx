@@ -21,7 +21,6 @@ export default function RajkotToVadodaraPage() {
     '@type': 'TaxiService',
     name: 'Rajkot to Vadodara Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-vadodara-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

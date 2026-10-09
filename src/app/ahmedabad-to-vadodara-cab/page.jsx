@@ -21,7 +21,6 @@ export default function AhmedabadToVadodaraPage() {
     '@type': 'TaxiService',
     name: 'Ahmedabad to Vadodara Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/ahmedabad-to-vadodara-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

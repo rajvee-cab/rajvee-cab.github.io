@@ -21,7 +21,6 @@ export default function AhmedabadToSuratPage() {
     '@type': 'TaxiService',
     name: 'Ahmedabad to Surat Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/ahmedabad-to-surat-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

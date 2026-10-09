@@ -21,21 +21,29 @@ export default function DwarkaCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Dwarka',
+    serviceType: 'Cab and Taxi Service in Dwarka',
     url: 'https://rajvee-cab.github.io/cab-service-dwarka/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier pilgrimage and coastal cab service in Dwarka covering Dwarkadhish Jagat Mandir, Beyt Dwarka, Nageshwar, Shivrajpur Beach, and Rajkot outstation highway travel.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Dwarka',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 22.2442,
       longitude: 68.9685,
     },
-    areaServed: 'Dwarka',
-    description: 'Premier pilgrimage and coastal cab service in Dwarka covering Dwarkadhish Jagat Mandir, Beyt Dwarka, Nageshwar, Shivrajpur Beach, and Rajkot outstation highway travel.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Dwarka',
+    },
   };
 
   return (

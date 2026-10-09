@@ -21,21 +21,29 @@ export default function BhujCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Bhuj Kutch',
+    serviceType: 'Cab and Taxi Service in Bhuj',
     url: 'https://rajvee-cab.github.io/cab-service-bhuj/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab service in Bhuj and Kutch covering White Desert Dhordo, Mandvi Beach, Gandhidham, Mundra Port, and Rajkot outstation highway trips.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Bhuj',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 23.2420,
       longitude: 69.6669,
     },
-    areaServed: 'Bhuj',
-    description: 'Premier cab service in Bhuj and Kutch covering White Desert Dhordo, Mandvi Beach, Gandhidham, Mundra Port, and Rajkot outstation highway trips.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Bhuj',
+    },
   };
 
   return (

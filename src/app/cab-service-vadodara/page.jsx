@@ -21,21 +21,29 @@ export default function VadodaraCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Vadodara',
+    serviceType: 'Cab and Taxi Service in Vadodara',
     url: 'https://rajvee-cab.github.io/cab-service-vadodara/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier 24x7 cab service in Vadodara covering Alkapuri, Vadodara Airport, Railway Station, Statue of Unity, and expressway rides to Ahmedabad and Surat.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Vadodara',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 22.3072,
       longitude: 73.1812,
     },
-    areaServed: 'Vadodara',
-    description: 'Premier 24x7 cab service in Vadodara covering Alkapuri, Vadodara Airport, Railway Station, Statue of Unity, and expressway rides to Ahmedabad and Surat.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Vadodara',
+    },
   };
 
   return (

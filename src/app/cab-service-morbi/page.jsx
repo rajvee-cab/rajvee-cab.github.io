@@ -21,21 +21,29 @@ export default function MorbiCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Morbi',
+    serviceType: 'Cab and Taxi Service in Morbi',
     url: 'https://rajvee-cab.github.io/cab-service-morbi/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab service in Morbi Ceramic Zone covering 8-A National Highway, Pipali-Jetpar Road, Rajkot Airport transfers, and Ahmedabad business trips.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Morbi',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 22.8120,
       longitude: 70.8384,
     },
-    areaServed: 'Morbi',
-    description: 'Premier cab service in Morbi Ceramic Zone covering 8-A National Highway, Pipali-Jetpar Road, Rajkot Airport transfers, and Ahmedabad business trips.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Morbi',
+    },
   };
 
   return (

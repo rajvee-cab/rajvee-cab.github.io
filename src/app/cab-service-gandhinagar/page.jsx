@@ -21,21 +21,29 @@ export default function GandhinagarCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Gandhinagar',
+    serviceType: 'Cab and Taxi Service in Gandhinagar',
     url: 'https://rajvee-cab.github.io/cab-service-gandhinagar/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab service in Gujarat Capital Gandhinagar covering GIFT City, Akshardham, Mahatma Mandir, Infocity, and SVPI Airport transfers.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Gandhinagar',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 23.2156,
       longitude: 72.6369,
     },
-    areaServed: 'Gandhinagar',
-    description: 'Premier cab service in Gujarat Capital Gandhinagar covering GIFT City, Akshardham, Mahatma Mandir, Infocity, and SVPI Airport transfers.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Gandhinagar',
+    },
   };
 
   return (

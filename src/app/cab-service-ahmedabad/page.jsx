@@ -21,21 +21,29 @@ export default function AhmedabadCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Ahmedabad',
+    serviceType: 'Cab and Taxi Service in Ahmedabad',
     url: 'https://rajvee-cab.github.io/cab-service-ahmedabad/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab service in Ahmedabad covering SVPI Airport, SG Highway, Kalupur Railway Station, Bopal, Prahlad Nagar, and outstation trips.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Ahmedabad',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 23.0225,
       longitude: 72.5714,
     },
-    areaServed: 'Ahmedabad',
-    description: 'Premier cab service in Ahmedabad covering SVPI Airport, SG Highway, Kalupur Railway Station, Bopal, Prahlad Nagar, and outstation trips.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Ahmedabad',
+    },
   };
 
   return (

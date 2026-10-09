@@ -21,7 +21,6 @@ export default function SuratToMumbaiPage() {
     '@type': 'TaxiService',
     name: 'Surat to Mumbai Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/surat-to-mumbai-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

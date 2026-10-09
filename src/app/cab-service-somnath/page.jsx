@@ -21,21 +21,29 @@ export default function SomnathCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Somnath',
+    serviceType: 'Cab and Taxi Service in Somnath',
     url: 'https://rajvee-cab.github.io/cab-service-somnath/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier pilgrimage and coastal cab service in Somnath covering Somnath Mahadev Temple, Bhalka Tirth, Veraval, Diu, and Rajkot outstation highway travel.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Somnath',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 20.8880,
       longitude: 70.4012,
     },
-    areaServed: 'Somnath',
-    description: 'Premier pilgrimage and coastal cab service in Somnath covering Somnath Mahadev Temple, Bhalka Tirth, Veraval, Diu, and Rajkot outstation highway travel.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Somnath',
+    },
   };
 
   return (

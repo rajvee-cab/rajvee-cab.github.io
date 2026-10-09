@@ -21,7 +21,6 @@ export default function RajkotToHirasarAirportPage() {
     '@type': 'TaxiService',
     name: 'Rajkot to Hirasar Airport Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-hirasar-airport-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

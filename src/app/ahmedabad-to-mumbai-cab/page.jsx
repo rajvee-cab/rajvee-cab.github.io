@@ -20,7 +20,6 @@ export default function AhmedabadToMumbaiPage() {
     '@type': 'TaxiService',
     name: 'Ahmedabad to Mumbai Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/ahmedabad-to-mumbai-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

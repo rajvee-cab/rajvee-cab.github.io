@@ -20,7 +20,6 @@ export default function RajkotToJamnagarPage() {
     '@type': 'TaxiService',
     name: 'Rajkot to Jamnagar Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-jamnagar-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

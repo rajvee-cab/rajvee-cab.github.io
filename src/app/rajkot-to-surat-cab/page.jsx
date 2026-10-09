@@ -20,7 +20,6 @@ export default function RajkotToSuratPage() {
     '@type': 'TaxiService',
     name: 'Rajkot to Surat Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-surat-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

@@ -21,7 +21,6 @@ export default function RajkotToSomnathPage() {
     '@type': 'TaxiService',
     name: 'Rajkot to Somnath Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-somnath-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

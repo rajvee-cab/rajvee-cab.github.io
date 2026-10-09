@@ -21,7 +21,6 @@ export default function RajkotToAhmedabadPage() {
     '@type': 'TaxiService',
     name: 'Rajkot to Ahmedabad Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-ahmedabad-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

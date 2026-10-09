@@ -22,9 +22,14 @@ export default function RajkotCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Rajkot',
+    serviceType: 'Cab and Taxi Service in Rajkot',
     url: 'https://rajvee-cab.github.io/cab-service-rajkot/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab and taxi booking service in Rajkot covering Hirasar Airport, Kalawad Road, Greenland Chokdi, and outstation trips.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       streetAddress: 'Greenland Chokdi',
       addressLocality: 'Rajkot',
@@ -32,13 +37,16 @@ export default function RajkotCabPage() {
       postalCode: '360003',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 22.3039,
       longitude: 70.8022,
     },
-    areaServed: 'Rajkot',
-    description: 'Premier cab and taxi booking service in Rajkot covering Hirasar Airport, Kalawad Road, Greenland Chokdi, and outstation trips.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Rajkot',
+    },
   };
 
   return (

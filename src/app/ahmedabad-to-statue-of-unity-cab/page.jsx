@@ -21,7 +21,6 @@ export default function AhmedabadToStatueOfUnityPage() {
     '@type': 'TaxiService',
     name: 'Ahmedabad to Statue of Unity Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/ahmedabad-to-statue-of-unity-cab/',
-    telephone: '+919737872972',
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

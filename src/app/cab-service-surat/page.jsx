@@ -21,21 +21,29 @@ export default function SuratCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Surat',
+    serviceType: 'Cab and Taxi Service in Surat',
     url: 'https://rajvee-cab.github.io/cab-service-surat/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier 24x7 cab service in Surat covering Surat Airport, Surat Railway Station, Varachha, Ring Road, Dumas, and outstation trips to Mumbai and Ahmedabad.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Surat',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 21.1702,
       longitude: 72.8311,
     },
-    areaServed: 'Surat',
-    description: 'Premier 24x7 cab service in Surat covering Surat Airport, Surat Railway Station, Varachha, Ring Road, Dumas, and outstation trips to Mumbai and Ahmedabad.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Surat',
+    },
   };
 
   return (

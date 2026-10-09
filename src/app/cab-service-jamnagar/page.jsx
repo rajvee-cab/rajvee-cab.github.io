@@ -21,21 +21,29 @@ export default function JamnagarCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Jamnagar',
+    serviceType: 'Cab and Taxi Service in Jamnagar',
     url: 'https://rajvee-cab.github.io/cab-service-jamnagar/',
-    telephone: '+919737872972',
-    address: {
+    description: 'Premier cab service in Jamnagar covering Jamnagar Airport, Reliance Greens Motikhavdi, Nayara Energy, Dwarka pilgrimage, and Rajkot outstation rides.',
+    provider: {
+      '@type': 'LocalBusiness',
+      name: 'Rajvee Cab',
+      telephone: '+919737872972',
+      address: {
       '@type': 'PostalAddress',
       addressLocality: 'Jamnagar',
       addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    geo: {
+      geo: {
       '@type': 'GeoCoordinates',
       latitude: 22.4707,
       longitude: 70.0577,
     },
-    areaServed: 'Jamnagar',
-    description: 'Premier cab service in Jamnagar covering Jamnagar Airport, Reliance Greens Motikhavdi, Nayara Energy, Dwarka pilgrimage, and Rajkot outstation rides.',
+    },
+    areaServed: {
+      '@type': 'City',
+      name: 'Jamnagar',
+    },
   };
 
   return (
