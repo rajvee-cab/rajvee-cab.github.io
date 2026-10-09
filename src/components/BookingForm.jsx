@@ -1,15 +1,24 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MapPin, Navigation, Calendar, Car, Phone, Send } from 'lucide-react';
 import { formatWhatsAppBooking } from '@/utils/whatsapp';
+
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzV3ecNe2LvlUYMgDxBuMphd6Z5y1uYAIwPHfuzORcUNk7EFVE0kLjDl8TKxU_972aig/exec';
 
 export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'Ahmedabad' }) {
   const [tripType, setTripType] = useState('one_way');
   const [pickup, setPickup] = useState(defaultPickup);
   const [drop, setDrop] = useState(defaultDrop);
   const [date, setDate] = useState('');
-  const [carType, setCarType] = useState('Maruti Dzire (Sedan)');
+  const [carType, setCarType] = useState('Maruti Dzire (Sedan - 4 Seater)');
   const [phone, setPhone] = useState('');
+
+  useEffect(() => {
+    try {
+      const savedPhone = localStorage.getItem('rajvee_user_phone');
+      if (savedPhone) setPhone(savedPhone);
+    } catch (_) {}
+  }, []);
 
   const handleBooking = (e) => {
     e.preventDefault();
@@ -20,8 +29,35 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
       local: 'Local Hourly Rental',
     };
 
+    const tripLabel = tripNames[tripType] || tripType;
+
+    const payload = {
+      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      tripType: tripLabel,
+      carType,
+      pickup,
+      drop,
+      date: date || 'Immediate / Today',
+      contactNo: phone || 'WhatsApp Lead',
+    };
+
+    try {
+      if (phone) localStorage.setItem('rajvee_user_phone', phone);
+    } catch (_) {}
+
+    // 1. Record lead to Google Sheet (Google Excel)
+    try {
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      }).catch(() => {});
+    } catch (_) {}
+
+    // 2. Open WhatsApp with formatted booking message
     const whatsappUrl = formatWhatsAppBooking({
-      tripType: tripNames[tripType] || tripType,
+      tripType: tripLabel,
       carType,
       pickup,
       drop,
@@ -56,10 +92,10 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
   ];
 
   return (
-    <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-xl border border-slate-200">
-      <div className="mb-6">
-        <h3 className="text-xl sm:text-2xl font-extrabold text-slate-900 flex items-center gap-2">
-          <Car className="w-6 h-6 text-amber-500" />
+    <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-7 shadow-xl border border-slate-200">
+      <div className="mb-4 sm:mb-6">
+        <h3 className="text-lg sm:text-2xl font-black text-slate-900 flex items-center gap-2">
+          <Car className="w-5 h-5 sm:w-6 sm:h-6 text-amber-500 shrink-0" />
           <span>Quick Cab Booking & Fare Check</span>
         </h3>
         <p className="text-xs sm:text-sm text-slate-500 mt-1">
@@ -67,9 +103,9 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
         </p>
       </div>
 
-      <form onSubmit={handleBooking} className="space-y-4">
+      <form onSubmit={handleBooking} className="space-y-3.5 sm:space-y-4">
         {/* Trip Type Tabs */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 p-1.5 bg-slate-100 rounded-xl">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 p-1 sm:p-1.5 bg-slate-100 rounded-xl">
           {[
             { id: 'one_way', label: 'One Way' },
             { id: 'round_trip', label: 'Round Trip' },
@@ -80,7 +116,7 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
               key={tab.id}
               type="button"
               onClick={() => setTripType(tab.id)}
-              className={`py-2 text-xs font-bold rounded-lg transition ${
+              className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg transition ${
                 tripType === tab.id
                   ? 'bg-slate-900 text-white shadow'
                   : 'text-slate-600 hover:text-slate-900'
@@ -92,10 +128,10 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
         </div>
 
         {/* Pickup & Drop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-amber-600" /> Pickup Location
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-amber-600 shrink-0" /> Pickup Location
             </label>
             <input
               type="text"
@@ -104,13 +140,13 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
               onChange={(e) => setPickup(e.target.value)}
               placeholder="e.g. Rajkot, Ahmedabad..."
               required
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
+              className="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Navigation className="w-3.5 h-3.5 text-emerald-600" /> Drop Location
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <Navigation className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> Drop Location
             </label>
             <input
               type="text"
@@ -119,7 +155,7 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
               onChange={(e) => setDrop(e.target.value)}
               placeholder="e.g. Ahmedabad, Surat..."
               required
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
+              className="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
             />
           </div>
         </div>
@@ -131,28 +167,28 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
         </datalist>
 
         {/* Date and Car Selection */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Calendar className="w-3.5 h-3.5 text-slate-500" /> Journey Date
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <Calendar className="w-3.5 h-3.5 text-slate-500 shrink-0" /> Journey Date
             </label>
             <input
               type="date"
               value={date}
               onChange={(e) => setDate(e.target.value)}
               required
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
+              className="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
             />
           </div>
 
           <div>
-            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-              <Car className="w-3.5 h-3.5 text-slate-500" /> Vehicle Model
+            <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+              <Car className="w-3.5 h-3.5 text-slate-500 shrink-0" /> Vehicle Model
             </label>
             <select
               value={carType}
               onChange={(e) => setCarType(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
+              className="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800 bg-white"
             >
               <option value="Maruti Dzire (Sedan - 4 Seater)">Maruti Dzire (Sedan - 4 Seater)</option>
               <option value="Hyundai Aura (Sedan - 4 Seater)">Hyundai Aura (Sedan - 4 Seater)</option>
@@ -165,25 +201,29 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
 
         {/* Phone Number */}
         <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
-            <Phone className="w-3.5 h-3.5 text-slate-500" /> Your Mobile Number
+          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
+            <Phone className="w-3.5 h-3.5 text-slate-500 shrink-0" /> Your Mobile Number
           </label>
           <input
             type="tel"
+            id="booking-phone-input"
+            name="tel"
+            autoComplete="tel"
+            inputMode="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="Enter 10-digit mobile number"
             required
-            className="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
+            className="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
           />
         </div>
 
         {/* Submit */}
         <button
           type="submit"
-          className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm sm:text-base flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition transform hover:-translate-y-0.5"
+          className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 active:scale-[0.98] text-white font-extrabold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-emerald-600/20 transition min-h-[48px]"
         >
-          <Send className="w-4 h-4" />
+          <Send className="w-4 h-4 shrink-0" />
           <span>Get Quote & Book via WhatsApp</span>
         </button>
       </form>
