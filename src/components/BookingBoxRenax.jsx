@@ -17,16 +17,43 @@ export default function BookingBoxRenax() {
     { id: 'city_local', label: 'Hourly' },
   ];
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSwap = () => {
     const temp = pickup;
     setPickup(drop);
     setDrop(temp);
   };
 
-  const handleBooking = (e) => {
+  const handleBooking = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
     const tripLabel = tripOptions.find((t) => t.id === tripType)?.label || tripType;
 
+    const payload = {
+      timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+      tripType: tripLabel,
+      carType,
+      pickup,
+      drop,
+      date: date || 'Immediate / Today',
+      contactNo: contactNo || 'WhatsApp Lead',
+    };
+
+    // 1. Record lead to Google Sheet (Google Excel)
+    try {
+      fetch(
+        'https://script.google.com/macros/s/AKfycbzzV3ecNe2LvlUYMgDxBuMphd6Z5y1uYAIwPHfuzORcUNk7EFVE0kLjDl8TKxU_972aig/exec',
+        {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }
+      ).catch(() => {});
+    } catch (_) {}
+
+    // 2. Open WhatsApp for instant booking
     const message = `*NEW CAB BOOKING INQUIRY - RAJVEE CAB*
 -----------------------------------
 • *Trip Type:* ${tripLabel}
@@ -40,6 +67,7 @@ Please provide fare details and confirm booking availability.`;
 
     const encoded = encodeURIComponent(message);
     window.open(`https://wa.me/919737872972?text=${encoded}`, '_blank');
+    setIsSubmitting(false);
   };
 
   const citiesList = [
@@ -246,10 +274,11 @@ Please provide fare details and confirm booking availability.`;
         <div className="pt-1">
           <button
             type="submit"
-            className="w-full py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer border border-amber-600/20"
+            disabled={isSubmitting}
+            className="w-full py-3 px-4 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer border border-amber-600/20 disabled:opacity-80"
           >
             <Send className="w-4 h-4 shrink-0" />
-            <span>Check Fare & Book on WhatsApp</span>
+            <span>{isSubmitting ? 'Recording Booking...' : 'Check Fare & Book on WhatsApp'}</span>
           </button>
         </div>
 
