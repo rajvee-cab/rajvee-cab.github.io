@@ -11,12 +11,32 @@ export default function BookingBoxRenax() {
   const [date, setDate] = useState('');
   const [contactNo, setContactNo] = useState('');
 
+  const [canPickContact, setCanPickContact] = useState(false);
+
   useEffect(() => {
     try {
       const savedPhone = localStorage.getItem('rajvee_user_phone');
       if (savedPhone) setContactNo(savedPhone);
     } catch (_) {}
+    if (typeof navigator !== 'undefined' && 'contacts' in navigator && 'ContactsManager' in window) {
+      setCanPickContact(true);
+    }
   }, []);
+
+  const handlePickContact = async () => {
+    try {
+      if (navigator.contacts) {
+        const contacts = await navigator.contacts.select(['tel'], { multiple: false });
+        if (contacts && contacts[0] && contacts[0].tel && contacts[0].tel[0]) {
+          const cleanNum = contacts[0].tel[0].replace(/\D/g, '').slice(-10);
+          if (cleanNum) {
+            setContactNo(cleanNum);
+            try { localStorage.setItem('rajvee_user_phone', cleanNum); } catch (_) {}
+          }
+        }
+      }
+    } catch (_) {}
+  };
 
   const tripOptions = [
     { id: 'one_way', label: 'One Way' },
@@ -258,9 +278,20 @@ export default function BookingBoxRenax() {
 
         {/* Contact Phone with Native Mobile Auto-Fill */}
         <div>
-          <label htmlFor="bookingPhone" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-            Your Phone (Auto-Detect / 1-Tap Fill)
-          </label>
+          <div className="flex items-center justify-between mb-1">
+            <label htmlFor="bookingPhone" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider">
+              Your Phone (Auto-Detect / 1-Tap Fill)
+            </label>
+            {canPickContact && (
+              <button
+                type="button"
+                onClick={handlePickContact}
+                className="text-[10px] font-bold text-amber-700 bg-amber-100 hover:bg-amber-200 px-2 py-0.5 rounded border border-amber-300 transition cursor-pointer"
+              >
+                1-Tap Auto-Fill
+              </button>
+            )}
+          </div>
           <div className="relative">
             <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
@@ -268,7 +299,7 @@ export default function BookingBoxRenax() {
               name="tel"
               type="tel"
               inputMode="tel"
-              autoComplete="tel"
+              autoComplete="tel tel-national"
               autoCapitalize="off"
               autoCorrect="off"
               value={contactNo}

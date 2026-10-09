@@ -140,7 +140,6 @@ export default function RootLayout({ children }) {
     <html lang="en-IN">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <link rel="preload" as="image" href="/frontend/imgs/Banner1.webp" type="image/webp" fetchPriority="high" />
         {/* Google tag (gtag.js) */}
         <script
           async

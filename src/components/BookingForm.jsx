@@ -13,12 +13,32 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
   const [carType, setCarType] = useState('Maruti Dzire (Sedan - 4 Seater)');
   const [phone, setPhone] = useState('');
 
+  const [canPickContact, setCanPickContact] = useState(false);
+
   useEffect(() => {
     try {
       const savedPhone = localStorage.getItem('rajvee_user_phone');
       if (savedPhone) setPhone(savedPhone);
     } catch (_) {}
+    if (typeof navigator !== 'undefined' && 'contacts' in navigator && 'ContactsManager' in window) {
+      setCanPickContact(true);
+    }
   }, []);
+
+  const handlePickContact = async () => {
+    try {
+      if (navigator.contacts) {
+        const contacts = await navigator.contacts.select(['tel'], { multiple: false });
+        if (contacts && contacts[0] && contacts[0].tel && contacts[0].tel[0]) {
+          const cleanNum = contacts[0].tel[0].replace(/\D/g, '').slice(-10);
+          if (cleanNum) {
+            setPhone(cleanNum);
+            try { localStorage.setItem('rajvee_user_phone', cleanNum); } catch (_) {}
+          }
+        }
+      }
+    } catch (_) {}
+  };
 
   const handleSwap = () => {
     const temp = pickup;
@@ -220,20 +240,39 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
           </div>
         </div>
 
-        {/* Phone Number */}
+        {/* Phone Number with Auto-Fill / Suggestion */}
         <div>
-          <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
-            <Phone className="w-3.5 h-3.5 text-slate-500 shrink-0" /> Your Mobile Number
-          </label>
+          <div className="flex items-center justify-between mb-1">
+            <label htmlFor="booking-phone-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5 text-slate-500 shrink-0" /> Your Mobile Number
+            </label>
+            {canPickContact && (
+              <button
+                type="button"
+                onClick={handlePickContact}
+                className="text-[10px] font-bold text-amber-700 bg-amber-100 hover:bg-amber-200 px-2 py-0.5 rounded border border-amber-300 transition cursor-pointer"
+              >
+                1-Tap Auto-Fill
+              </button>
+            )}
+          </div>
           <input
             type="tel"
             id="booking-phone-input"
             name="tel"
-            autoComplete="tel"
+            autoComplete="tel tel-national"
             inputMode="tel"
+            autoCapitalize="off"
+            autoCorrect="off"
             value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder="Enter 10-digit mobile number"
+            onChange={(e) => {
+              const val = e.target.value;
+              setPhone(val);
+              try {
+                localStorage.setItem('rajvee_user_phone', val);
+              } catch (_) {}
+            }}
+            placeholder="e.g. 97378 72972 (Auto-fill ready)"
             required
             className="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
           />
