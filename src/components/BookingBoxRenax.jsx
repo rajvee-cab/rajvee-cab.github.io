@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Send, MapPin, Navigation, Calendar, Car, Phone, ShieldCheck, Zap, ArrowUpDown, ChevronDown } from 'lucide-react';
 
 export default function BookingBoxRenax() {
@@ -9,6 +9,13 @@ export default function BookingBoxRenax() {
   const [drop, setDrop] = useState('Ahmedabad');
   const [date, setDate] = useState('');
   const [contactNo, setContactNo] = useState('');
+
+  useEffect(() => {
+    try {
+      const savedPhone = localStorage.getItem('rajvee_user_phone');
+      if (savedPhone) setContactNo(savedPhone);
+    } catch (_) {}
+  }, []);
 
   const tripOptions = [
     { id: 'one_way', label: 'One Way' },
@@ -251,20 +258,29 @@ Please provide fare details and confirm booking availability.`;
           </div>
         </div>
 
-        {/* Contact Phone */}
+        {/* Contact Phone with Native Mobile Auto-Fill */}
         <div>
-          <label htmlFor="bookingContactNo" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
-            Your Phone (Optional)
+          <label htmlFor="bookingPhone" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+            Your Phone (Auto-Detect / 1-Tap Fill)
           </label>
           <div className="relative">
             <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
-              id="bookingContactNo"
-              name="contactNo"
+              id="bookingPhone"
+              name="tel"
               type="tel"
+              inputMode="tel"
+              autoComplete="tel"
+              autoCapitalize="off"
+              autoCorrect="off"
               value={contactNo}
-              onChange={(e) => setContactNo(e.target.value)}
-              placeholder="e.g. 97378 72972"
+              onChange={(e) => {
+                setContactNo(e.target.value);
+                try {
+                  localStorage.setItem('rajvee_user_phone', e.target.value);
+                } catch (_) {}
+              }}
+              placeholder="e.g. 97378 72972 (Auto-fill ready)"
               className="w-full pl-9 pr-3 py-2 sm:py-2.5 rounded-xl border border-slate-300 bg-slate-50 text-xs sm:text-sm font-semibold text-slate-900 outline-none focus:bg-white focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition"
             />
           </div>
