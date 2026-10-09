@@ -22,6 +22,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="tel:+919737872972"
+                  aria-label="Call Rajvee Cab 24x7 helpline at +91 97378 72972"
                   className="text-sm sm:text-base text-white font-extrabold hover:text-amber-400 transition truncate block"
                 >
                   +91 97378 72972
@@ -40,6 +41,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="mailto:rajveecab@gmail.com"
+                  aria-label="Email Rajvee Cab customer support at rajveecab@gmail.com"
                   className="text-sm sm:text-base text-white font-extrabold hover:text-amber-400 transition truncate block"
                 >
                   rajveecab@gmail.com
@@ -87,6 +89,7 @@ export default function Footer() {
                 href="https://wa.me/919737872972"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Chat with Rajvee Cab WhatsApp desk"
                 className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-600/40 text-xs font-bold hover:bg-emerald-600/30 transition"
               >
                 <MessageCircle className="w-4 h-4" />

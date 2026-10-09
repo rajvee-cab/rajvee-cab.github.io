@@ -92,12 +92,14 @@ Please provide fare details and confirm booking availability.`;
         <div className="relative space-y-2.5 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-3">
           {/* Pickup Input */}
           <div>
-            <label className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+            <label htmlFor="bookingPickup" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
               Pickup City / Area
             </label>
             <div className="relative">
               <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-amber-500" />
               <input
+                id="bookingPickup"
+                name="pickup"
                 type="text"
                 list="corporate-cities"
                 value={pickup}
@@ -116,6 +118,7 @@ Please provide fare details and confirm booking availability.`;
               onClick={handleSwap}
               className="w-7 h-7 rounded-full bg-white border border-slate-300 shadow-sm text-slate-600 hover:text-amber-600 flex items-center justify-center transition active:rotate-180 cursor-pointer"
               title="Swap pickup and drop"
+              aria-label="Swap pickup and drop cities"
             >
               <ArrowUpDown className="w-3.5 h-3.5" />
             </button>
@@ -123,12 +126,14 @@ Please provide fare details and confirm booking availability.`;
 
           {/* Drop Input */}
           <div>
-            <label className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+            <label htmlFor="bookingDrop" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
               Destination / Drop City
             </label>
             <div className="relative">
               <Navigation className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-emerald-600" />
               <input
+                id="bookingDrop"
+                name="drop"
                 type="text"
                 list="corporate-cities"
                 value={drop}
@@ -153,6 +158,7 @@ Please provide fare details and confirm booking availability.`;
           <button
             type="button"
             onClick={() => { setPickup('Rajkot'); setDrop('Ahmedabad'); }}
+            aria-label="Set route from Rajkot to Ahmedabad"
             className="text-[10px] font-semibold bg-slate-100 hover:bg-amber-100 text-slate-700 hover:text-amber-900 px-2 py-0.5 rounded-md border border-slate-200 transition cursor-pointer"
           >
             Rajkot ➔ Ahmd
@@ -160,6 +166,7 @@ Please provide fare details and confirm booking availability.`;
           <button
             type="button"
             onClick={() => { setPickup('Rajkot City'); setDrop('Rajkot Hirasar Airport'); }}
+            aria-label="Set route to Rajkot Hirasar Airport"
             className="text-[10px] font-semibold bg-slate-100 hover:bg-amber-100 text-slate-700 hover:text-amber-900 px-2 py-0.5 rounded-md border border-slate-200 transition cursor-pointer"
           >
             Hirasar Airport
@@ -167,6 +174,7 @@ Please provide fare details and confirm booking availability.`;
           <button
             type="button"
             onClick={() => { setPickup('Ahmedabad'); setDrop('Surat'); }}
+            aria-label="Set route from Ahmedabad to Surat"
             className="text-[10px] font-semibold bg-slate-100 hover:bg-amber-100 text-slate-700 hover:text-amber-900 px-2 py-0.5 rounded-md border border-slate-200 transition cursor-pointer"
           >
             Ahmd ➔ Surat
@@ -176,12 +184,14 @@ Please provide fare details and confirm booking availability.`;
         {/* Car Selection & Travel Date */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
           <div>
-            <label className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+            <label htmlFor="bookingCarType" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
               Vehicle Type
             </label>
             <div className="relative">
               <Car className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <select
+                id="bookingCarType"
+                name="carType"
                 value={carType}
                 onChange={(e) => setCarType(e.target.value)}
                 className="w-full pl-9 pr-8 py-2 sm:py-2.5 rounded-xl border border-slate-300 bg-slate-50 text-xs sm:text-sm font-semibold text-slate-900 outline-none focus:bg-white focus:border-amber-500 focus:ring-2 focus:ring-amber-200 transition appearance-none cursor-pointer"
@@ -196,12 +206,14 @@ Please provide fare details and confirm booking availability.`;
           </div>
 
           <div>
-            <label className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+            <label htmlFor="bookingTravelDate" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
               Travel Date
             </label>
             <div className="relative">
               <Calendar className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
               <input
+                id="bookingTravelDate"
+                name="travelDate"
                 type="date"
                 value={date}
                 onChange={(e) => setDate(e.target.value)}
@@ -213,12 +225,14 @@ Please provide fare details and confirm booking availability.`;
 
         {/* Contact Phone */}
         <div>
-          <label className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
+          <label htmlFor="bookingContactNo" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider mb-1">
             Your Phone (Optional)
           </label>
           <div className="relative">
             <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
+              id="bookingContactNo"
+              name="contactNo"
               type="tel"
               value={contactNo}
               onChange={(e) => setContactNo(e.target.value)}

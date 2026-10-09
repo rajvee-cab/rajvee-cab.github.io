@@ -1,7 +1,14 @@
 import './globals.css';
+import { Outfit } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MobileStickyBar from '@/components/MobileStickyBar';
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800', '900'],
+});
 
 export const viewport = {
   width: 'device-width',
@@ -120,18 +127,16 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="gu-IN">
+    <html lang="en-IN">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link rel="preload" as="image" href="/frontend/imgs/Banner1.webp" type="image/webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaTaxiService) }}
         />
       </head>
-      <body className="bg-white text-slate-900 antialiased min-h-screen flex flex-col pb-16 md:pb-0">
+      <body className={`${outfit.className} bg-white text-slate-900 antialiased min-h-screen flex flex-col pb-16 md:pb-0`}>
         <Navbar />
         <main className="flex-grow pt-[68px] sm:pt-[76px]">{children}</main>
         <Footer />

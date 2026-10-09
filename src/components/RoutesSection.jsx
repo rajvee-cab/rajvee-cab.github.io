@@ -260,6 +260,7 @@ export default function RoutesSection() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`WhatsApp fare inquiry for cab from ${route.from} to ${route.to}`}
                   className="text-xs font-bold text-emerald-600 hover:text-emerald-700 flex items-center gap-1"
                 >
                   WhatsApp Fare
@@ -267,6 +268,7 @@ export default function RoutesSection() {
 
                 <Link
                   href={route.link}
+                  aria-label={`Book cab from ${route.from} to ${route.to}`}
                   className="text-xs font-bold text-slate-900 hover:text-amber-600 flex items-center gap-0.5 transition"
                 >
                   <span>Book</span>

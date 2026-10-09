@@ -91,6 +91,7 @@ export default function Navbar() {
                   </div>
                   <a
                     href="tel:+919737872972"
+                    aria-label="Call Rajvee Cab at +91 97378 72972"
                     className="text-xs sm:text-[13px] 2xl:text-[14px] font-bold text-white hover:text-amber-400 transition tracking-wide"
                   >
                     +91 97378 72972
@@ -103,6 +104,7 @@ export default function Navbar() {
                 href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Chat with Rajvee Cab on WhatsApp"
                 className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-xs font-black uppercase tracking-wider shadow-md transition transform hover:-translate-y-0.5"
               >
                 <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4" />

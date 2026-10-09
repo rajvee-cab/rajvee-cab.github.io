@@ -119,6 +119,7 @@ export default function GujaratNetworkSection() {
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Book cab pickup in ${city.name} on WhatsApp`}
                   className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800 transition"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
@@ -144,6 +145,7 @@ export default function GujaratNetworkSection() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 shrink-0">
             <a
               href="tel:+919737872972"
+              aria-label="Call Rajvee Cab at +91 97378 72972"
               className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-white text-slate-950 text-xs font-bold hover:bg-slate-100 transition shadow-sm text-center"
             >
               Call +91 97378 72972
@@ -152,6 +154,7 @@ export default function GujaratNetworkSection() {
               href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20need%20doorstep%20pickup%20in%20Gujarat."
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Chat with Rajvee Cab Gujarat WhatsApp support"
               className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 transition shadow-sm text-center"
             >
               WhatsApp Support

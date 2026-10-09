@@ -130,7 +130,7 @@ export default function HomePage() {
         className="relative py-10 sm:py-16 lg:py-24 bg-slate-950 text-white bg-cover bg-center"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.94)), url('/frontend/imgs/Banner1.jpg')",
+            "linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.94)), url('/frontend/imgs/Banner1.webp')",
         }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -174,6 +174,7 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                 <a
                   href="tel:+919737872972"
+                  aria-label="Call Rajvee Cab at +91 97378 72972"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2 whitespace-nowrap min-h-[48px]"
                 >
                   <Phone className="w-4 h-4 shrink-0" />
@@ -183,6 +184,7 @@ export default function HomePage() {
                   href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Chat with Rajvee Cab on WhatsApp"
                   className="w-full sm:w-auto px-6 py-3.5 rounded-xl border border-slate-700 bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition flex items-center justify-center gap-2 whitespace-nowrap min-h-[48px]"
                 >
                   <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
@@ -274,6 +276,7 @@ export default function HomePage() {
                   href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20know%20more%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Inquire about Rajvee Cab services on WhatsApp"
                   className="inline-flex items-center gap-2 px-5 py-2.5 sm:py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold uppercase tracking-wider transition"
                 >
                   <span>Inquire on WhatsApp</span>
@@ -286,9 +289,10 @@ export default function HomePage() {
             <div className="lg:col-span-6 flex justify-center">
               <div className="relative w-full max-w-sm sm:max-w-md h-64 sm:h-80">
                 <Image
-                  src="/frontend/imgs/about-1.png"
-                  alt="About Rajvee Cab"
+                  src="/frontend/imgs/about-1.webp"
+                  alt="About Rajvee Cab Gujarat"
                   fill
+                  sizes="(max-width: 768px) 100vw, 500px"
                   className="object-contain"
                 />
               </div>
@@ -366,6 +370,7 @@ export default function HomePage() {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`Book ${car.name} on WhatsApp`}
                     className="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition duration-150"
                   >
                     <span>Book {car.name}</span>
@@ -420,6 +425,7 @@ export default function HomePage() {
                   href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20inquire%20about%20your%20services."
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={`Inquire about ${srv.title} on WhatsApp`}
                   className="text-xs font-bold text-slate-900 hover:text-amber-600 flex items-center gap-1 transition pt-2 border-t border-slate-200/60"
                 >
                   <span>Inquire Now</span>
@@ -462,6 +468,7 @@ export default function HomePage() {
               href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Book cab via WhatsApp"
               className="w-full sm:w-auto sm:min-w-[220px] px-6 sm:px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2.5 whitespace-nowrap min-h-[50px]"
             >
               <MessageCircle className="w-4 h-4 shrink-0" />
@@ -469,6 +476,7 @@ export default function HomePage() {
             </a>
             <a
               href="tel:+919737872972"
+              aria-label="Call Rajvee Cab at +91 97378 72972"
               className="w-full sm:w-auto sm:min-w-[220px] px-6 sm:px-8 py-3.5 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm uppercase tracking-wider transition flex items-center justify-center gap-2.5 whitespace-nowrap min-h-[50px]"
             >
               <Phone className="w-4 h-4 text-amber-400 shrink-0" />

@@ -66,6 +66,7 @@ export default function FaqSection() {
                 <button
                   type="button"
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
+                  aria-expanded={isOpen}
                   className="w-full text-left p-5 sm:p-6 font-bold text-slate-900 text-base sm:text-lg flex items-center justify-between gap-4 bg-transparent cursor-pointer"
                 >
                   <span className="flex items-center gap-3">

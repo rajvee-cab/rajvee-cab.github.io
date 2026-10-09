@@ -239,7 +239,7 @@ export default function ReviewsSection() {
                             <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                           ))}
                         </div>
-                        <span className="text-[11px] font-medium text-slate-400">{rev.date}</span>
+                        <span className="text-[11px] font-semibold text-slate-600">{rev.date}</span>
                       </div>
 
                       {/* Route Pill */}
@@ -259,7 +259,7 @@ export default function ReviewsSection() {
                         <h4 className="text-xs sm:text-sm font-bold text-slate-900 m-0 truncate">
                           {rev.name}
                         </h4>
-                        <p className="text-[11px] text-slate-500 m-0 truncate">
+                        <p className="text-[11px] text-slate-600 m-0 truncate">
                           {rev.role}
                         </p>
                       </div>
