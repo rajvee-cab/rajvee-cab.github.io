@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { MapPin, Navigation, Calendar, Car, Phone, Send } from 'lucide-react';
+import { MapPin, Navigation, Calendar, Car, Phone, Send, ArrowUpDown } from 'lucide-react';
 import { formatWhatsAppBooking } from '@/utils/whatsapp';
 
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzV3ecNe2LvlUYMgDxBuMphd6Z5y1uYAIwPHfuzORcUNk7EFVE0kLjDl8TKxU_972aig/exec';
@@ -20,13 +20,26 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
     } catch (_) {}
   }, []);
 
+  const handleSwap = () => {
+    const temp = pickup;
+    setPickup(drop);
+    setDrop(temp);
+  };
+
+  const tripOptions = [
+    { id: 'one_way', label: 'One Way' },
+    { id: 'round_trip', label: 'Round Trip' },
+    { id: 'airport', label: 'Airport' },
+    { id: 'local', label: 'Hourly' },
+  ];
+
   const handleBooking = (e) => {
     e.preventDefault();
     const tripNames = {
-      one_way: 'One Way Drop',
-      round_trip: 'Round Trip Outstation',
-      airport: 'Airport Transfer',
-      local: 'Local Hourly Rental',
+      one_way: 'One Way',
+      round_trip: 'Round Trip',
+      airport: 'Airport',
+      local: 'Hourly',
     };
 
     const tripLabel = tripNames[tripType] || tripType;
@@ -104,31 +117,26 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
       </div>
 
       <form onSubmit={handleBooking} className="space-y-3.5 sm:space-y-4">
-        {/* Trip Type Tabs */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 sm:gap-2 p-1 sm:p-1.5 bg-slate-100 rounded-xl">
-          {[
-            { id: 'one_way', label: 'One Way' },
-            { id: 'round_trip', label: 'Round Trip' },
-            { id: 'airport', label: 'Airport' },
-            { id: 'local', label: 'Local City' },
-          ].map((tab) => (
+        {/* Trip Type Tabs - Single sleek row for mobile and desktop (matches Home Page) */}
+        <div className="grid grid-cols-4 gap-1 p-1 bg-slate-100 rounded-xl mb-3.5">
+          {tripOptions.map((opt) => (
             <button
-              key={tab.id}
+              key={opt.id}
               type="button"
-              onClick={() => setTripType(tab.id)}
-              className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg transition ${
-                tripType === tab.id
-                  ? 'bg-slate-900 text-white shadow'
-                  : 'text-slate-600 hover:text-slate-900'
+              onClick={() => setTripType(opt.id)}
+              className={`py-2 px-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all text-center truncate cursor-pointer ${
+                tripType === opt.id
+                  ? 'bg-slate-900 text-white shadow-sm'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60'
               }`}
             >
-              {tab.label}
+              {opt.label}
             </button>
           ))}
         </div>
 
-        {/* Pickup & Drop */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+        {/* Pickup & Drop with Swap Button */}
+        <div className="relative space-y-2.5 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-3">
           <div>
             <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-1 flex items-center gap-1.5">
               <MapPin className="w-3.5 h-3.5 text-amber-600 shrink-0" /> Pickup Location
@@ -142,6 +150,19 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
               required
               className="w-full px-3.5 sm:px-4 py-2.5 rounded-xl border border-slate-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none text-sm font-semibold text-slate-800"
             />
+          </div>
+
+          {/* Swap Button on mobile */}
+          <div className="sm:hidden flex justify-center -my-1 relative z-10">
+            <button
+              type="button"
+              onClick={handleSwap}
+              className="w-7 h-7 rounded-full bg-white border border-slate-300 shadow-sm text-slate-600 hover:text-amber-600 flex items-center justify-center transition active:rotate-180 cursor-pointer"
+              title="Swap pickup and drop"
+              aria-label="Swap pickup and drop locations"
+            >
+              <ArrowUpDown className="w-3.5 h-3.5" />
+            </button>
           </div>
 
           <div>
