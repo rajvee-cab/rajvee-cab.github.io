@@ -1,0 +1,193 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import { Phone, Mail, MapPin, MessageCircle, ShieldCheck, Clock, ExternalLink } from 'lucide-react';
+
+export default function Footer() {
+  return (
+    <footer className="bg-slate-950 text-slate-400 pt-10 sm:pt-16 pb-12 border-t border-slate-800" id="contact">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Top 3 Corporate Contact Pills */}
+        <div className="mb-8 sm:mb-12 pb-8 sm:pb-10 border-b border-slate-800">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-5">
+            
+            {/* Box 1: Call Us */}
+            <div className="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-slate-900 border border-slate-800">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-slate-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider block">
+                  24x7 Helpline
+                </span>
+                <a
+                  href="tel:+919737872972"
+                  className="text-sm sm:text-base text-white font-extrabold hover:text-amber-400 transition truncate block"
+                >
+                  +91 97378 72972
+                </a>
+              </div>
+            </div>
+
+            {/* Box 2: Write to Us */}
+            <div className="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-slate-900 border border-slate-800">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-slate-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider block">
+                  Email Support
+                </span>
+                <a
+                  href="mailto:rajveecab@gmail.com"
+                  className="text-sm sm:text-base text-white font-extrabold hover:text-amber-400 transition truncate block"
+                >
+                  rajveecab@gmail.com
+                </a>
+              </div>
+            </div>
+
+            {/* Box 3: Address */}
+            <div className="flex items-center gap-3.5 sm:gap-4 p-4 sm:p-5 rounded-2xl bg-slate-900 border border-slate-800">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 shrink-0">
+                <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-slate-400 text-[11px] sm:text-xs font-bold uppercase tracking-wider block">
+                  Main Office
+                </span>
+                <p className="text-xs sm:text-sm text-slate-200 font-semibold m-0 truncate">
+                  Greenland Chokdi, Rajkot - 360003
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        {/* Middle Footer Columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12">
+          
+          {/* Brand Info */}
+          <div className="lg:col-span-5">
+            <div className="relative h-11 w-48 mb-5">
+              <Image
+                src="/frontend/imgs/logo-w.png"
+                alt="Rajvee Cab"
+                fill
+                className="object-contain object-left"
+              />
+            </div>
+            <p className="text-sm text-slate-400 leading-relaxed max-w-sm mb-6">
+              Rajvee Cab is Gujarat&apos;s trusted one-way outstation and airport taxi service. Headquartered at Greenland Chokdi, Rajkot, offering transparent per-km billing, zero return charges, and polite verified chauffeurs.
+            </p>
+
+            <div className="flex items-center gap-3">
+              <a
+                href="https://wa.me/919737872972"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-600/20 text-emerald-400 border border-emerald-600/40 text-xs font-bold hover:bg-emerald-600/30 transition"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span>WhatsApp Desk</span>
+              </a>
+              <span className="text-xs text-slate-500">
+                • 24x7 Instant Dispatch
+              </span>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="lg:col-span-3">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4">
+              Key Services
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              <li>
+                <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">
+                  Cab Service in Rajkot
+                </Link>
+              </li>
+              <li>
+                <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">
+                  Cab Service in Ahmedabad
+                </Link>
+              </li>
+              <li>
+                <Link href="/rajkot-to-ahmedabad-cab" className="hover:text-amber-400 transition">
+                  Rajkot to Ahmedabad Taxi
+                </Link>
+              </li>
+              <li>
+                <Link href="/#cars" className="hover:text-amber-400 transition">
+                  Fleet (Dzire, Aura, Ertiga, Innova)
+                </Link>
+              </li>
+              <li>
+                <Link href="/#reviews" className="hover:text-amber-400 transition">
+                  Customer Reviews
+                </Link>
+              </li>
+              <li>
+                <Link href="/#faq" className="hover:text-amber-400 transition">
+                  Frequently Asked Questions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Popular Corridors */}
+          <div className="lg:col-span-4">
+            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4">
+              Popular Gujarat Routes
+            </h4>
+            <div className="grid grid-cols-2 gap-2 text-xs">
+              <Link href="/rajkot-to-ahmedabad-cab" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Ahmedabad
+              </Link>
+              <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Hirasar Airport
+              </Link>
+              <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition py-1">
+                Ahmedabad ➔ Surat
+              </Link>
+              <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Somnath
+              </Link>
+              <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Dwarka
+              </Link>
+              <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition py-1">
+                Ahmedabad ➔ Vadodara
+              </Link>
+              <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition py-1">
+                Rajkot ➔ Jamnagar
+              </Link>
+              <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition py-1">
+                Ahmedabad ➔ Mumbai
+              </Link>
+            </div>
+            
+            <div className="mt-5 p-3 rounded-xl bg-slate-900 border border-slate-800 text-[11px] text-slate-400">
+              <ShieldCheck className="w-4 h-4 text-emerald-500 inline mr-1.5 -mt-0.5" />
+              <span>All trips covered with commercial taxi permit & valid highway insurance.</span>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Bottom Copyright */}
+        <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+          <p className="m-0">
+            © {new Date().getFullYear()} <span className="text-slate-300 font-semibold">Rajvee Cab</span>. All Rights Reserved.
+          </p>
+          <p className="m-0 text-slate-400">
+            Official 24x7 Cab Service Provider for Rajkot & All Gujarat
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  );
+}
