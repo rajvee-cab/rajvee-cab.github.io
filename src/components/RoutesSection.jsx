@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRightLeft, Clock, ChevronRight, MapPin } from 'lucide-react';
+import { formatWhatsAppRoute } from '@/utils/whatsapp';
 
 const rajkotRoutes = [
   {
@@ -255,9 +256,7 @@ export default function RoutesSection() {
 
               <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between">
                 <a
-                  href={`https://wa.me/919737872972?text=${encodeURIComponent(
-                    `Hello Rajvee Cab, I want to inquire about cab fare from ${route.from} to ${route.to}.`
-                  )}`}
+                  href={formatWhatsAppRoute({ from: route.from, to: route.to, fare: route.fare })}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`WhatsApp fare inquiry for cab from ${route.from} to ${route.to}`}

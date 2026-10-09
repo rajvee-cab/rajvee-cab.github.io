@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Users, Briefcase, Snowflake, CheckCircle2, MessageCircle } from 'lucide-react';
+import { formatWhatsAppCar } from '@/utils/whatsapp';
 
 const fleetData = [
   {
@@ -126,7 +127,7 @@ export default function FleetSection() {
 
               <div className="p-5 pt-0">
                 <a
-                  href={`https://wa.me/919737872972?text=${encodeURIComponent(car.waMsg)}`}
+                  href={formatWhatsAppCar({ name: car.name, category: car.category, rate: car.price })}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`w-full py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition ${

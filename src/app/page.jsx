@@ -5,6 +5,7 @@ import RoutesSection from '@/components/RoutesSection';
 import GujaratNetworkSection from '@/components/GujaratNetworkSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import FaqSection from '@/components/FaqSection';
+import { formatWhatsAppGeneral, formatWhatsAppCar } from '@/utils/whatsapp';
 import {
   Check,
   ArrowUpRight,
@@ -238,7 +239,7 @@ export default function HomePage() {
                   <span>Call: +91 97378 72972</span>
                 </a>
                 <a
-                  href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
+                  href={formatWhatsAppGeneral('Outstation & Airport Cab')}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat with Rajvee Cab on WhatsApp"
@@ -330,7 +331,7 @@ export default function HomePage() {
 
               <div className="pt-2">
                 <a
-                  href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20know%20more%20about%20your%20services."
+                  href={formatWhatsAppGeneral('Rajvee Cab Services & Corporate Booking')}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Inquire about Rajvee Cab services on WhatsApp"
@@ -422,9 +423,7 @@ export default function HomePage() {
 
                 <div className="p-4 sm:p-5 pt-0">
                   <a
-                    href={`https://wa.me/919737872972?text=${encodeURIComponent(
-                      `Hello Rajvee Cab, I want to book ${car.name}.`
-                    )}`}
+                    href={formatWhatsAppCar({ name: car.name, category: car.category, rate: car.rate })}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`Book ${car.name} on WhatsApp`}
@@ -479,7 +478,7 @@ export default function HomePage() {
                 </div>
 
                 <a
-                  href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20inquire%20about%20your%20services."
+                  href={formatWhatsAppGeneral(srv.title)}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Inquire about ${srv.title} on WhatsApp`}
@@ -522,7 +521,7 @@ export default function HomePage() {
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3.5 sm:gap-4 max-w-xl mx-auto">
             <a
-              href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
+              href={formatWhatsAppGeneral('Immediate Cab Dispatch')}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Book cab via WhatsApp"

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { MapPin, Navigation, Calendar, Car, Phone, Send } from 'lucide-react';
+import { formatWhatsAppBooking } from '@/utils/whatsapp';
 
 export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'Ahmedabad' }) {
   const [tripType, setTripType] = useState('one_way');
@@ -19,19 +20,16 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
       local: 'Local Hourly Rental',
     };
 
-    const message = `*NEW CAB BOOKING INQUIRY (Rajvee Travels)*
---------------------------------
-• *Trip Type:* ${tripNames[tripType] || tripType}
-• *Pickup City:* ${pickup}
-• *Drop Location:* ${drop}
-• *Date:* ${date || 'Immediate / Today'}
-• *Selected Vehicle:* ${carType}
-• *Contact Number:* ${phone || 'Not provided'}
---------------------------------
-Please share the best estimated fare & confirm cab availability.`;
+    const whatsappUrl = formatWhatsAppBooking({
+      tripType: tripNames[tripType] || tripType,
+      carType,
+      pickup,
+      drop,
+      date,
+      phone,
+    });
 
-    const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/919737872972?text=${encoded}`, '_blank');
+    window.open(whatsappUrl, '_blank');
   };
 
   const gujaratCities = [

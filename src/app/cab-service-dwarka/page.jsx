@@ -1,5 +1,6 @@
 import BookingForm from '@/components/BookingForm';
 import FleetSection from '@/components/FleetSection';
+import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Landmark, Compass, Waves } from 'lucide-react';
 
 export const metadata = {
@@ -89,7 +90,7 @@ export default function DwarkaCabPage() {
                   <span>Call: +91 97378 72972</span>
                 </a>
                 <a
-                  href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab%20in%20Dwarka."
+                  href={formatWhatsAppCity('Dwarka')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm flex items-center gap-2 shadow-md shadow-emerald-600/20 transition transform hover:-translate-y-0.5"

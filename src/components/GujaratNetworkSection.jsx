@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { MapPin, Navigation, ArrowRight, ShieldCheck, Phone, MessageCircle } from 'lucide-react';
+import { formatWhatsAppCity, formatWhatsAppGeneral } from '@/utils/whatsapp';
 
 const regionsData = [
   {
@@ -114,9 +115,7 @@ export default function GujaratNetworkSection() {
 
               <div className="pt-3 mt-3 border-t border-slate-100">
                 <a
-                  href={`https://wa.me/919737872972?text=${encodeURIComponent(
-                    `Hello Rajvee Cab, I need to book a cab for pickup in ${city.name}.`
-                  )}`}
+                  href={formatWhatsAppCity(city.name)}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Book cab pickup in ${city.name} on WhatsApp`}
@@ -151,7 +150,7 @@ export default function GujaratNetworkSection() {
               Call +91 97378 72972
             </a>
             <a
-              href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20need%20doorstep%20pickup%20in%20Gujarat."
+              href={formatWhatsAppGeneral('Gujarat Doorstep Pickup')}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat with Rajvee Cab Gujarat WhatsApp support"

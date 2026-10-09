@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { Send, MapPin, Navigation, Calendar, Car, Phone, ShieldCheck, Zap, ArrowUpDown, ChevronDown } from 'lucide-react';
+import { formatWhatsAppBooking } from '@/utils/whatsapp';
 
 export default function BookingBoxRenax() {
   const [carType, setCarType] = useState('Swift Dzire (Sedan 4+1)');
@@ -60,20 +61,17 @@ export default function BookingBoxRenax() {
       ).catch(() => {});
     } catch (_) {}
 
-    // 2. Open WhatsApp for instant booking
-    const message = `*NEW CAB BOOKING INQUIRY - RAJVEE CAB*
------------------------------------
-• *Trip Type:* ${tripLabel}
-• *Vehicle:* ${carType}
-• *Pickup City:* ${pickup}
-• *Drop City:* ${drop}
-• *Travel Date:* ${date || 'Immediate / Today'}
-• *Customer Phone:* ${contactNo || 'Provided via WhatsApp'}
------------------------------------
-Please provide fare details and confirm booking availability.`;
+    // 2. Open WhatsApp with clean, readable booking format
+    const whatsappUrl = formatWhatsAppBooking({
+      tripType: tripLabel,
+      carType,
+      pickup,
+      drop,
+      date,
+      phone: contactNo,
+    });
 
-    const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/919737872972?text=${encoded}`, '_blank');
+    window.open(whatsappUrl, '_blank');
     setIsSubmitting(false);
   };
 

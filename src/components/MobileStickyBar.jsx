@@ -1,4 +1,5 @@
 import { Phone, MessageCircle } from 'lucide-react';
+import { formatWhatsAppGeneral } from '@/utils/whatsapp';
 
 export default function MobileStickyBar() {
   return (
@@ -13,7 +14,7 @@ export default function MobileStickyBar() {
       </a>
 
       <a
-        href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
+        href={formatWhatsAppGeneral('Instant Mobile Booking')}
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp with Rajvee Cab"

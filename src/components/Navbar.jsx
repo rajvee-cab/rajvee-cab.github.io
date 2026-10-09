@@ -17,6 +17,7 @@ import {
   Facebook,
   Instagram,
 } from 'lucide-react';
+import { formatWhatsAppGeneral } from '@/utils/whatsapp';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,7 +104,7 @@ export default function Navbar() {
 
               {/* WhatsApp Button (always visible, compact on mobile) */}
               <a
-                href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
+                href={formatWhatsAppGeneral('Cab Booking')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with Rajvee Cab on WhatsApp"
@@ -194,7 +195,7 @@ export default function Navbar() {
               </div>
 
               <a
-                href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab."
+                href={formatWhatsAppGeneral('Mobile Cab Booking')}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}

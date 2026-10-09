@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { ChevronDown, HelpCircle, PhoneCall, MessageCircle } from 'lucide-react';
+import { formatWhatsAppGeneral } from '@/utils/whatsapp';
 
 const faqs = [
   {
@@ -109,7 +110,7 @@ export default function FaqSection() {
               <span>+91 97378 72972</span>
             </a>
             <a
-              href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20have%20an%20inquiry%20regarding%20cab%20booking."
+              href={formatWhatsAppGeneral('FAQ & Pricing Inquiry')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-bold hover:bg-amber-400 transition shadow-sm w-full sm:w-auto whitespace-nowrap min-h-[42px]"

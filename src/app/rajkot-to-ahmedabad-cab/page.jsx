@@ -1,5 +1,6 @@
 import BookingForm from '@/components/BookingForm';
 import FleetSection from '@/components/FleetSection';
+import { formatWhatsAppRoute, formatWhatsAppRouteCar } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
@@ -91,7 +92,7 @@ export default function RajkotToAhmedabadPage() {
                   <span>Call: +91 97378 72972</span>
                 </a>
                 <a
-                  href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20a%20cab%20from%20Rajkot%20to%20Ahmedabad."
+                  href={formatWhatsAppRoute({ from: 'Rajkot', to: 'Ahmedabad', fare: '₹2,299' })}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm flex items-center gap-2 shadow-md shadow-emerald-600/20 transition transform hover:-translate-y-0.5"
@@ -143,7 +144,7 @@ export default function RajkotToAhmedabadPage() {
                   <td className="p-4 font-bold text-slate-900">₹11 - ₹12 / KM</td>
                   <td className="p-4 text-center">
                     <a
-                      href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20Dzire%20from%20Rajkot%20to%20Ahmedabad."
+                      href={formatWhatsAppRouteCar({ from: 'Rajkot', to: 'Ahmedabad', car: 'Maruti Swift Dzire', fare: '₹2,299 - ₹2,500' })}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-block"
@@ -162,7 +163,7 @@ export default function RajkotToAhmedabadPage() {
                   <td className="p-4 font-bold text-slate-900">₹11 - ₹12 / KM</td>
                   <td className="p-4 text-center">
                     <a
-                      href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20Aura%20from%20Rajkot%20to%20Ahmedabad."
+                      href={formatWhatsAppRouteCar({ from: 'Rajkot', to: 'Ahmedabad', car: 'Hyundai Aura', fare: '₹2,299 - ₹2,500' })}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-block"
@@ -181,7 +182,7 @@ export default function RajkotToAhmedabadPage() {
                   <td className="p-4 font-bold text-slate-900">₹14 - ₹15 / KM</td>
                   <td className="p-4 text-center">
                     <a
-                      href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20Ertiga%20from%20Rajkot%20to%20Ahmedabad."
+                      href={formatWhatsAppRouteCar({ from: 'Rajkot', to: 'Ahmedabad', car: 'Maruti Ertiga', fare: '₹3,400 - ₹3,600' })}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-block"
@@ -200,7 +201,7 @@ export default function RajkotToAhmedabadPage() {
                   <td className="p-4 font-bold text-slate-900">₹18 - ₹20 / KM</td>
                   <td className="p-4 text-center">
                     <a
-                      href="https://wa.me/919737872972?text=Hello%20Rajvee%20Cab,%20I%20want%20to%20book%20Innova%20Crysta%20from%20Rajkot%20to%20Ahmedabad."
+                      href={formatWhatsAppRouteCar({ from: 'Rajkot', to: 'Ahmedabad', car: 'Toyota Innova Crysta', fare: '₹4,500 - ₹4,800' })}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs inline-block"

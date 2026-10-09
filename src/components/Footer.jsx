@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, MessageCircle, ShieldCheck, Clock, ExternalLink, Facebook, Instagram } from 'lucide-react';
+import { formatWhatsAppGeneral } from '@/utils/whatsapp';
 
 export default function Footer() {
   return (
@@ -86,7 +87,7 @@ export default function Footer() {
 
             <div className="flex flex-wrap items-center gap-3">
               <a
-                href="https://wa.me/919737872972"
+                href={formatWhatsAppGeneral('WhatsApp Desk Support')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with Rajvee Cab WhatsApp desk"
