@@ -1,5 +1,6 @@
 import './globals.css';
 import { Outfit } from 'next/font/google';
+import Script from 'next/script';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MobileStickyBar from '@/components/MobileStickyBar';
@@ -143,6 +144,23 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className={`${outfit.className} bg-white text-slate-900 antialiased min-h-screen flex flex-col pb-16 md:pb-0`}>
+        {/* Google Analytics (GA4) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q1G8Y8TLVZ"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Q1G8Y8TLVZ');
+            `,
+          }}
+        />
         <Navbar />
         <main className="flex-grow pt-[68px] sm:pt-[76px]">{children}</main>
         <Footer />
