@@ -81,10 +81,10 @@ export default function HomePage() {
       sub: 'Driver info 1 hr prior',
     },
     {
-      icon: FileText,
-      num: 'Official',
-      label: 'GST Invoices',
-      sub: 'For corporate travel',
+      icon: ShieldCheck,
+      num: 'Transparent',
+      label: 'Zero Hidden Costs',
+      sub: 'Clear pricing, no surprises',
     },
   ];
 
@@ -101,8 +101,8 @@ export default function HomePage() {
     },
     {
       num: '03.',
-      title: 'Corporate Travel & Accounts',
-      desc: 'Official transportation for business executives, delegates, and company tours with transparent GST tax billing and monthly accounts.',
+      title: 'Corporate & Executive Travel',
+      desc: 'Official transportation for business executives, delegates, and company tours with transparent billing, custom routes, and monthly accounts.',
     },
     {
       num: '04.',
@@ -121,10 +121,67 @@ export default function HomePage() {
     },
   ];
 
-
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do I book a cab with Rajvee Cab?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You can book instantly by calling our 24x7 desk at +91 97378 72972 or by sending a message on WhatsApp. Simply share your pickup location, drop city, travel date, and preferred car type. You will receive an immediate confirmation with driver and vehicle details.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is one-way taxi service available without paying return fare?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, 100%! With Rajvee Cab One-Way drops, you pay ONLY for the one-sided journey from your pickup to destination city. You never pay any return charges or empty vehicle return kms.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the estimated taxi fare from Rajkot to Ahmedabad?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'For Rajkot to Ahmedabad one-way travel, Sedan (Swift Dzire / Hyundai Aura) typically starts around ₹2,299 to ₹2,500. Spacious SUVs like Maruti Ertiga range from ₹3,400 to ₹3,600, and Toyota Innova Crysta starts from ₹4,500. All fares are transparent with zero hidden charges.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide 24x7 pickups for Rajkot Hirasar Airport & Ahmedabad SVPI Airport?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! We operate 24 hours a day, 365 days a year. Whether you have an early morning 4:00 AM flight departure or a late midnight flight arrival, our chauffeurs will be waiting at the terminal with your nameboard.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What payment modes are accepted?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'We accept Cash, Google Pay, PhonePe, Paytm, and all UPI applications directly upon the completion of your journey. For corporate clients, clear trip receipts and bank transfer options are also available.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are the cabs safe for families, senior citizens, and female travelers?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Safety is our highest priority. All Rajvee Cab drivers are police-verified, experienced on national and state highways, polite, and non-smoking. All vehicles are equipped with GPS tracking and chilled dual-AC systems.',
+        },
+      },
+    ],
+  };
 
   return (
     <div className="w-full max-w-full overflow-x-hidden">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* 1. Hero Section - Executive Corporate Styling */}
       <section
         className="relative py-10 sm:py-16 lg:py-24 bg-slate-950 text-white bg-cover bg-center"

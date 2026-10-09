@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: 'What payment modes are accepted?',
-    a: 'We accept Cash, Google Pay, PhonePe, Paytm, and all UPI applications directly upon the completion of your journey. For corporate clients, GST tax invoices and bank transfer options are also available.',
+    a: 'We accept Cash, Google Pay, PhonePe, Paytm, and all UPI applications directly upon the completion of your journey. For corporate clients, clear trip receipts and bank transfer options are also available.',
   },
   {
     q: 'Are the cabs safe for families, senior citizens, and female travelers?',

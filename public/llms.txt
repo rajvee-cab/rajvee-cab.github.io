@@ -1,0 +1,55 @@
+# Rajvee Cab - Gujarat Cab & Taxi Service
+
+> Rajvee Cab is Gujarat's premier 24x7 cab and outstation taxi service, headquartered at Greenland Chokdi, Rajkot. Specializing in affordable one-way drops with ZERO return fare, round-trip intercity cabs, and reliable 24x7 airport transfers for Rajkot Hirasar International Airport and Ahmedabad SVPI Airport.
+
+## Quick Facts
+- Business Name: Rajvee Cab (also known as Rajvee Travels)
+- Primary Phone: +91 97378 72972 (Call & WhatsApp 24x7)
+- Headquarters Address: Greenland Chokdi, Rajkot, Gujarat 360003, India
+- Hours: Open 24 Hours, 7 Days a Week, 365 Days a Year
+- Official Website: https://rajvee-cab.github.io/
+- Service Coverage: All 33 districts of Gujarat including Rajkot, Ahmedabad, Surat, Vadodara, Gandhinagar, Jamnagar, Bhavnagar, Junagadh, Morbi, Somnath, Dwarka, Bhuj, Statue of Unity, and Mumbai.
+
+## Fleet & Rates
+- Swift Dzire / Hyundai Aura (Sedan, 4+1): ₹11 - ₹12 / KM. Ideal for airport drops, couples, and small families.
+- Maruti Ertiga (SUV, 6+1): ₹14 - ₹15 / KM. Ideal for family vacations, groups, and outstation trips.
+- Toyota Innova Crysta (Premium SUV, 7+1): ₹18 - ₹20 / KM. Ideal for VIP corporate travel, executive transfers, and long luxury tours.
+
+## Core Services
+- One-Way Outstation Drops: Pay only for one-sided kilometers. Zero return fare.
+- 24x7 Airport Transfers: Punctual pickups and drops for Rajkot Hirasar Airport (HSR) and Ahmedabad Airport (AMD) with free flight tracking.
+- Round-Trip & Saurashtra Pilgrimage Tours: Dedicated chauffeurs for Somnath Jyotirlinga, Dwarka Dham, Gir National Park, and Statue of Unity.
+- Local City Rentals: Flexible hourly packages for business, hospital visits, and events in Rajkot.
+
+## Major Popular Routes
+- Rajkot to Ahmedabad Cab: https://rajvee-cab.github.io/rajkot-to-ahmedabad-cab/ (Starting ₹2,299 - ₹2,500)
+- Rajkot to Hirasar Airport Cab: https://rajvee-cab.github.io/rajkot-to-hirasar-airport-cab/
+- Rajkot to Surat Cab: https://rajvee-cab.github.io/rajkot-to-surat-cab/
+- Rajkot to Vadodara Cab: https://rajvee-cab.github.io/rajkot-to-vadodara-cab/
+- Rajkot to Somnath Cab: https://rajvee-cab.github.io/rajkot-to-somnath-cab/
+- Rajkot to Dwarka Cab: https://rajvee-cab.github.io/rajkot-to-dwarka-cab/
+- Rajkot to Jamnagar Cab: https://rajvee-cab.github.io/rajkot-to-jamnagar-cab/
+- Rajkot to Morbi Cab: https://rajvee-cab.github.io/rajkot-to-morbi-cab/
+- Ahmedabad to Surat Cab: https://rajvee-cab.github.io/ahmedabad-to-surat-cab/
+- Ahmedabad to Vadodara Cab: https://rajvee-cab.github.io/ahmedabad-to-vadodara-cab/
+- Ahmedabad to Statue of Unity Cab: https://rajvee-cab.github.io/ahmedabad-to-statue-of-unity-cab/
+- Ahmedabad to Mumbai Cab: https://rajvee-cab.github.io/ahmedabad-to-mumbai-cab/
+- Surat to Mumbai Cab: https://rajvee-cab.github.io/surat-to-mumbai-cab/
+
+## City Service Pages
+- Cab Service in Rajkot: https://rajvee-cab.github.io/cab-service-rajkot/
+- Cab Service in Ahmedabad: https://rajvee-cab.github.io/cab-service-ahmedabad/
+- Cab Service in Surat: https://rajvee-cab.github.io/cab-service-surat/
+- Cab Service in Vadodara: https://rajvee-cab.github.io/cab-service-vadodara/
+- Cab Service in Gandhinagar: https://rajvee-cab.github.io/cab-service-gandhinagar/
+- Cab Service in Jamnagar: https://rajvee-cab.github.io/cab-service-jamnagar/
+- Cab Service in Morbi: https://rajvee-cab.github.io/cab-service-morbi/
+- Cab Service in Bhavnagar: https://rajvee-cab.github.io/cab-service-bhavnagar/
+- Cab Service in Junagadh: https://rajvee-cab.github.io/cab-service-junagadh/
+- Cab Service in Bhuj: https://rajvee-cab.github.io/cab-service-bhuj/
+- Cab Service in Somnath: https://rajvee-cab.github.io/cab-service-somnath/
+- Cab Service in Dwarka: https://rajvee-cab.github.io/cab-service-dwarka/
+
+## Booking & Contact
+- Instant Phone Booking: +91 97378 72972
+- Instant WhatsApp Booking: https://wa.me/919737872972

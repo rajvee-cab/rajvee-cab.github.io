@@ -21,7 +21,7 @@ const reviews = [
     rating: 5,
     date: '1 week ago',
     comment:
-      'Our corporate team frequently books Rajvee Cab for executive travel across South Gujarat. The billing is completely transparent, zero surge pricing, and they provided GST invoice instantly. Professional service at its best.',
+      'Our corporate team frequently books Rajvee Cab for executive travel across South Gujarat. The billing is completely transparent, zero surge pricing, and they provided trip receipts instantly. Professional service at its best.',
   },
   {
     name: 'Nirali & Parth Shah',
@@ -202,7 +202,7 @@ export default function ReviewsSection() {
               <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> Transparent Per KM Tariffs
             </span>
             <span className="inline-flex items-center gap-1.5 bg-slate-100 px-2.5 py-1.5 rounded-full">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> GST Corporate Invoices
+              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" /> Transparent Corporate Billing
             </span>
           </div>
         </div>
