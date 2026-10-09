@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Phone, Mail, MapPin, MessageCircle, ShieldCheck, Clock, ExternalLink } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageCircle, ShieldCheck, Clock, ExternalLink, Facebook, Instagram } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -84,7 +84,7 @@ export default function Footer() {
               Rajvee Cab is Gujarat&apos;s trusted one-way outstation and airport taxi service. Headquartered at Greenland Chokdi, Rajkot, offering transparent per-km billing, zero return charges, and polite verified chauffeurs.
             </p>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <a
                 href="https://wa.me/919737872972"
                 target="_blank"
@@ -95,9 +95,26 @@ export default function Footer() {
                 <MessageCircle className="w-4 h-4" />
                 <span>WhatsApp Desk</span>
               </a>
-              <span className="text-xs text-slate-500">
-                • 24x7 Instant Dispatch
-              </span>
+              <a
+                href="https://www.facebook.com/rajveecab/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Rajvee Cab on Facebook"
+                className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-blue-500 hover:border-blue-500/50 hover:bg-blue-500/10 transition"
+                title="Follow on Facebook"
+              >
+                <Facebook className="w-4 h-4" />
+              </a>
+              <a
+                href="https://www.instagram.com/rajveecab/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Follow Rajvee Cab on Instagram"
+                className="w-9 h-9 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-400 hover:text-pink-500 hover:border-pink-500/50 hover:bg-pink-500/10 transition"
+                title="Follow on Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
             </div>
           </div>
 
@@ -207,6 +224,29 @@ export default function Footer() {
           <p className="m-0">
             © {new Date().getFullYear()} <span className="text-slate-300 font-semibold">Rajvee Cab</span>. All Rights Reserved.
           </p>
+          <div className="flex items-center gap-4 text-xs">
+            <a
+              href="https://www.facebook.com/rajveecab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Rajvee Cab Facebook Page"
+              className="text-slate-400 hover:text-blue-400 transition flex items-center gap-1.5"
+            >
+              <Facebook className="w-3.5 h-3.5 text-blue-500" />
+              <span>Facebook</span>
+            </a>
+            <span className="text-slate-700">•</span>
+            <a
+              href="https://www.instagram.com/rajveecab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Rajvee Cab Instagram Profile"
+              className="text-slate-400 hover:text-pink-400 transition flex items-center gap-1.5"
+            >
+              <Instagram className="w-3.5 h-3.5 text-pink-500" />
+              <span>Instagram</span>
+            </a>
+          </div>
           <p className="m-0 text-slate-400">
             Official 24x7 Cab Service Provider for Rajkot & All Gujarat
           </p>

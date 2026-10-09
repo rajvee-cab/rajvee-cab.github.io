@@ -14,6 +14,8 @@ import {
   HelpCircle,
   ShieldCheck,
   ChevronRight,
+  Facebook,
+  Instagram,
 } from 'lucide-react';
 
 export default function Navbar() {
@@ -201,6 +203,29 @@ export default function Navbar() {
                 <MessageCircle className="w-4 h-4" />
                 <span>Book on WhatsApp</span>
               </a>
+
+              <div className="flex items-center justify-center gap-2 pt-1">
+                <a
+                  href="https://www.facebook.com/rajveecab/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Rajvee Cab on Facebook"
+                  className="flex-1 py-2 px-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-blue-400 hover:border-blue-500/40 text-[11px] font-bold flex items-center justify-center gap-1.5 transition"
+                >
+                  <Facebook className="w-3.5 h-3.5 text-blue-500" />
+                  <span>Facebook</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/rajveecab/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Rajvee Cab on Instagram"
+                  className="flex-1 py-2 px-3 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-pink-400 hover:border-pink-500/40 text-[11px] font-bold flex items-center justify-center gap-1.5 transition"
+                >
+                  <Instagram className="w-3.5 h-3.5 text-pink-500" />
+                  <span>Instagram</span>
+                </a>
+              </div>
             </div>
 
           </div>

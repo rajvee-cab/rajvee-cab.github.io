@@ -100,6 +100,10 @@ export default function RootLayout({ children }) {
         latitude: 22.3039,
         longitude: 70.8022,
       },
+      sameAs: [
+        'https://www.facebook.com/rajveecab/',
+        'https://www.instagram.com/rajveecab/',
+      ],
       openingHoursSpecification: {
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
