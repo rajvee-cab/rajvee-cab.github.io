@@ -34,25 +34,25 @@ export default function FaqSection() {
   const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="py-20 bg-white" id="faq">
+    <section className="py-12 sm:py-20 bg-white" id="faq">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider mb-4">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-bold uppercase tracking-wider mb-3 sm:mb-4">
             <HelpCircle className="w-4 h-4 text-amber-600" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Frequently Asked <span className="text-amber-600">Questions</span>
           </h2>
-          <p className="text-base text-slate-600 mt-3 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 mt-2.5 sm:mt-3 leading-relaxed">
             Everything you need to know about booking one-way, outstation, and airport cabs with Rajvee Cab.
           </p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {faqs.map((faq, idx) => {
             const isOpen = openIdx === idx;
             return (
@@ -68,10 +68,10 @@ export default function FaqSection() {
                   type="button"
                   onClick={() => setOpenIdx(isOpen ? null : idx)}
                   aria-expanded={isOpen}
-                  className="w-full text-left p-5 sm:p-6 font-bold text-slate-900 text-base sm:text-lg flex items-center justify-between gap-4 bg-transparent cursor-pointer"
+                  className="w-full text-left p-4 sm:p-6 font-bold text-slate-900 text-sm sm:text-lg flex items-center justify-between gap-3 sm:gap-4 bg-transparent cursor-pointer"
                 >
-                  <span className="flex items-center gap-3">
-                    <span className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0 ${
+                  <span className="flex items-center gap-2.5 sm:gap-3">
+                    <span className={`w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center text-[11px] sm:text-xs font-black shrink-0 ${
                       isOpen ? 'bg-amber-500 text-slate-950' : 'bg-slate-100 text-slate-700'
                     }`}>
                       {idx + 1}
@@ -79,15 +79,15 @@ export default function FaqSection() {
                     <span className="text-slate-900 leading-snug">{faq.q}</span>
                   </span>
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform duration-200 shrink-0 text-slate-600 ${
+                    className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 shrink-0 text-slate-600 ${
                       isOpen ? 'rotate-180 text-amber-600' : ''
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-sm text-slate-700 leading-relaxed border-t border-slate-100">
-                    <p className="m-0 pl-10">{faq.a}</p>
+                  <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-1 text-xs sm:text-sm text-slate-700 leading-relaxed border-t border-slate-100">
+                    <p className="m-0 pl-0 sm:pl-10">{faq.a}</p>
                   </div>
                 )}
               </div>

@@ -35,27 +35,27 @@ const reasons = [
 
 export default function WhyUsSection() {
   return (
-    <section className="py-20 bg-slate-50 border-t border-slate-200" id="why-us">
+    <section className="py-12 sm:py-20 bg-slate-50 border-t border-slate-200" id="why-us">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-800 mb-3">
             Why Choose Us
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
             Why Thousands Trust Rajvee Travels
           </h2>
-          <p className="mt-4 text-base text-slate-600">
+          <p className="mt-3 sm:mt-4 text-sm sm:text-base text-slate-600">
             Dedicated to providing the highest standards of safety, punctuality, and affordability.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
           {reasons.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-white border border-slate-200 hover:border-amber-500 shadow-sm hover:shadow-md transition duration-300 hover:-translate-y-1"
+                className="p-5 sm:p-8 rounded-2xl bg-white border border-slate-200 hover:border-amber-500 shadow-sm hover:shadow-md transition duration-300 hover:-translate-y-1"
               >
                 <div className="w-14 h-14 rounded-xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600 mb-6">
                   <Icon className="w-7 h-7" />

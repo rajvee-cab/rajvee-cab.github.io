@@ -191,10 +191,10 @@ export default function RoutesSection() {
           </p>
 
           {/* Interactive Hub Switcher Tabs */}
-          <div className="inline-flex p-1.5 bg-slate-100 rounded-2xl mt-8 border border-slate-200 shadow-inner">
+          <div className="flex flex-col sm:inline-flex sm:flex-row w-full sm:w-auto p-1.5 bg-slate-100 rounded-2xl mt-6 sm:mt-8 border border-slate-200 shadow-inner gap-1 sm:gap-0">
             <button
               onClick={() => setActiveHub('rajkot')}
-              className={`px-5 sm:px-8 py-3 rounded-xl font-black text-xs sm:text-sm flex items-center gap-2 transition ${
+              className={`px-4 sm:px-8 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 transition ${
                 activeHub === 'rajkot'
                   ? 'bg-slate-900 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
@@ -206,7 +206,7 @@ export default function RoutesSection() {
 
             <button
               onClick={() => setActiveHub('ahmedabad')}
-              className={`px-5 sm:px-8 py-3 rounded-xl font-black text-xs sm:text-sm flex items-center gap-2 transition ${
+              className={`px-4 sm:px-8 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 transition ${
                 activeHub === 'ahmedabad'
                   ? 'bg-slate-900 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
