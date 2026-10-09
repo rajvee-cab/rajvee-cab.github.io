@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import BookingBoxRenax from '@/components/BookingBoxRenax';
+import RoutesSection from '@/components/RoutesSection';
 import GujaratNetworkSection from '@/components/GujaratNetworkSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import FaqSection from '@/components/FaqSection';
@@ -120,56 +121,7 @@ export default function HomePage() {
     },
   ];
 
-  const popularRoutes = [
-    {
-      from: 'Rajkot',
-      to: 'Ahmedabad',
-      time: '3.5 - 4 Hours',
-      fare: '₹2,299 Starting',
-      link: '/rajkot-to-ahmedabad-cab',
-      tag: 'Most Popular',
-    },
-    {
-      from: 'Rajkot City',
-      to: 'Hirasar Airport',
-      time: '35 - 45 Mins',
-      fare: 'Fixed Airport Fare',
-      link: '/cab-service-rajkot',
-      tag: '24x7 Express',
-    },
-    {
-      from: 'Ahmedabad',
-      to: 'Surat',
-      time: '4.5 - 5 Hours',
-      fare: '₹3,499 Starting',
-      link: '/cab-service-ahmedabad',
-      tag: 'Business Corridor',
-    },
-    {
-      from: 'Rajkot',
-      to: 'Somnath & Dwarka',
-      time: '2 - 3 Days',
-      fare: 'Tour Package',
-      link: '/cab-service-rajkot',
-      tag: 'Pilgrimage',
-    },
-    {
-      from: 'Ahmedabad',
-      to: 'Mumbai',
-      time: '8 - 9 Hours',
-      fare: 'Interstate AC Cab',
-      link: '/cab-service-ahmedabad',
-      tag: 'Interstate',
-    },
-    {
-      from: 'Rajkot',
-      to: 'Jamnagar / Junagadh',
-      time: '1.5 - 2 Hours',
-      fare: 'Express Local Drop',
-      link: '/cab-service-rajkot',
-      tag: 'Daily Route',
-    },
-  ];
+
 
   return (
     <div className="w-full max-w-full overflow-x-hidden">
@@ -480,70 +432,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Popular Highway Routes */}
-      <section className="py-14 sm:py-20 bg-slate-50 border-t border-slate-200" id="routes">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3">
-              <Clock className="w-3.5 h-3.5 text-amber-700" />
-              <span>Frequent Corridors</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Popular <span className="text-amber-600">Cab Routes</span>
-            </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
-              Guaranteed doorstep pickup & one-way fares with no return charges.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {popularRoutes.map((r, idx) => (
-              <div
-                key={idx}
-                className="bg-white p-5 sm:p-6 rounded-2xl border border-slate-200 hover:border-amber-400 hover:shadow-md transition duration-200 flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between text-xs font-bold text-slate-500 mb-3">
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-amber-600 shrink-0" /> {r.time}
-                    </span>
-                    <span className="text-amber-600 font-black">{r.fare}</span>
-                  </div>
-
-                  <h3 className="text-sm sm:text-base font-extrabold text-slate-900 flex items-center gap-2 mb-4">
-                    <span>{r.from}</span>
-                    <ArrowRightLeft className="w-4 h-4 text-amber-500 shrink-0" />
-                    <span>{r.to}</span>
-                  </h3>
-                </div>
-
-                <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                  <a
-                    href={`https://wa.me/919737872972?text=${encodeURIComponent(
-                      `Hello Rajvee Cab, I want to book a cab from ${r.from} to ${r.to}.`
-                    )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-bold text-slate-900 hover:text-amber-600 flex items-center gap-1"
-                  >
-                    <span>Instant Booking</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
-                  </a>
-
-                  <Link
-                    href={r.link}
-                    className="text-xs font-semibold text-slate-500 hover:text-slate-900 transition"
-                  >
-                    View Details →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-      </section>
+      {/* 6. Popular Highway Routes (Interactive Rajkot HQ & Ahmedabad Hub) */}
+      <RoutesSection />
 
       {/* 7. All Gujarat Coverage Network (25+ Cities) */}
       <GujaratNetworkSection />
