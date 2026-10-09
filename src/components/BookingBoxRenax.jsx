@@ -139,7 +139,7 @@ export default function BookingBoxRenax() {
       </div>
 
       {/* Form Fields */}
-      <form onSubmit={handleBooking} className="space-y-3">
+      <form onSubmit={handleBooking} autoComplete="on" className="space-y-3">
         
         {/* Pickup & Drop with Swap Button */}
         <div className="relative space-y-2.5 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-3">
@@ -279,7 +279,7 @@ export default function BookingBoxRenax() {
         {/* Contact Phone with Native Mobile Auto-Fill */}
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label htmlFor="bookingPhone" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider">
+            <label htmlFor="phone" className="block text-[10px] sm:text-[11px] font-bold text-slate-700 uppercase tracking-wider">
               Your Phone (Auto-Detect / 1-Tap Fill)
             </label>
             {canPickContact && (
@@ -295,13 +295,14 @@ export default function BookingBoxRenax() {
           <div className="relative">
             <Phone className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
             <input
-              id="bookingPhone"
-              name="tel"
+              id="phone"
+              name="phone"
               type="tel"
               inputMode="tel"
               autoComplete="tel tel-national"
               autoCapitalize="off"
               autoCorrect="off"
+              maxLength={10}
               value={contactNo}
               onChange={(e) => {
                 setContactNo(e.target.value);

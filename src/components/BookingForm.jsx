@@ -136,7 +136,7 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
         </p>
       </div>
 
-      <form onSubmit={handleBooking} className="space-y-3.5 sm:space-y-4">
+      <form onSubmit={handleBooking} autoComplete="on" className="space-y-3.5 sm:space-y-4">
         {/* Trip Type Tabs - Single sleek row for mobile and desktop (matches Home Page) */}
         <div className="grid grid-cols-4 gap-1 p-1 bg-slate-100 rounded-xl mb-3.5">
           {tripOptions.map((opt) => (
@@ -243,7 +243,7 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
         {/* Phone Number with Auto-Fill / Suggestion */}
         <div>
           <div className="flex items-center justify-between mb-1">
-            <label htmlFor="booking-phone-input" className="block text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
+            <label htmlFor="phone" className="block text-xs font-bold text-slate-700 uppercase tracking-wider flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-slate-500 shrink-0" /> Your Mobile Number
             </label>
             {canPickContact && (
@@ -258,12 +258,13 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
           </div>
           <input
             type="tel"
-            id="booking-phone-input"
-            name="tel"
+            id="phone"
+            name="phone"
             autoComplete="tel tel-national"
             inputMode="tel"
             autoCapitalize="off"
             autoCorrect="off"
+            maxLength={10}
             value={phone}
             onChange={(e) => {
               const val = e.target.value;
