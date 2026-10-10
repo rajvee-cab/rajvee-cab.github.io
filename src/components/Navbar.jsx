@@ -18,6 +18,7 @@ import {
   Instagram,
 } from 'lucide-react';
 import { formatWhatsAppGeneral } from '@/utils/whatsapp';
+import { trackCallClick, trackWhatsAppClick } from '@/utils/analytics';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,6 +95,7 @@ export default function Navbar() {
                   </div>
                   <a
                     href="tel:+919737872972"
+                    onClick={() => trackCallClick('navbar_header')}
                     aria-label="Call Rajvee Cab at +91 97378 72972"
                     className="text-xs sm:text-[13px] 2xl:text-[14px] font-bold text-white hover:text-amber-400 transition tracking-wide"
                   >
@@ -105,6 +107,7 @@ export default function Navbar() {
               {/* WhatsApp Button (always visible, compact on mobile) */}
               <a
                 href={formatWhatsAppGeneral('Cab Booking')}
+                onClick={() => trackWhatsAppClick('navbar_header')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat with Rajvee Cab on WhatsApp"
@@ -185,6 +188,10 @@ export default function Navbar() {
                 </div>
                 <a
                   href="tel:+919737872972"
+                  onClick={() => {
+                    trackCallClick('navbar_drawer');
+                    setIsOpen(false);
+                  }}
                   className="text-base font-black text-white hover:text-amber-400 transition block"
                 >
                   +91 97378 72972
@@ -198,7 +205,10 @@ export default function Navbar() {
                 href={formatWhatsAppGeneral('Mobile Cab Booking')}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => setIsOpen(false)}
+                onClick={() => {
+                  trackWhatsAppClick('navbar_drawer');
+                  setIsOpen(false);
+                }}
                 className="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 text-center font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md transition"
               >
                 <MessageCircle className="w-4 h-4" />

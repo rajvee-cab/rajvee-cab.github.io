@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Send, MapPin, Navigation, Calendar, Car, Phone, ShieldCheck, Zap, ArrowUpDown, ChevronDown } from 'lucide-react';
 import { formatWhatsAppBooking } from '@/utils/whatsapp';
+import { trackLeadSubmission } from '@/utils/analytics';
 
 export default function BookingBoxRenax() {
   const [carType, setCarType] = useState('Swift Dzire (Sedan 4+1)');
@@ -81,7 +82,15 @@ export default function BookingBoxRenax() {
       ).catch(() => {});
     } catch (_) {}
 
-    // 2. Open WhatsApp with clean, readable booking format
+    // 2. Track lead event in Google Analytics
+    trackLeadSubmission({
+      tripType: tripLabel,
+      carType,
+      pickup,
+      drop,
+    });
+
+    // 3. Open WhatsApp with clean, readable booking format
     const whatsappUrl = formatWhatsAppBooking({
       tripType: tripLabel,
       carType,

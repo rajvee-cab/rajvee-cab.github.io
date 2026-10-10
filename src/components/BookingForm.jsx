@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { MapPin, Navigation, Calendar, Car, Phone, Send, ArrowUpDown } from 'lucide-react';
 import { formatWhatsAppBooking } from '@/utils/whatsapp';
+import { trackLeadSubmission } from '@/utils/analytics';
 
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzV3ecNe2LvlUYMgDxBuMphd6Z5y1uYAIwPHfuzORcUNk7EFVE0kLjDl8TKxU_972aig/exec';
 
@@ -88,7 +89,15 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
       }).catch(() => {});
     } catch (_) {}
 
-    // 2. Open WhatsApp with formatted booking message
+    // 2. Track lead event in Google Analytics
+    trackLeadSubmission({
+      tripType: tripLabel,
+      carType,
+      pickup,
+      drop,
+    });
+
+    // 3. Open WhatsApp with formatted booking message
     const whatsappUrl = formatWhatsAppBooking({
       tripType: tripLabel,
       carType,
