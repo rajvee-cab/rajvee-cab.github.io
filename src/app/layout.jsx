@@ -3,6 +3,7 @@ import { Outfit } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MobileStickyBar from '@/components/MobileStickyBar';
+import GlobalWhatsAppTracker from '@/components/GlobalWhatsAppTracker';
 import Script from 'next/script';
 
 const outfit = Outfit({
@@ -166,6 +167,7 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        <GlobalWhatsAppTracker />
         <Navbar />
         <main className="flex-grow pt-[68px] sm:pt-[76px]">{children}</main>
         <Footer />
