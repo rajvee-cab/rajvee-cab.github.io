@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Send, MapPin, Navigation, Calendar, Car, Phone, ShieldCheck, Zap, ArrowUpDown, ChevronDown } from 'lucide-react';
 import { formatWhatsAppBooking } from '@/utils/whatsapp';
 import { trackLeadSubmission } from '@/utils/analytics';
+import { recordLeadToGoogleSheet } from '@/utils/leads';
 
 export default function BookingBoxRenax() {
   const [carType, setCarType] = useState('Swift Dzire (Sedan 4+1)');
@@ -70,17 +71,7 @@ export default function BookingBoxRenax() {
     };
 
     // 1. Record lead to Google Sheet (Google Excel)
-    try {
-      fetch(
-        'https://script.google.com/macros/s/AKfycbzzV3ecNe2LvlUYMgDxBuMphd6Z5y1uYAIwPHfuzORcUNk7EFVE0kLjDl8TKxU_972aig/exec',
-        {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(payload),
-        }
-      ).catch(() => {});
-    } catch (_) {}
+    recordLeadToGoogleSheet(payload);
 
     // 2. Track lead event in Google Analytics
     trackLeadSubmission({

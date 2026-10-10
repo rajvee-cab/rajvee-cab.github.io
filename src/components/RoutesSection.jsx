@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRightLeft, Clock, ChevronRight, MapPin } from 'lucide-react';
 import { formatWhatsAppRoute } from '@/utils/whatsapp';
+import { recordLeadToGoogleSheet } from '@/utils/leads';
 
 const rajkotRoutes = [
   {
@@ -257,6 +258,14 @@ export default function RoutesSection() {
               <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between">
                 <a
                   href={formatWhatsAppRoute({ from: route.from, to: route.to, fare: route.fare })}
+                  onClick={() =>
+                    recordLeadToGoogleSheet({
+                      tripType: 'Route Card Fare Inquiry',
+                      pickup: route.from,
+                      drop: route.to,
+                      carType: route.fare,
+                    })
+                  }
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`WhatsApp fare inquiry for cab from ${route.from} to ${route.to}`}
