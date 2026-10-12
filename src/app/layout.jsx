@@ -148,7 +148,7 @@ export default function RootLayout({ children }) {
         {/* Google Analytics (gtag.js) - Direct Head Execution */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-Q1G8Y8TLVZ"
+          src="https://www.googletagmanager.com/gtag/js?id=G-Q158Y8TLVZ"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -156,7 +156,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-Q1G8Y8TLVZ', {
+              gtag('config', 'G-Q158Y8TLVZ', {
                 page_path: window.location.pathname,
               });
             `,
