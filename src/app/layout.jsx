@@ -4,7 +4,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MobileStickyBar from '@/components/MobileStickyBar';
 import GlobalWhatsAppTracker from '@/components/GlobalWhatsAppTracker';
-import Script from 'next/script';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -146,16 +145,12 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaTaxiService) }}
         />
-      </head>
-      <body className={`${outfit.className} bg-white text-slate-900 antialiased min-h-screen flex flex-col pb-16 md:pb-0`}>
-        {/* Google Analytics (gtag.js) */}
-        <Script
-          strategy="afterInteractive"
+        {/* Google Analytics (gtag.js) - Direct Head Execution */}
+        <script
+          async
           src="https://www.googletagmanager.com/gtag/js?id=G-Q1G8Y8TLVZ"
         />
-        <Script
-          id="google-analytics-init"
-          strategy="afterInteractive"
+        <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
@@ -167,6 +162,8 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+      </head>
+      <body className={`${outfit.className} bg-white text-slate-900 antialiased min-h-screen flex flex-col pb-16 md:pb-0`}>
         <GlobalWhatsAppTracker />
         <Navbar />
         <main className="flex-grow pt-[68px] sm:pt-[76px]">{children}</main>
