@@ -137,10 +137,24 @@ export default function RootLayout({ children }) {
     ],
   };
 
+  const schemaWebSite = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Rajvee Cab',
+    alternateName: ['Rajvee Cab Rajkot', 'RajveeCab', 'Rajvee Travels'],
+    url: 'https://rajvee-cab.github.io/',
+  };
+
   return (
     <html lang="en-IN">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        {/* Google Site Name Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaWebSite) }}
+        />
+        {/* Taxi Service Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaTaxiService) }}
