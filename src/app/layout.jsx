@@ -15,12 +15,21 @@ export const viewport = {
   width: 'device-width',
   initialScale: 1,
   maximumScale: 5,
+  themeColor: '#0f172a',
 };
 
 export const metadata = {
   metadataBase: new URL('https://rajvee-cab.github.io'),
   title: 'Rajvee Cab | 24x7 Cab Booking & Car Rental in Rajkot, Ahmedabad, Gujarat Taxi Hire',
   description: 'Book 24x7 cab service & car rental with driver across Rajkot, Ahmedabad, Surat, Vadodara & Gujarat with Rajvee Cab. Best rates for One-Way taxi, rent Ertiga, Innova Crysta & Dzire. Call/WhatsApp +91 97378 72972.',
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/',
+  },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/frontend/imgs/logo-w.png',
+  },
   keywords: [
     'Rajvee Cab',
     'cab service Rajkot',
@@ -56,11 +65,11 @@ export const metadata = {
   openGraph: {
     title: 'Rajvee Cab | Best Cab Service & Car Rental in Rajkot, Ahmedabad & Gujarat',
     description: 'Safe, sanitized, budget-friendly cabs and car rental with driver in Rajkot, Ahmedabad, and outstation routes. Instant booking on WhatsApp & Call!',
-    url: 'https://rajvee-cab.github.io',
+    url: 'https://rajvee-cab.github.io/',
     siteName: 'Rajvee Cab',
     images: [
       {
-        url: '/images/welcome.jpg',
+        url: 'https://rajvee-cab.github.io/images/welcome.jpg',
         width: 1200,
         height: 630,
         alt: 'Rajvee Cab Gujarat',
@@ -73,7 +82,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Rajvee Cab | 24x7 Cab Service & Car Rental in Gujarat',
     description: 'Book One-Way & Round Trip Cabs across Gujarat at the best rates. Rent Swift Dzire, Ertiga, Innova Crysta.',
-    images: ['/images/welcome.jpg'],
+    images: ['https://rajvee-cab.github.io/images/welcome.jpg'],
   },
 };
 
