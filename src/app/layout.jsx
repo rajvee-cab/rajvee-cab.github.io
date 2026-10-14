@@ -19,18 +19,24 @@ export const viewport = {
 
 export const metadata = {
   metadataBase: new URL('https://rajvee-cab.github.io'),
-  title: 'Rajvee Cab | 24x7 Cab Booking in Rajkot, Ahmedabad & Gujarat Taxi Service',
-  description: 'Rajvee Cab provides reliable, affordable 24x7 cab services across Rajkot, Ahmedabad, Surat, and Gujarat. Best rates for One-Way taxi, Round-Trip, Airport Drops, and Outstation cabs. Book instantly via WhatsApp or Call: +91 97378 72972.',
+  title: 'Rajvee Cab | 24x7 Cab Booking & Car Rental in Rajkot, Ahmedabad, Gujarat Taxi Hire',
+  description: 'Book 24x7 cab service & car rental with driver across Rajkot, Ahmedabad, Surat, Vadodara & Gujarat with Rajvee Cab. Best rates for One-Way taxi, rent Ertiga, Innova Crysta & Dzire. Call/WhatsApp +91 97378 72972.',
   keywords: [
     'Rajvee Cab',
     'cab service Rajkot',
     'taxi service Ahmedabad',
+    'car rental in Rajkot',
+    'rent car Ahmedabad',
+    'rent cab Gujarat',
+    'rent taxi Rajkot',
+    'car hire with driver',
     'Rajkot to Ahmedabad cab',
     'Ahmedabad to Rajkot taxi',
     'Hirasar airport cab Rajkot',
     'one way cab Gujarat',
     'Innova Crysta rental Rajkot',
-    'Ertiga cab booking',
+    'Ertiga on rent in Rajkot',
+    'Swift Dzire cab rental',
     'Rajvee Travels',
   ],
   authors: [{ name: 'Rajvee Cab' }],
@@ -48,8 +54,8 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: 'Rajvee Cab | Best & Affordable Cab Service in Rajkot & Gujarat',
-    description: 'Safe, sanitized, budget-friendly cabs in Rajkot, Ahmedabad, and outstation routes. Instant booking on WhatsApp & Call!',
+    title: 'Rajvee Cab | Best Cab Service & Car Rental in Rajkot, Ahmedabad & Gujarat',
+    description: 'Safe, sanitized, budget-friendly cabs and car rental with driver in Rajkot, Ahmedabad, and outstation routes. Instant booking on WhatsApp & Call!',
     url: 'https://rajvee-cab.github.io',
     siteName: 'Rajvee Cab',
     images: [
@@ -65,8 +71,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Rajvee Cab | 24x7 Cab Service in Rajkot & Ahmedabad',
-    description: 'Book One-Way & Round Trip Cabs across Gujarat at the best rates.',
+    title: 'Rajvee Cab | 24x7 Cab Service & Car Rental in Gujarat',
+    description: 'Book One-Way & Round Trip Cabs across Gujarat at the best rates. Rent Swift Dzire, Ertiga, Innova Crysta.',
     images: ['/images/welcome.jpg'],
   },
 };
@@ -76,9 +82,16 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab',
-    serviceType: 'One-Way Outstation & Airport Cab Service',
+    serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver',
     url: 'https://rajvee-cab.github.io/',
-    description: 'Rajvee Cab provides professional, on-time, and budget-friendly outstation, one-way, round-trip, and airport taxi services across Rajkot, Ahmedabad, Surat, Vadodara, and all 33 districts of Gujarat.',
+    description: 'Rajvee Cab provides professional, on-time, and budget-friendly outstation, one-way, round-trip, and airport taxi services and car rental across Rajkot, Ahmedabad, Surat, Vadodara, and all 33 districts of Gujarat.',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '1850',
+    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',
@@ -88,6 +101,13 @@ export default function RootLayout({ children }) {
       image: 'https://rajvee-cab.github.io/images/welcome.jpg',
       telephone: '+919737872972',
       priceRange: '₹₹',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        bestRating: '5',
+        worstRating: '1',
+        ratingCount: '1850',
+      },
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Greenland Chokdi',

@@ -4,17 +4,23 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
 export const metadata = {
-  title: 'Cab Service in Rajkot | Best 24x7 Taxi & Hirasar Airport Cab - Rajvee Cab',
-  description: 'Book the best cab service in Rajkot with Rajvee Cab. Lowest taxi fares for local Rajkot travel, Hirasar Airport drops, and outstation trips to Ahmedabad, Somnath, and Dwarka. Call +91 97378 72972.',
+  title: 'Cab Service & Car Rental in Rajkot | Rent Taxi, Airport Cab & Car Hire - Rajvee Cab',
+  description: 'Book top-rated cab service & car rental in Rajkot with Rajvee Cab. Rent Dzire, Ertiga & Innova Crysta with verified driver. 24x7 local, Hirasar Airport & outstation drops. Call +91 97378 72972.',
   keywords: [
     'cab service in Rajkot',
     'taxi service Rajkot',
-    'Rajkot taxi booking',
-    'Rajkot airport cab',
-    'Hirasar airport taxi',
-    'Rajkot to Ahmedabad cab',
+    'car rental in Rajkot',
+    'rent car Rajkot',
+    'rent cab in Rajkot',
+    'rent taxi Rajkot',
+    'Ertiga on rent in Rajkot',
+    'Innova Crysta rental Rajkot',
+    'Swift Dzire rent Rajkot',
+    'Hirasar airport taxi contact number',
+    'car hire with driver Rajkot',
     'cheap cab in Rajkot',
     'Greenland chokdi cab Rajkot',
+    'Kalawad road taxi Rajkot',
   ],
 };
 
@@ -23,26 +29,33 @@ export default function RajkotCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Rajkot',
-    serviceType: 'Cab and Taxi Service in Rajkot',
+    serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Rajkot',
     url: 'https://rajvee-cab.github.io/cab-service-rajkot/',
-    description: 'Premier cab and taxi booking service in Rajkot covering Hirasar Airport, Kalawad Road, Greenland Chokdi, and outstation trips.',
+    description: 'Premier cab service, taxi booking, and car rental with driver in Rajkot covering Hirasar Airport, Kalawad Road, Greenland Chokdi, and outstation trips.',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '940',
+    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',
       telephone: '+919737872972',
       address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Greenland Chokdi',
-      addressLocality: 'Rajkot',
-      addressRegion: 'Gujarat',
-      postalCode: '360003',
-      addressCountry: 'IN',
-    },
+        '@type': 'PostalAddress',
+        streetAddress: 'Greenland Chokdi',
+        addressLocality: 'Rajkot',
+        addressRegion: 'Gujarat',
+        postalCode: '360003',
+        addressCountry: 'IN',
+      },
       geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 22.3039,
-      longitude: 70.8022,
-    },
+        '@type': 'GeoCoordinates',
+        latitude: 22.3039,
+        longitude: 70.8022,
+      },
     },
     areaServed: {
       '@type': 'City',
@@ -65,11 +78,11 @@ export default function RajkotCabPage() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold mb-4 sm:mb-6 max-w-full truncate">
                 <MapPin className="w-4 h-4 text-amber-600 shrink-0" />
-                <span className="truncate">Rajkot Main Headquarters - 24x7 Taxi Service</span>
+                <span className="truncate">Rajkot Main Headquarters - 24x7 Cab & Car Rental</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900 mb-4 sm:mb-6">
-                Best & Most Affordable <span className="text-amber-600">Cab Service in Rajkot</span>
+                Best Cab Service & <span className="text-amber-600">Car Rental in Rajkot</span>
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">

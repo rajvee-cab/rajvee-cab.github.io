@@ -25,40 +25,40 @@ import {
 export default function HomePage() {
   const carsData = [
     {
-      name: 'Swift Dzire',
-      category: 'Sedan (4+1)',
+      name: 'Swift Dzire (Rent Sedan)',
+      category: 'Sedan Rental (4+1)',
       img: '/frontend/imgs/car/SWIFT.webp',
       rate: '₹11 - ₹12 / KM',
       seats: '4 Passengers',
       bags: '2 Large Bags',
-      ideal: 'Airport drops, solo commuters & small family trips',
+      ideal: 'Airport drops, solo commuters & budget car rental with driver',
     },
     {
-      name: 'Hyundai Aura',
-      category: 'Sedan (4+1)',
+      name: 'Hyundai Aura (Economy Cab)',
+      category: 'Sedan Rental (4+1)',
       img: '/frontend/imgs/car/AURA.webp',
       rate: '₹11 - ₹12 / KM',
       seats: '4 Passengers',
       bags: '2 Large Bags',
-      ideal: 'Smooth highway cruising with maximum fuel efficiency',
+      ideal: 'Smooth highway cruising with maximum luggage boot space',
     },
     {
-      name: 'Maruti Ertiga',
-      category: 'SUV (6+1)',
+      name: 'Maruti Ertiga (Rent 7 Seater)',
+      category: 'SUV Rental (6+1)',
       img: '/frontend/imgs/car/ERTIGA.webp',
       rate: '₹14 - ₹15 / KM',
       seats: '6 Passengers',
       bags: '3-4 Bags',
-      ideal: 'Large family vacations, group travel & outstation trips',
+      ideal: 'Large family vacations, group travel & outstation car hire',
     },
     {
-      name: 'Toyota Innova Crysta',
-      category: 'Luxury (7+1)',
+      name: 'Toyota Innova Crysta (Rent Luxury)',
+      category: 'Luxury SUV Rental (7+1)',
       img: '/frontend/imgs/car/INNOVA.webp',
       rate: '₹18 - ₹20 / KM',
       seats: '7 Passengers',
       bags: '5+ Bags',
-      ideal: 'VIP corporate guests, executive comfort & long journeys',
+      ideal: 'VIP corporate guests, executive luxury & long journeys',
     },
   ];
 
@@ -201,18 +201,18 @@ export default function HomePage() {
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/90 border border-amber-500/30 text-amber-400 text-[10px] sm:text-xs font-bold uppercase tracking-wide sm:tracking-wider max-w-full shadow-sm">
                 <Sparkles className="w-3.5 h-3.5 shrink-0 text-amber-400" />
                 <span className="truncate sm:whitespace-normal">
-                  24x7 Outstation &amp; Airport Cab Service in Gujarat
+                  24x7 Cab Booking &amp; Car Rental Service in Gujarat
                 </span>
               </div>
 
               {/* Main Headline */}
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-snug sm:leading-tight break-words">
-                Premium One-Way & Outstation <span className="text-amber-400">Cab Service</span> in Gujarat
+                Cab Booking &amp; Car Rental in Gujarat | <span className="text-amber-400">Rent Taxi With Driver</span>
               </h1>
 
               {/* Subtitle */}
               <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed font-normal">
-                Travel comfortably across Rajkot, Ahmedabad, Surat, and 25+ cities. Professional chauffeurs, chilled AC sedans & SUVs, zero return charges, and transparent per-KM billing.
+                Rent a car with verified driver or book one-way taxi across Rajkot, Ahmedabad, Surat, Vadodara, and 25+ cities. Professional chauffeurs, chilled AC sedans &amp; SUVs, zero return fare, and transparent billing.
               </p>
 
               {/* Trust Indicators */}
@@ -221,10 +221,13 @@ export default function HomePage() {
                   <Check className="w-4 h-4 text-emerald-400 shrink-0" /> Doorstep Pickup
                 </span>
                 <span className="flex items-center gap-1">
-                  <Check className="w-4 h-4 text-emerald-400 shrink-0" /> Zero Surge Charges
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" /> Zero Return Fare
                 </span>
                 <span className="flex items-center gap-1">
                   <Check className="w-4 h-4 text-emerald-400 shrink-0" /> 24x7 Airport Transfers
+                </span>
+                <span className="flex items-center gap-1">
+                  <Check className="w-4 h-4 text-emerald-400 shrink-0" /> Chauffeur-Driven Cars
                 </span>
               </div>
 
@@ -367,13 +370,13 @@ export default function HomePage() {
           <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider mb-2 sm:mb-3">
               <Car className="w-3.5 h-3.5 text-amber-700" />
-              <span>Commercial Fleet</span>
+              <span>Car Rental &amp; Taxi Fleet</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Our Fleet & <span className="text-amber-600">Transparent Tariffs</span>
+              Car Rental Options &amp; <span className="text-amber-600">Transparent Tariffs</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
-              Every vehicle is commercially registered, fully air-conditioned, sanitized, and driven by an experienced highway driver.
+              Rent Swift Dzire, Maruti Ertiga, or Innova Crysta with experienced driver. All cars commercially registered, air-conditioned &amp; sanitized.
             </p>
           </div>
 
@@ -426,10 +429,10 @@ export default function HomePage() {
                     href={formatWhatsAppCar({ name: car.name, category: car.category, rate: car.rate })}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`Book ${car.name} on WhatsApp`}
+                    aria-label={`Rent or Book ${car.name} on WhatsApp`}
                     className="w-full py-2.5 rounded-xl bg-slate-900 hover:bg-amber-500 hover:text-slate-950 text-white text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition duration-150"
                   >
-                    <span>Book {car.name}</span>
+                    <span>Rent / Book {car.name.split(' ')[0]} {car.name.split(' ')[1] || ''}</span>
                     <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
                   </a>
                 </div>

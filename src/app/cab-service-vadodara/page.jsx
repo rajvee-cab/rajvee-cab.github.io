@@ -4,15 +4,20 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Landmark } from 'lucide-react';
 
 export const metadata = {
-  title: 'Cab Service in Vadodara | 24x7 Taxi & Statue of Unity Tour - Rajvee Cab',
-  description: 'Book premium cab service in Vadodara with Rajvee Cab. Best rates for Vadodara Airport, Railway Station, Statue of Unity (Kevadia) tours, and outstation drops to Ahmedabad, Surat, and Mumbai. Call +91 97378 72972.',
+  title: 'Cab Service & Car Rental in Vadodara | Rent Taxi, Airport Cab & Statue of Unity Tour - Rajvee Cab',
+  description: 'Book top-rated cab service & car rental in Vadodara with Rajvee Cab. Rent Dzire, Ertiga & Innova Crysta with driver. 24x7 local, airport taxi & Statue of Unity tours. Call +91 97378 72972.',
   keywords: [
     'cab service in Vadodara',
     'taxi service Vadodara',
-    'Vadodara to Statue of Unity cab',
-    'Vadodara airport taxi',
-    'Vadodara to Ahmedabad cab',
     'car rental Vadodara',
+    'rent car Vadodara',
+    'rent cab Vadodara',
+    'rent taxi Vadodara',
+    'Vadodara to Statue of Unity cab',
+    'car hire with driver Vadodara',
+    'Vadodara airport taxi',
+    'Ertiga on rent Vadodara',
+    'Innova Crysta rental Vadodara',
     'Baroda taxi booking',
   ],
 };
@@ -22,24 +27,31 @@ export default function VadodaraCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Vadodara',
-    serviceType: 'Cab and Taxi Service in Vadodara',
+    serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Vadodara',
     url: 'https://rajvee-cab.github.io/cab-service-vadodara/',
-    description: 'Premier 24x7 cab service in Vadodara covering Alkapuri, Vadodara Airport, Railway Station, Statue of Unity, and expressway rides to Ahmedabad and Surat.',
+    description: 'Premier 24x7 cab service and car rental with driver in Vadodara covering Alkapuri, Vadodara Airport, Railway Station, Statue of Unity, and expressway rides to Ahmedabad and Surat.',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '610',
+    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',
       telephone: '+919737872972',
       address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Vadodara',
-      addressRegion: 'Gujarat',
-      addressCountry: 'IN',
-    },
+        '@type': 'PostalAddress',
+        addressLocality: 'Vadodara',
+        addressRegion: 'Gujarat',
+        addressCountry: 'IN',
+      },
       geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 22.3072,
-      longitude: 73.1812,
-    },
+        '@type': 'GeoCoordinates',
+        latitude: 22.3072,
+        longitude: 73.1812,
+      },
     },
     areaServed: {
       '@type': 'City',
@@ -61,11 +73,11 @@ export default function VadodaraCabPage() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold mb-4 sm:mb-6">
                 <MapPin className="w-4 h-4 text-amber-600 shrink-0" />
-                <span className="truncate sm:whitespace-normal">Vadodara Central Hub - 24x7 Cab Service</span>
+                <span className="truncate sm:whitespace-normal">Vadodara Central Hub - 24x7 Cab & Car Rental</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900 mb-4 sm:mb-6">
-                Reliable & Budget <span className="text-amber-600">Cab Service in Vadodara</span>
+                Best Cab Service & <span className="text-amber-600">Car Rental in Vadodara</span>
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">

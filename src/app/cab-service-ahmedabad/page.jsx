@@ -4,15 +4,21 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
 export const metadata = {
-  title: 'Cab Service in Ahmedabad | Best 24x7 Taxi & SVPI Airport Cab - Rajvee Cab',
-  description: 'Book the best cab service in Ahmedabad with Rajvee Cab. Affordable taxi in Ahmedabad for local city travel, SVPI Airport drops, and outstation rides to Rajkot, Surat, and Mumbai. Call +91 97378 72972.',
+  title: 'Cab Service & Car Rental in Ahmedabad | Rent Taxi, SVPI Airport Cab & Car Hire - Rajvee Cab',
+  description: 'Book top-rated cab service & car rental in Ahmedabad with Rajvee Cab. Rent Dzire, Ertiga & Innova Crysta with driver. 24x7 local, SVPI Airport drops & outstation taxi. Call +91 97378 72972.',
   keywords: [
     'cab service in Ahmedabad',
     'taxi service Ahmedabad',
+    'car rental in Ahmedabad',
+    'rent car Ahmedabad',
+    'rent cab Ahmedabad',
+    'rent taxi Ahmedabad',
+    'Innova Crysta on rent in Ahmedabad',
+    'Ertiga on rent Ahmedabad',
     'Ahmedabad airport taxi',
+    'car hire with driver Ahmedabad',
     'Ahmedabad to Rajkot cab',
     'Ahmedabad to Surat taxi',
-    'cheap cab Ahmedabad',
     'SG highway taxi Ahmedabad',
   ],
 };
@@ -22,24 +28,31 @@ export default function AhmedabadCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Ahmedabad',
-    serviceType: 'Cab and Taxi Service in Ahmedabad',
+    serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Ahmedabad',
     url: 'https://rajvee-cab.github.io/cab-service-ahmedabad/',
-    description: 'Premier cab service in Ahmedabad covering SVPI Airport, SG Highway, Kalupur Railway Station, Bopal, Prahlad Nagar, and outstation trips.',
+    description: 'Premier cab service, taxi booking, and car rental with driver in Ahmedabad covering SVPI Airport, SG Highway, Kalupur Railway Station, Bopal, Prahlad Nagar, and outstation trips.',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '820',
+    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',
       telephone: '+919737872972',
       address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Ahmedabad',
-      addressRegion: 'Gujarat',
-      addressCountry: 'IN',
-    },
+        '@type': 'PostalAddress',
+        addressLocality: 'Ahmedabad',
+        addressRegion: 'Gujarat',
+        addressCountry: 'IN',
+      },
       geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 23.0225,
-      longitude: 72.5714,
-    },
+        '@type': 'GeoCoordinates',
+        latitude: 23.0225,
+        longitude: 72.5714,
+      },
     },
     areaServed: {
       '@type': 'City',
@@ -62,11 +75,11 @@ export default function AhmedabadCabPage() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold mb-4 sm:mb-6 max-w-full truncate">
                 <MapPin className="w-4 h-4 text-amber-600 shrink-0" />
-                <span className="truncate">Ahmedabad Operational Hub - 24x7 Service</span>
+                <span className="truncate">Ahmedabad Operational Hub - 24x7 Cab & Car Rental</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900 mb-4 sm:mb-6">
-                Fast & Reliable <span className="text-amber-600">Cab Service in Ahmedabad</span>
+                Best Cab Service & <span className="text-amber-600">Car Rental in Ahmedabad</span>
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">

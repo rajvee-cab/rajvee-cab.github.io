@@ -220,6 +220,50 @@ export default function Footer() {
 
         </div>
 
+        {/* Popular Searches & Car Rental Silo in Gujarat */}
+        <div className="pt-8 pb-8 border-t border-slate-800">
+          <h4 className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
+            Popular Searches &amp; Car Rental in Gujarat
+          </h4>
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] sm:text-xs text-slate-400 leading-relaxed">
+            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Car Rental in Rajkot</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Rent a Car with Driver Rajkot</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Rent Taxi in Rajkot</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">Car Rental in Ahmedabad</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">Rent Cab in Ahmedabad</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-surat" className="hover:text-amber-400 transition">Car Rental in Surat</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-vadodara" className="hover:text-amber-400 transition">Car Rental in Vadodara</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Ertiga on Rent in Rajkot</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">Innova Crysta on Rent Ahmedabad</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Swift Dzire on Rent</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/rajkot-to-hirasar-airport-cab" className="hover:text-amber-400 transition">Hirasar Airport Cab Contact Number</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/rajkot-to-ahmedabad-cab" className="hover:text-amber-400 transition">Rajkot to Ahmedabad One Way Taxi</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-gandhinagar" className="hover:text-amber-400 transition">Cab Booking Gandhinagar GIFT City</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-jamnagar" className="hover:text-amber-400 transition">Taxi Service Jamnagar</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-bhuj" className="hover:text-amber-400 transition">Bhuj Kutch Car Rental</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-somnath" className="hover:text-amber-400 transition">Somnath Dwarka Tour Taxi</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/ahmedabad-to-statue-of-unity-cab" className="hover:text-amber-400 transition">Statue of Unity Cab Booking</Link>
+            <span className="text-slate-700">•</span>
+            <Link href="/cab-service-morbi" className="hover:text-amber-400 transition">Morbi Ceramic Zone Taxi</Link>
+          </div>
+        </div>
+
         {/* Bottom Copyright */}
         <div className="pt-8 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p className="m-0">

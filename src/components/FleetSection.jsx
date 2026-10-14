@@ -5,47 +5,47 @@ import { formatWhatsAppCar } from '@/utils/whatsapp';
 const fleetData = [
   {
     name: 'Maruti Suzuki Dzire',
-    category: 'Sedan (Most Popular)',
+    category: 'Sedan Rental (4+1)',
     image: '/images/car/SWIFT.webp',
     seats: '4 Passengers + Driver',
     luggage: '2-3 Luggage Bags',
     price: 'Starting @ ₹11 - ₹12 / KM',
     popular: true,
-    features: ['Best for small families & airport drops', 'Chilled AC & comfortable legroom', 'Clean & sanitized interior'],
-    waMsg: 'Hello Rajvee Cab, I want to book Maruti Dzire Sedan.',
+    features: ['Best for car rental & airport drops', 'Chilled AC & comfortable legroom', 'Clean & sanitized interior'],
+    waMsg: 'Hello Rajvee Cab, I want to rent / book Maruti Dzire Sedan with driver.',
   },
   {
     name: 'Hyundai Aura',
-    category: 'Comfort Sedan',
+    category: 'Economy Sedan Rental',
     image: '/images/car/AURA.webp',
     seats: '4 Passengers + Driver',
     luggage: '2-3 Luggage Bags',
     price: 'Starting @ ₹11 - ₹12 / KM',
     popular: false,
-    features: ['Smooth highway ride', 'Ample boot space for luggage', 'Affordable outstation pricing'],
-    waMsg: 'Hello Rajvee Cab, I want to book Hyundai Aura Sedan.',
+    features: ['Smooth highway car hire', 'Ample boot space for luggage', 'Affordable outstation pricing'],
+    waMsg: 'Hello Rajvee Cab, I want to rent / book Hyundai Aura Sedan with driver.',
   },
   {
     name: 'Maruti Suzuki Ertiga',
-    category: 'Spacious Family SUV',
+    category: '7 Seater SUV Rental (6+1)',
     image: '/images/car/ERTIGA.webp',
     seats: '6 Passengers + Driver',
     luggage: '3-4 Luggage Bags',
     price: 'Starting @ ₹14 - ₹15 / KM',
     popular: false,
-    features: ['Perfect for group & family trips', 'Dual AC vents for all rows', 'Superior riding comfort'],
-    waMsg: 'Hello Rajvee Cab, I want to book Maruti Ertiga SUV.',
+    features: ['Perfect for group & family tours', 'Dual AC vents for all rows', 'Spacious & comfortable ride'],
+    waMsg: 'Hello Rajvee Cab, I want to rent Maruti Ertiga 7 seater SUV with driver.',
   },
   {
     name: 'Toyota Innova Crysta',
-    category: 'Premium Luxury SUV',
+    category: 'Luxury SUV Car Rental (7+1)',
     image: '/images/car/INNOVA.webp',
     seats: '7 Passengers + Driver',
     luggage: '5+ Luggage Bags',
     price: 'Starting @ ₹18 - ₹20 / KM',
     popular: false,
-    features: ['VIP luxury & unmatched comfort', 'Captain seats with plush cushioning', 'High-speed highway stability'],
-    waMsg: 'Hello Rajvee Cab, I want to book Toyota Innova Crysta.',
+    features: ['VIP luxury & executive car hire', 'Plush captain seats with ample legroom', 'Smooth high-speed highway stability'],
+    waMsg: 'Hello Rajvee Cab, I want to rent Toyota Innova Crysta luxury SUV with driver.',
   },
 ];
 
@@ -55,13 +55,13 @@ export default function FleetSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-14">
           <span className="inline-block px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide uppercase bg-amber-100 text-amber-800 mb-2 sm:mb-3">
-            Our Vehicle Fleet
+            Car Rental &amp; Taxi Fleet
           </span>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-            Clean, Comfortable & Modern Cab Fleet
+            Car Rental Fleet &amp; Taxi Hire in Gujarat
           </h2>
           <p className="mt-2 sm:mt-4 text-xs sm:text-base text-slate-600 leading-relaxed">
-            Choose from well-maintained sedans and SUVs with transparent per-KM and fixed route fares.
+            Rent Swift Dzire, Maruti Ertiga, or Toyota Innova Crysta with verified chauffeur. Available for outstation one-way drops, round trips, and airport transfers.
           </p>
         </div>
 
@@ -137,7 +137,7 @@ export default function FleetSection() {
                   }`}
                 >
                   <MessageCircle className="w-4 h-4 shrink-0" />
-                  <span>Book {car.name}</span>
+                  <span>Rent / Book {car.name.replace('Maruti Suzuki ', '').replace('Toyota ', '')}</span>
                 </a>
               </div>
             </div>

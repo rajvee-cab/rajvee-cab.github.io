@@ -4,16 +4,21 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
 export const metadata = {
-  title: 'Cab Service in Surat | 24x7 Taxi & Surat Airport Cab Booking - Rajvee Cab',
-  description: 'Book reliable cab service in Surat with Rajvee Cab. Clean AC taxis for Surat Airport drops, local city rides, and outstation trips to Mumbai, Ahmedabad, Vadodara, and Navsari. Call +91 97378 72972.',
+  title: 'Cab Service & Car Rental in Surat | Rent Taxi, Airport Cab & Car Hire - Rajvee Cab',
+  description: 'Book top-rated cab service & car rental in Surat with Rajvee Cab. Rent Dzire, Ertiga & Innova Crysta with driver. 24x7 local, Surat Airport & Mumbai drops. Call +91 97378 72972.',
   keywords: [
     'cab service in Surat',
     'taxi service Surat',
+    'car rental Surat',
+    'rent car Surat',
+    'rent cab Surat',
+    'rent taxi Surat',
     'Surat airport cab',
     'Surat to Mumbai cab',
-    'Surat to Ahmedabad taxi',
+    'car hire with driver Surat',
     'one way cab Surat',
-    'car rental Surat',
+    'Ertiga on rent Surat',
+    'Innova Crysta rental Surat',
   ],
 };
 
@@ -22,24 +27,31 @@ export default function SuratCabPage() {
     '@context': 'https://schema.org',
     '@type': 'TaxiService',
     name: 'Rajvee Cab Surat',
-    serviceType: 'Cab and Taxi Service in Surat',
+    serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Surat',
     url: 'https://rajvee-cab.github.io/cab-service-surat/',
-    description: 'Premier 24x7 cab service in Surat covering Surat Airport, Surat Railway Station, Varachha, Ring Road, Dumas, and outstation trips to Mumbai and Ahmedabad.',
+    description: 'Premier 24x7 cab service and car rental with driver in Surat covering Surat Airport, Surat Railway Station, Varachha, Ring Road, Dumas, and outstation trips to Mumbai and Ahmedabad.',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      bestRating: '5',
+      worstRating: '1',
+      ratingCount: '690',
+    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',
       telephone: '+919737872972',
       address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Surat',
-      addressRegion: 'Gujarat',
-      addressCountry: 'IN',
-    },
+        '@type': 'PostalAddress',
+        addressLocality: 'Surat',
+        addressRegion: 'Gujarat',
+        addressCountry: 'IN',
+      },
       geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 21.1702,
-      longitude: 72.8311,
-    },
+        '@type': 'GeoCoordinates',
+        latitude: 21.1702,
+        longitude: 72.8311,
+      },
     },
     areaServed: {
       '@type': 'City',
@@ -61,11 +73,11 @@ export default function SuratCabPage() {
             <div className="lg:col-span-7">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs sm:text-sm font-bold mb-4 sm:mb-6">
                 <MapPin className="w-4 h-4 text-amber-600 shrink-0" />
-                <span className="truncate sm:whitespace-normal">Surat Operational Hub - 24x7 On-Call Service</span>
+                <span className="truncate sm:whitespace-normal">Surat Operational Hub - 24x7 Cab & Car Rental</span>
               </div>
 
               <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900 mb-4 sm:mb-6">
-                Fast & Trusted <span className="text-amber-600">Cab Service in Surat</span>
+                Best Cab Service & <span className="text-amber-600">Car Rental in Surat</span>
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-600 mb-6 sm:mb-8 leading-relaxed">
