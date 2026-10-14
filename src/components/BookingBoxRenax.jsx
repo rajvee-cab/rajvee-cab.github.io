@@ -5,11 +5,11 @@ import { formatWhatsAppBooking } from '@/utils/whatsapp';
 import { trackLeadSubmission } from '@/utils/analytics';
 import { recordLeadToGoogleSheet } from '@/utils/leads';
 
-export default function BookingBoxRenax() {
+export default function BookingBoxRenax({ defaultPickup = 'Rajkot', defaultDrop = 'Ahmedabad' } = {}) {
   const [carType, setCarType] = useState('Swift Dzire (Sedan 4+1)');
   const [tripType, setTripType] = useState('one_way');
-  const [pickup, setPickup] = useState('Rajkot');
-  const [drop, setDrop] = useState('Ahmedabad');
+  const [pickup, setPickup] = useState(defaultPickup);
+  const [drop, setDrop] = useState(defaultDrop);
   const [date, setDate] = useState('');
   const [contactNo, setContactNo] = useState('');
 

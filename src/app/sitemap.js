@@ -1,6 +1,15 @@
+import { dynamicRoutesData } from '@/data/allRoutesData';
+
 export default function sitemap() {
   const baseUrl = 'https://rajvee-cab.github.io';
   const now = new Date();
+
+  const dynamicRouteEntries = dynamicRoutesData.map((route) => ({
+    url: `${baseUrl}/${route.slug}/`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }));
 
   return [
     // Main Homepage
@@ -166,5 +175,8 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+
+    // 500+ Programmatic Dynamic Gujarat Corridors
+    ...dynamicRouteEntries,
   ];
 }

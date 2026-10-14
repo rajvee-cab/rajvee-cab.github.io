@@ -5,6 +5,7 @@ import RoutesSection from '@/components/RoutesSection';
 import GujaratNetworkSection from '@/components/GujaratNetworkSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import FaqSection from '@/components/FaqSection';
+import PopularRoutesSection from '@/components/PopularRoutesSection';
 import { formatWhatsAppGeneral, formatWhatsAppCar } from '@/utils/whatsapp';
 import {
   Check,
@@ -544,6 +545,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Popular Taxi Services in Cities & Most Popular Routes */}
+      <PopularRoutesSection />
     </div>
   );
 }
