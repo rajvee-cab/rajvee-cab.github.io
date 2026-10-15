@@ -84,6 +84,15 @@ export const metadata = {
     description: 'Book One-Way & Round Trip Cabs across Gujarat at the best rates. Rent Swift Dzire, Ertiga, Innova Crysta.',
     images: ['https://rajvee-cab.github.io/images/welcome.jpg'],
   },
+  other: {
+    'geo.region': 'IN-GJ',
+    'geo.placename': 'Rajkot, Gujarat, India',
+    'geo.position': '22.3039;70.8022',
+    'ICBM': '22.3039, 70.8022',
+    'coverage': 'Gujarat, India',
+    'distribution': 'Local',
+    'rating': 'General',
+  },
 };
 
 export default function RootLayout({ children }) {
