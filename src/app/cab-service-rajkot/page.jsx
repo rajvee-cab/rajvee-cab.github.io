@@ -30,7 +30,7 @@ export const metadata = {
 export default function RajkotCabPage() {
   const rajkotSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
+    '@type': ['LocalBusiness', 'AutoRental'],
     name: 'Rajvee Cab Rajkot',
     serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Rajkot',
     url: 'https://rajvee-cab.github.io/cab-service-rajkot/',

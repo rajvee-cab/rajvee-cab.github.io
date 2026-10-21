@@ -28,7 +28,7 @@ export const metadata = {
 export default function VadodaraCabPage() {
   const vadodaraSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
+    '@type': ['LocalBusiness', 'AutoRental'],
     name: 'Rajvee Cab Vadodara',
     serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Vadodara',
     url: 'https://rajvee-cab.github.io/cab-service-vadodara/',

@@ -28,7 +28,7 @@ export const metadata = {
 export default function SuratCabPage() {
   const suratSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
+    '@type': ['LocalBusiness', 'AutoRental'],
     name: 'Rajvee Cab Surat',
     serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Surat',
     url: 'https://rajvee-cab.github.io/cab-service-surat/',

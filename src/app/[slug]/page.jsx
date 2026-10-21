@@ -86,7 +86,7 @@ export default function DynamicRoutePage({ params }) {
   // Structured Data: TaxiService + AggregateRating Schema
   const taxiSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
+    '@type': ['LocalBusiness', 'AutoRental'],
     name: `Rajvee Cab - ${route.origin} to ${route.destination} Cab Service`,
     provider: {
       '@type': 'LocalBusiness',
