@@ -50,6 +50,7 @@ export default function PopularRoutesSection() {
             <Link
               key={idx}
               href={city.link}
+              prefetch={false}
               className="hover:text-black hover:underline transition truncate"
               title={`Cab hire in ${city.name}`}
             >
@@ -93,6 +94,7 @@ export default function PopularRoutesSection() {
               <Link
                 key={idx}
                 href={`/${route.slug}/`}
+                prefetch={false}
                 className="hover:text-black hover:underline transition truncate"
                 title={`${route.origin} To ${route.destination} Taxi Service`}
               >
