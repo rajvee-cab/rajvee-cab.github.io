@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Building2, Landmark, Plane } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-gandhinagar/',
+  },
   title: 'Cab Service in Gandhinagar | GIFT City & Akshardham Taxi - Rajvee Cab',
   description: 'Book corporate & local cab service in Gandhinagar with Rajvee Cab. Premium AC cabs for GIFT City, Akshardham Temple, Mahatma Mandir, Ahmedabad Airport drops, and outstation trips across Gujarat. Call +91 97378 72972.',
   keywords: [

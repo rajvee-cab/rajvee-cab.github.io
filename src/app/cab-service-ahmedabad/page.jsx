@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-ahmedabad/',
+  },
   title: 'Cab Service & Car Rental in Ahmedabad | Rent Taxi, SVPI Airport Cab & Car Hire - Rajvee Cab',
   description: 'Book top-rated cab service & car rental in Ahmedabad with Rajvee Cab. Rent Dzire, Ertiga & Innova Crysta with driver. 24x7 local, SVPI Airport drops & outstation taxi. Call +91 97378 72972.',
   keywords: [

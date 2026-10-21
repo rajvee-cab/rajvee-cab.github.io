@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, Plane, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/rajkot-to-hirasar-airport-cab/',
+  },
   title: 'Rajkot to Hirasar Airport Cab | Fixed Fare Taxi Booking @ ₹699 - Rajvee Cab',
   description: 'Book Rajkot to Hirasar International Airport Cab (HSR) with Rajvee Cab. Lowest fixed fare starting @ ₹699. 24x7 doorstep flight pickup and drop. Clean AC Dzire, Ertiga, and Innova Crysta.',
   keywords: [

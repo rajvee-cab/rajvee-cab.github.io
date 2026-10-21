@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/ahmedabad-to-surat-cab/',
+  },
   title: 'Ahmedabad to Surat Cab | Best One-Way Taxi Fare Starting @ ₹3499 - Rajvee Cab',
   description: 'Book Ahmedabad to Surat Cab & Surat to Ahmedabad taxi with Rajvee Cab. Lowest one-way fare starting @ ₹3499. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. Doorstep pickup 24x7.',
   keywords: [

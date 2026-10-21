@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Landmark, Compass, Trees } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-junagadh/',
+  },
   title: 'Cab Service in Junagadh | Girnar Ropeway & Sasan Gir Safari Taxi - Rajvee Cab',
   description: 'Book trusted cab service in Junagadh with Rajvee Cab. Clean AC taxis for Girnar Ropeway, Bhavnath, Sasan Gir Lion Safari, Somnath Jyotirlinga, and Rajkot outstation drops. Call +91 97378 72972.',
   keywords: [

@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Landmark, Compass, Waves } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-dwarka/',
+  },
   title: 'Cab Service in Dwarka | Jagat Mandir & Beyt Dwarka Taxi - Rajvee Cab',
   description: 'Book trusted cab service in Dwarka with Rajvee Cab. Clean AC taxis for Dwarkadhish Temple, Beyt Dwarka, Nageshwar Jyotirlinga, Shivrajpur Blue Flag Beach, and outstation drops to Jamnagar, Rajkot, and Somnath. Call +91 97378 72972.',
   keywords: [

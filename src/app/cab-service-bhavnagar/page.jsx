@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Landmark } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-bhavnagar/',
+  },
   title: 'Cab Service in Bhavnagar | Palitana & Alang Taxi Booking - Rajvee Cab',
   description: 'Book reliable cab service in Bhavnagar with Rajvee Cab. Clean AC taxis for Bhavnagar Airport, Palitana Jain Temples, Alang Ship Breaking Yard, and one-way drops to Ahmedabad and Rajkot. Call +91 97378 72972.',
   keywords: [

@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/ahmedabad-to-mumbai-cab/',
+  },
   title: 'Ahmedabad to Mumbai Cab | Interstate Highway Taxi - Rajvee Cab',
   description: 'Book Ahmedabad to Mumbai Cab & Mumbai to Ahmedabad taxi with Rajvee Cab. Lowest one-way fare starting @ ₹7499. Clean AC Swift Dzire, Ertiga, and Innova Crysta. Direct drops to Mumbai Airport & South Bombay.',
   keywords: [

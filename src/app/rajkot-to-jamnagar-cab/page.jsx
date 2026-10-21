@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/rajkot-to-jamnagar-cab/',
+  },
   title: 'Rajkot to Jamnagar Cab | Best One-Way Taxi Fare Starting @ ₹1299 - Rajvee Cab',
   description: 'Book Rajkot to Jamnagar Cab & Jamnagar to Rajkot taxi with Rajvee Cab. Lowest one-way fare starting @ ₹1299. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. Direct drops to Reliance Greens & City.',
   keywords: [

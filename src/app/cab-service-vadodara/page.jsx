@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Landmark } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-vadodara/',
+  },
   title: 'Cab Service & Car Rental in Vadodara | Rent Taxi, Airport Cab & Statue of Unity Tour - Rajvee Cab',
   description: 'Book top-rated cab service & car rental in Vadodara with Rajvee Cab. Rent Dzire, Ertiga & Innova Crysta with driver. 24x7 local, airport taxi & Statue of Unity tours. Call +91 97378 72972.',
   keywords: [

@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/rajkot-to-vadodara-cab/',
+  },
   title: 'Rajkot to Vadodara (Baroda) Cab | Best One-Way Taxi Fare - Rajvee Cab',
   description: 'Book Rajkot to Vadodara Cab & Baroda to Rajkot taxi with Rajvee Cab. Lowest one-way fare starting @ ₹3499. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. 24x7 service. Call +91 97378 72972.',
   keywords: [

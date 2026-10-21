@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-surat/',
+  },
   title: 'Cab Service & Car Rental in Surat | Rent Taxi, Airport Cab & Car Hire - Rajvee Cab',
   description: 'Book top-rated cab service & car rental in Surat with Rajvee Cab. Rent Dzire, Ertiga & Innova Crysta with driver. 24x7 local, Surat Airport & Mumbai drops. Call +91 97378 72972.',
   keywords: [

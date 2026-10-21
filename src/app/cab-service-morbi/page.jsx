@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, ShieldCheck } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-morbi/',
+  },
   title: 'Cab Service in Morbi | Ceramic City Business Taxi Booking - Rajvee Cab',
   description: 'Book corporate & business cab service in Morbi Ceramic Hub with Rajvee Cab. On-time taxi to Rajkot Hirasar Airport, Ahmedabad, Mundra Port, and local ceramic industrial areas. Call +91 97378 72972.',
   keywords: [

@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Compass, Sun, Ship } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-bhuj/',
+  },
   title: 'Cab Service in Bhuj | Rann of Kutch & Mandvi Beach Taxi - Rajvee Cab',
   description: 'Book reliable cab service in Bhuj & Kutch with Rajvee Cab. Clean AC taxis for Rann Utsav (White Desert), Mandvi Beach, Kandla/Mundra Port, Bhuj Airport, and outstation drops to Rajkot and Ahmedabad. Call +91 97378 72972.',
   keywords: [

@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/rajkot-to-surat-cab/',
+  },
   title: 'Rajkot to Surat Cab | Best One-Way Taxi Fare - Rajvee Cab',
   description: 'Book Rajkot to Surat Cab & Surat to Rajkot taxi with Rajvee Cab. Affordable one-way taxi fare. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. Doorstep pickup 24x7. Call +91 97378 72972.',
   keywords: [

@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Landmark, Waves, Sun } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-somnath/',
+  },
   title: 'Cab Service in Somnath | Somnath Temple & Diu Taxi Booking - Rajvee Cab',
   description: 'Book reliable cab service in Somnath with Rajvee Cab. Clean AC taxis for Somnath Mahadev Jyotirlinga, Veraval Railway Station, Diu Island, Sasan Gir Safari, and one-way drops to Rajkot and Ahmedabad. Call +91 97378 72972.',
   keywords: [

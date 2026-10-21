@@ -4,6 +4,9 @@ import { formatWhatsAppRoute, formatWhatsAppRouteCar } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/rajkot-to-ahmedabad-cab/',
+  },
   title: 'Rajkot to Ahmedabad Cab | Best One-Way Taxi Fare Starting @ ₹2299 - Rajvee Cab',
   description: 'Book Rajkot to Ahmedabad Cab & Ahmedabad to Rajkot taxi with Rajvee Cab. Lowest one-way fare starting @ ₹2299. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. Doorstep pickup 24x7.',
   keywords: [

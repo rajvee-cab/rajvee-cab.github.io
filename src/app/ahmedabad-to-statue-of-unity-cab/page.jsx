@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, Landmark, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/ahmedabad-to-statue-of-unity-cab/',
+  },
   title: 'Ahmedabad to Statue of Unity Cab | Kevadia Tour Taxi Fare @ ₹3299 - Rajvee Cab',
   description: 'Book Ahmedabad to Statue of Unity (Kevadia) Cab & same-day return tour with Rajvee Cab. Lowest fare starting @ ₹3299. Clean AC Swift Dzire, Ertiga, and Innova Crysta. Sightseeing waiting included.',
   keywords: [

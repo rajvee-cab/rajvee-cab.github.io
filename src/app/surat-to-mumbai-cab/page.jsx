@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/surat-to-mumbai-cab/',
+  },
   title: 'Surat to Mumbai Cab | Best One-Way Taxi Fare Starting @ ₹4499 - Rajvee Cab',
   description: 'Book Surat to Mumbai Cab & Mumbai to Surat taxi with Rajvee Cab. Lowest one-way fare starting @ ₹4499. Direct drops to Mumbai Airport (BOM), Borivali, Bandra, and South Bombay. Clean AC sedans & SUVs 24x7.',
   keywords: [

@@ -4,6 +4,9 @@ import { formatWhatsAppRoute } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/rajkot-to-dwarka-cab/',
+  },
   title: 'Rajkot to Dwarka Cab | Best One-Way Taxi Fare Starting @ ₹2899 - Rajvee Cab',
   description: 'Book Rajkot to Dwarka Cab & Dwarka to Rajkot taxi with Rajvee Cab. Lowest one-way fare starting @ ₹2899. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. Doorstep pickup 24x7.',
   keywords: [

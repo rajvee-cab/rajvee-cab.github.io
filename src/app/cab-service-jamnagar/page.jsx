@@ -4,6 +4,9 @@ import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Landmark } from 'lucide-react';
 
 export const metadata = {
+  alternates: {
+    canonical: 'https://rajvee-cab.github.io/cab-service-jamnagar/',
+  },
   title: 'Cab Service in Jamnagar | Reliance Greens & Dwarka Taxi - Rajvee Cab',
   description: 'Book trusted cab service in Jamnagar with Rajvee Cab. Clean AC cabs for Reliance Greens (Motikhavdi), Nayara Energy, Jamnagar Airport, and one-way taxi to Dwarka, Rajkot, and Ahmedabad. Call +91 97378 72972.',
   keywords: [
