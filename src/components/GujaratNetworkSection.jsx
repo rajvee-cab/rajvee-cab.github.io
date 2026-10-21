@@ -137,7 +137,7 @@ export default function GujaratNetworkSection() {
               <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
-              <h4 className="text-base sm:text-lg font-bold text-white m-0 leading-snug">Need doorstep pickup in any Gujarat village or town?</h4>
+              <p className="text-base sm:text-lg font-bold text-white m-0 leading-snug">Need doorstep pickup in any Gujarat village or town?</p>
               <p className="text-xs text-slate-400 m-0 mt-1">Our network covers all 33 districts of Gujarat with 24x7 immediate chauffeur dispatch.</p>
             </div>
           </div>

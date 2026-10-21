@@ -112,10 +112,10 @@ export default function BookingBoxRenax({ defaultPickup = 'Rajkot', defaultDrop 
           <Zap className="w-3 h-3 text-amber-600" />
           <span>Quick Fare & Booking</span>
         </div>
-        <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight m-0">
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight m-0">
           Book Your Journey
-        </h3>
-        <p className="text-[11px] sm:text-xs text-slate-500 mt-0.5 m-0">
+        </h2>
+        <p className="text-[11px] sm:text-xs text-slate-600 mt-0.5 m-0">
           Upfront transparent pricing with zero surge charges.
         </p>
       </div>
@@ -328,7 +328,7 @@ export default function BookingBoxRenax({ defaultPickup = 'Rajkot', defaultDrop 
           </button>
         </div>
 
-        <div className="flex items-center justify-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-slate-500 pt-0.5">
+        <div className="flex items-center justify-center gap-1.5 text-[10px] sm:text-[11px] font-semibold text-slate-600 pt-0.5">
           <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
           <span>No prepayment required • Direct payment to driver</span>
         </div>

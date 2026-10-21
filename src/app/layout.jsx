@@ -27,8 +27,9 @@ export const metadata = {
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
-    apple: '/frontend/imgs/logo-w.png',
+    apple: '/icon-192.png',
   },
+  manifest: '/manifest.json',
   keywords: [
     'Rajvee Cab',
     'cab service Rajkot',
@@ -204,10 +205,17 @@ export default function RootLayout({ children }) {
                 s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q158Y8TLVZ';
                 document.head.appendChild(s);
               }
+              function initSW() {
+                if ('serviceWorker' in navigator) {
+                  navigator.serviceWorker.register('/sw.js').catch(function(){});
+                }
+              }
               if (document.readyState === 'complete') {
                 loadGtag();
+                initSW();
               } else {
                 window.addEventListener('load', function() {
+                  initSW();
                   if ('requestIdleCallback' in window) {
                     requestIdleCallback(loadGtag);
                   } else {

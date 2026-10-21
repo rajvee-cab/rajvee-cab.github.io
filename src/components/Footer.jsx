@@ -122,9 +122,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="lg:col-span-3">
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4">
+            <p className="text-white text-sm font-bold uppercase tracking-wider mb-4">
               Major Gujarat Hubs
-            </h4>
+            </p>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">
@@ -171,9 +171,9 @@ export default function Footer() {
 
           {/* Popular Corridors */}
           <div className="lg:col-span-4">
-            <h4 className="text-white text-sm font-bold uppercase tracking-wider mb-4">
+            <p className="text-white text-sm font-bold uppercase tracking-wider mb-4">
               Top Rajkot & Ahmedabad Routes
-            </h4>
+            </p>
             <div className="grid grid-cols-2 gap-2 text-xs">
               <Link href="/rajkot-to-ahmedabad-cab" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Ahmedabad
@@ -223,9 +223,9 @@ export default function Footer() {
 
         {/* Popular Searches & Car Rental Silo in Gujarat */}
         <div className="pt-8 pb-8 border-t border-slate-800">
-          <h4 className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
+          <p className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">
             Popular Searches &amp; Car Rental in Gujarat
-          </h4>
+          </p>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] sm:text-xs text-slate-400 leading-relaxed">
             <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Car Rental in Rajkot</Link>
             <span className="text-slate-700">•</span>

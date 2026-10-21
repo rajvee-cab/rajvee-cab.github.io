@@ -1,0 +1,26 @@
+{
+  "name": "Rajvee Cab - 24x7 Cab Booking & Car Rental in Gujarat",
+  "short_name": "Rajvee Cab",
+  "description": "Book 24x7 outstation cabs, one-way drops, airport transfers, and car rental with verified drivers across Rajkot, Ahmedabad, and Gujarat.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "orientation": "portrait-primary",
+  "categories": ["travel", "transportation", "business"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

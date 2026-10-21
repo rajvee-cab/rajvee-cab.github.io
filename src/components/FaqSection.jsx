@@ -126,7 +126,7 @@ export default function FaqSection() {
         {/* Quick Contact Footer under FAQ */}
         <div className="mt-10 sm:mt-12 p-5 sm:p-6 rounded-2xl bg-slate-900 text-white flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4">
           <div>
-            <h4 className="text-sm sm:text-base font-bold text-white m-0">Still have questions?</h4>
+            <p className="text-sm sm:text-base font-bold text-white m-0">Still have questions?</p>
             <p className="text-xs text-slate-400 m-0 mt-1">Our 24x7 Rajkot helpline is always available to help you plan your journey.</p>
           </div>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-3 shrink-0">

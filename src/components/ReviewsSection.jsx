@@ -256,9 +256,9 @@ export default function ReviewsSection() {
                     {/* Author & Verified Badge */}
                     <div className="pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
                       <div className="min-w-0">
-                        <h4 className="text-xs sm:text-sm font-bold text-slate-900 m-0 truncate">
+                        <h3 className="text-xs sm:text-sm font-bold text-slate-900 m-0 truncate">
                           {rev.name}
-                        </h4>
+                        </h3>
                         <p className="text-[11px] text-slate-600 m-0 truncate">
                           {rev.role}
                         </p>
