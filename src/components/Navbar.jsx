@@ -60,6 +60,7 @@ export default function Navbar() {
                   src="/frontend/imgs/logo-w.png"
                   alt="Rajvee Cab"
                   fill
+                  sizes="(max-width: 640px) 144px, 192px"
                   priority
                   className="object-contain object-left"
                 />

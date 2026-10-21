@@ -1,7 +1,11 @@
-import { MapPin, Phone, MessageCircle, Clock, Navigation, ExternalLink, ShieldCheck, Star } from 'lucide-react';
+'use client';
+import { useState } from 'react';
+import { MapPin, Phone, MessageCircle, Clock, Navigation, ExternalLink, Star, Layers } from 'lucide-react';
 import { formatWhatsAppGeneral } from '@/utils/whatsapp';
 
 export default function OfficeLocationMap() {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <section className="py-12 sm:py-16 bg-slate-900 text-white relative overflow-hidden" id="office-location">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -105,19 +109,61 @@ export default function OfficeLocationMap() {
             </div>
           </div>
 
-          {/* Right Column: Embedded Google Map */}
-          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl min-h-[350px] relative bg-slate-950">
-            <iframe
-              src="https://maps.google.com/maps?q=Greenland+Chokdi,+Rajkot,+Gujarat+360003&t=&z=14&ie=UTF8&iwloc=&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Rajvee Cab Official Location Map - Greenland Chokdi, Rajkot"
-              className="w-full h-full min-h-[350px] lg:min-h-full"
-            />
+          {/* Right Column: Google Maps (Optimized Facade for 95+ PageSpeed) */}
+          <div className="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl min-h-[350px] relative bg-slate-950 flex flex-col items-center justify-center">
+            {isLoaded ? (
+              <iframe
+                src="https://maps.google.com/maps?q=Greenland+Chokdi,+Rajkot,+Gujarat+360003&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Rajvee Cab Official Location Map - Greenland Chokdi, Rajkot"
+                className="w-full h-full min-h-[350px] lg:min-h-full"
+              />
+            ) : (
+              <div
+                onClick={() => setIsLoaded(true)}
+                className="w-full h-full min-h-[350px] p-6 flex flex-col items-center justify-center text-center cursor-pointer group relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900"
+              >
+                {/* Visual road grid backdrop */}
+                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+
+                {/* Animated Pulsing Map Pin */}
+                <div className="relative mb-4">
+                  <div className="w-16 h-16 rounded-full bg-amber-500/20 animate-ping absolute inset-0" />
+                  <div className="relative w-16 h-16 rounded-full bg-amber-500 text-slate-950 flex items-center justify-center shadow-xl group-hover:scale-110 transition duration-300">
+                    <MapPin className="w-8 h-8 fill-slate-950 text-amber-500" />
+                  </div>
+                </div>
+
+                <div className="relative z-10 max-w-md">
+                  <span className="inline-block px-3 py-1 rounded-full bg-slate-800 border border-slate-700 text-amber-400 text-xs font-bold uppercase tracking-wider mb-2">
+                    National Highway 27, Greenland Chokdi
+                  </span>
+                  <h4 className="text-lg sm:text-xl font-extrabold text-white mb-1.5">
+                    Rajvee Cab Rajkot Main Hub
+                  </h4>
+                  <p className="text-xs sm:text-sm text-slate-400 mb-5 leading-relaxed">
+                    Interactive Google Map with live navigation, junction view, and 24x7 fleet dispatch point.
+                  </p>
+
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setIsLoaded(true);
+                    }}
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 group-hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg transition duration-200"
+                  >
+                    <Layers className="w-4 h-4 shrink-0" />
+                    <span>Load Interactive Google Map</span>
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
 
         </div>

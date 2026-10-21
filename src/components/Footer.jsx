@@ -78,6 +78,7 @@ export default function Footer() {
                 src="/frontend/imgs/logo-w.png"
                 alt="Rajvee Cab"
                 fill
+                sizes="192px"
                 className="object-contain object-left"
               />
             </div>

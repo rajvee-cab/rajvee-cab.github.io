@@ -124,76 +124,13 @@ export default function HomePage() {
     },
   ];
 
-  const faqSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'How do I book a cab with Rajvee Cab?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'You can book instantly by calling our 24x7 desk at +91 97378 72972 or by sending a message on WhatsApp. Simply share your pickup location, drop city, travel date, and preferred car type. You will receive an immediate confirmation with driver and vehicle details.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Is one-way taxi service available without paying return fare?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes, 100%! With Rajvee Cab One-Way drops, you pay ONLY for the one-sided journey from your pickup to destination city. You never pay any return charges or empty vehicle return kms.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the estimated taxi fare from Rajkot to Ahmedabad?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'For Rajkot to Ahmedabad one-way travel, Sedan (Swift Dzire / Hyundai Aura) typically starts around ₹2,299 to ₹2,500. Spacious SUVs like Maruti Ertiga range from ₹3,400 to ₹3,600, and Toyota Innova Crysta starts from ₹4,500. All fares are transparent with zero hidden charges.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Do you provide 24x7 pickups for Rajkot Hirasar Airport & Ahmedabad SVPI Airport?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Yes! We operate 24 hours a day, 365 days a year. Whether you have an early morning 4:00 AM flight departure or a late midnight flight arrival, our chauffeurs will be waiting at the terminal with your nameboard.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What payment modes are accepted?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'We accept Cash, Google Pay, PhonePe, Paytm, and all UPI applications directly upon the completion of your journey. For corporate clients, clear trip receipts and bank transfer options are also available.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'Are the cabs safe for families, senior citizens, and female travelers?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Safety is our highest priority. All Rajvee Cab drivers are police-verified, experienced on national and state highways, polite, and non-smoking. All vehicles are equipped with GPS tracking and chilled dual-AC systems.',
-        },
-      },
-    ],
-  };
-
   return (
     <div className="w-full max-w-full overflow-x-hidden">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      {/* 1. Hero Section - Executive Corporate Styling */}
-      <section
-        className="relative py-10 sm:py-16 lg:py-24 bg-slate-950 text-white bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15, 23, 42, 0.90), rgba(15, 23, 42, 0.94)), url('/frontend/imgs/Banner1.webp')",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. Hero Section - Executive Corporate Styling (Zero-network pure CSS background for instant LCP) */}
+      <section className="relative py-10 sm:py-16 lg:py-24 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white border-b border-slate-800/80 overflow-hidden">
+        {/* Subtle decorative ambient glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(245,158,11,0.12),rgba(15,23,42,0))] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Corporate Value Proposition */}

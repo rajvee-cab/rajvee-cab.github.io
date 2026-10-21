@@ -8,7 +8,6 @@ import GlobalWhatsAppTracker from '@/components/GlobalWhatsAppTracker';
 const outfit = Outfit({
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800', '900'],
 });
 
 export const viewport = {
@@ -185,11 +184,8 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaTaxiService) }}
         />
-        {/* Google Analytics (gtag.js) - Direct Head Execution */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-Q158Y8TLVZ"
-        />
+        {/* Google Analytics (gtag.js) - High Performance Deferred Execution */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -199,6 +195,26 @@ export default function RootLayout({ children }) {
               gtag('config', 'G-Q158Y8TLVZ', {
                 page_path: window.location.pathname,
               });
+
+              function loadGtag() {
+                if (window.__gtagLoaded) return;
+                window.__gtagLoaded = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-Q158Y8TLVZ';
+                document.head.appendChild(s);
+              }
+              if (document.readyState === 'complete') {
+                loadGtag();
+              } else {
+                window.addEventListener('load', function() {
+                  if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadGtag);
+                  } else {
+                    setTimeout(loadGtag, 1200);
+                  }
+                });
+              }
             `,
           }}
         />
