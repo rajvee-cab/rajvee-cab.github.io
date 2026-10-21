@@ -83,7 +83,7 @@ export default function FleetSection() {
                 <div className="relative h-36 sm:h-44 w-full bg-slate-50 p-3 sm:p-4 flex items-center justify-center">
                   <Image
                     src={car.image}
-                    alt={car.name}
+                    alt={`${car.name} car rental & taxi hire with driver in Rajkot - Rajvee Cab`}
                     width={260}
                     height={150}
                     className="object-contain max-h-32 sm:max-h-36 hover:scale-105 transition duration-300"

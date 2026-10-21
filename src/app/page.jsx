@@ -6,6 +6,7 @@ import GujaratNetworkSection from '@/components/GujaratNetworkSection';
 import ReviewsSection from '@/components/ReviewsSection';
 import FaqSection from '@/components/FaqSection';
 import PopularRoutesSection from '@/components/PopularRoutesSection';
+import OfficeLocationMap from '@/components/OfficeLocationMap';
 import { formatWhatsAppGeneral, formatWhatsAppCar } from '@/utils/whatsapp';
 import {
   Check,
@@ -392,7 +393,7 @@ export default function HomePage() {
                   <div className="relative h-40 sm:h-44 w-full bg-slate-100 p-3 flex items-center justify-center">
                     <Image
                       src={car.img}
-                      alt={car.name}
+                      alt={`${car.name} car rental with driver in Rajkot - Rajvee Cab`}
                       width={240}
                       height={140}
                       className="object-contain max-h-32 sm:max-h-36 hover:scale-105 transition duration-300"
@@ -545,6 +546,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Official Office Location & Live Google Map */}
+      <OfficeLocationMap />
 
       {/* Popular Taxi Services in Cities & Most Popular Routes */}
       <PopularRoutesSection />

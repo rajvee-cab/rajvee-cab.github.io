@@ -5,36 +5,64 @@ import { formatWhatsAppGeneral } from '@/utils/whatsapp';
 
 const faqs = [
   {
+    q: 'What is the cab fare from Rajkot to Ahmedabad?',
+    a: 'Rajkot to Ahmedabad one-way AC sedan (Swift Dzire / Hyundai Aura) taxi fare starts at ₹2,199 to ₹2,499 with Rajvee Cab. For family group travel, 7-seater Maruti Ertiga starts at ₹3,499 and Toyota Innova Crysta starts at ₹4,499. All fares are transparent with zero return fare charges.',
+  },
+  {
+    q: 'How much is the taxi fare from Rajkot to Hirasar Airport (HSR)?',
+    a: 'Rajvee Cab provides dedicated airport taxi transfers from Rajkot city to Rajkot Hirasar International Airport (HSR) starting at a budget-friendly fixed rate of ₹699 for AC Sedan. Chauffeurs are available 24x7 with doorstep flight-timed pickup and flight delay tracking.',
+  },
+  {
+    q: 'Is one-way taxi service available without paying return fare?',
+    a: 'Yes, 100%! With Rajvee Cab One-Way drops, you pay ONLY for the one-sided journey from your pickup to destination city. You never pay any return charges or empty vehicle return kms across Rajkot, Ahmedabad, Surat, Vadodara, or anywhere in Gujarat.',
+  },
+  {
+    q: 'Where is Rajvee Cab located in Rajkot and which areas are served?',
+    a: 'Rajvee Cab is headquartered at Greenland Chokdi, National Highway 27, Rajkot, Gujarat (360003). We provide doorstep cab pickup across all Rajkot localities (Kalawad Road, 150 Feet Ring Road, Yagnik Road, Raiya Road, Mavdi, Madhapar, Kothariya) and service all 33 districts of Gujarat.',
+  },
+  {
     q: 'How do I book a cab with Rajvee Cab?',
     a: 'You can book instantly by calling our 24x7 desk at +91 97378 72972 or by sending a message on WhatsApp. Simply share your pickup location, drop city, travel date, and preferred car type. You will receive an immediate confirmation with driver and vehicle details.',
   },
   {
-    q: 'Is one-way taxi service available without paying return fare?',
-    a: 'Yes, 100%! With Rajvee Cab One-Way drops, you pay ONLY for the one-sided journey from your pickup to destination city. You never pay any return charges or empty vehicle return kms.',
-  },
-  {
-    q: 'What is the estimated taxi fare from Rajkot to Ahmedabad?',
-    a: 'For Rajkot to Ahmedabad one-way travel, Sedan (Swift Dzire / Hyundai Aura) typically starts around ₹2,299 to ₹2,500. Spacious SUVs like Maruti Ertiga range from ₹3,400 to ₹3,600, and Toyota Innova Crysta starts from ₹4,500. All fares are transparent with zero hidden charges.',
-  },
-  {
-    q: 'Do you provide 24x7 pickups for Rajkot Hirasar Airport & Ahmedabad SVPI Airport?',
-    a: 'Yes! We operate 24 hours a day, 365 days a year. Whether you have an early morning 4:00 AM flight departure or a late midnight flight arrival, our chauffeurs will be waiting at the terminal with your nameboard.',
+    q: 'Which cars are available for outstation rental with driver?',
+    a: 'Our verified fleet includes: Swift Dzire & Hyundai Aura (Sedan 4+1 - best for solo and couple commuters), Maruti Suzuki Ertiga (7-Seater SUV 6+1 - ideal for family trips), and Toyota Innova Crysta (Luxury SUV 7+1 - perfect for VIP, business, and executive travel).',
   },
   {
     q: 'What payment modes are accepted?',
-    a: 'We accept Cash, Google Pay, PhonePe, Paytm, and all UPI applications directly upon the completion of your journey. For corporate clients, clear trip receipts and bank transfer options are also available.',
+    a: 'We accept Cash, Google Pay, PhonePe, Paytm, and all UPI applications directly upon the completion of your journey. Clean trip receipts and instant invoices are provided for every booking.',
   },
   {
     q: 'Are the cabs safe for families, senior citizens, and female travelers?',
-    a: 'Safety is our highest priority. All Rajvee Cab drivers are police-verified, experienced on national and state highways, polite, and non-smoking. All vehicles are equipped with GPS tracking and chilled dual-AC systems.',
+    a: 'Safety is our highest priority. All Rajvee Cab drivers are police-verified, highly experienced on Gujarat state highways, polite, and non-smoking. All vehicles are equipped with GPS tracking, sanitized seating, and chilled dual-AC systems.',
   },
 ];
 
 export default function FaqSection() {
   const [openIdx, setOpenIdx] = useState(0);
 
+  // Schema for Google Rich Snippets & AI Search (AEO)
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a,
+      },
+    })),
+  };
+
   return (
     <section className="py-12 sm:py-20 bg-white" id="faq">
+      {/* Inject FAQPage Schema for Google and AI Answer Engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -47,7 +75,7 @@ export default function FaqSection() {
             Frequently Asked <span className="text-amber-600">Questions</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-600 mt-2.5 sm:mt-3 leading-relaxed">
-            Everything you need to know about booking one-way, outstation, and airport cabs with Rajvee Cab.
+            Quick, transparent answers about outstation taxi fares, airport drops, and car rental with driver in Gujarat.
           </p>
         </div>
 
