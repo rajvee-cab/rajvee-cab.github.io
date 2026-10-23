@@ -7,7 +7,7 @@ export const metadata = {
   alternates: {
     canonical: 'https://rajvee-cab.github.io/ahmedabad-to-surat-cab/',
   },
-  title: 'Ahmedabad to Surat Cab | Best One-Way Taxi Fare Starting @ ₹3499 - Rajvee Cab',
+  title: 'Ahmedabad to Surat Cab @ ₹3,699 | One-Way Taxi - Rajvee Cab',
   description: 'Book Ahmedabad to Surat Cab & Surat to Ahmedabad taxi with Rajvee Cab. Lowest one-way fare starting @ ₹3499. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. Doorstep pickup 24x7.',
   keywords: [
     'Ahmedabad to Surat cab',
@@ -22,7 +22,7 @@ export const metadata = {
 export default function AhmedabadToSuratPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
+    '@type': ['LocalBusiness', 'AutoRental'],
     name: 'Ahmedabad to Surat Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/ahmedabad-to-surat-cab/',
     provider: {
@@ -43,12 +43,71 @@ export default function AhmedabadToSuratPage() {
     },
   };
 
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rajvee-cab.github.io/' },
+      { '@type': 'ListItem', position: 2, name: 'Routes', item: 'https://rajvee-cab.github.io/#routes' },
+      { '@type': 'ListItem', position: 3, name: 'Ahmedabad to Surat Cab', item: 'https://rajvee-cab.github.io/ahmedabad-to-surat-cab/' }
+    ]
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the taxi fare from Ahmedabad to Surat?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'One-way AC Sedan taxi from Ahmedabad to Surat starts at ₹3,699 with zero return fare charges. SUVs like Maruti Ertiga and Innova Crysta are also available.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the travel distance from Ahmedabad to Surat?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The approximate highway distance from Ahmedabad to Surat is ~265 KM, taking around 4.5 - 5 Hours of comfortable driving.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do I have to pay return charges for a one-way cab?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No, you pay only for the one-sided journey from Ahmedabad to Surat. There are zero hidden fees or return kms.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I book a cab from Ahmedabad to Surat?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Instant booking is available by calling +91 97378 72972 or messaging on WhatsApp for immediate vehicle confirmation.'
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(routeSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
 
       <section className="bg-gradient-to-b from-amber-50/60 via-slate-50/40 to-white text-slate-900 pt-8 sm:pt-10 pb-12 sm:pb-16 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

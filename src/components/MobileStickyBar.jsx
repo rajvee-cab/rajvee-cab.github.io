@@ -10,10 +10,10 @@ export default function MobileStickyBar() {
         href="tel:+919737872972"
         onClick={() => trackCallClick('mobile_sticky_bar')}
         aria-label="Call Rajvee Cab now at +91 97378 72972"
-        className="flex-1 py-2.5 px-2 rounded-xl bg-slate-900 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow transition active:scale-95"
+        className="flex-1 py-3 px-2 rounded-xl bg-slate-950 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow transition active:scale-95 min-h-[44px]"
       >
-        <Phone className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-        <span>Call Now</span>
+        <Phone className="w-4 h-4 text-amber-400 shrink-0" />
+        <span>Call: 97378 72972</span>
       </a>
 
       <a
@@ -22,10 +22,10 @@ export default function MobileStickyBar() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp with Rajvee Cab"
-        className="flex-1 py-2.5 px-2 rounded-xl bg-emerald-600 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/30 transition active:scale-95"
+        className="flex-1 py-3 px-2 rounded-xl bg-emerald-600 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-lg shadow-emerald-600/30 transition active:scale-95 min-h-[44px]"
       >
-        <MessageCircle className="w-3.5 h-3.5 shrink-0" />
-        <span>WhatsApp</span>
+        <MessageCircle className="w-4 h-4 shrink-0" />
+        <span>Book WhatsApp</span>
       </a>
     </div>
   );

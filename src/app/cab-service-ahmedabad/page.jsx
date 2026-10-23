@@ -63,12 +63,71 @@ export default function AhmedabadCabPage() {
     },
   };
 
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rajvee-cab.github.io/' },
+      { '@type': 'ListItem', position: 2, name: 'Gujarat Cities', item: 'https://rajvee-cab.github.io/#coverage' },
+      { '@type': 'ListItem', position: 3, name: 'Cab Service in Ahmedabad', item: 'https://rajvee-cab.github.io/cab-service-ahmedabad/' }
+    ]
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do I book a cab in Ahmedabad with Rajvee Cab?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Booking a cab in Ahmedabad is instantaneous. Simply call our 24x7 desk at +91 97378 72972 or message on WhatsApp. Share your pickup address, travel date, and destination for immediate chauffeur and vehicle details.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Are one-way outstation cabs available from Ahmedabad without return fare?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! With Rajvee Cab One-Way drop service, you pay only for the one-sided journey from Ahmedabad. There are zero return kilometer charges across all destinations in Gujarat.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What types of cars are available for hire in Ahmedabad?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our commercial fleet in Ahmedabad includes: Swift Dzire and Hyundai Aura (Sedan 4+1 @ ₹11-12/KM), Maruti Ertiga (SUV 6+1 @ ₹14-15/KM), and Toyota Innova Crysta (Luxury 7+1 @ ₹18-20/KM) with verified chauffeurs.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide airport and railway station pickup in Ahmedabad?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we provide 24 hours guaranteed doorstep pickup from SVPI Airport & Kalupur Railway Station and all major residential and corporate zones with live flight tracking.'
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ahmedabadSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
 
       {/* Light Hero */}
       <section className="bg-gradient-to-b from-amber-50/60 via-slate-50/40 to-white text-slate-900 pt-8 sm:pt-12 pb-12 sm:pb-16 border-b border-slate-200">

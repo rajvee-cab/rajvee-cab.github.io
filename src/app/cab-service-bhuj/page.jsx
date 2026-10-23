@@ -50,12 +50,71 @@ export default function BhujCabPage() {
     },
   };
 
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rajvee-cab.github.io/' },
+      { '@type': 'ListItem', position: 2, name: 'Gujarat Cities', item: 'https://rajvee-cab.github.io/#coverage' },
+      { '@type': 'ListItem', position: 3, name: 'Cab Service in Bhuj', item: 'https://rajvee-cab.github.io/cab-service-bhuj/' }
+    ]
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do I book a cab in Bhuj with Rajvee Cab?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Booking a cab in Bhuj is instantaneous. Simply call our 24x7 desk at +91 97378 72972 or message on WhatsApp. Share your pickup address, travel date, and destination for immediate chauffeur and vehicle details.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Are one-way outstation cabs available from Bhuj without return fare?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! With Rajvee Cab One-Way drop service, you pay only for the one-sided journey from Bhuj. There are zero return kilometer charges across all destinations in Gujarat.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What types of cars are available for hire in Bhuj?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Our commercial fleet in Bhuj includes: Swift Dzire and Hyundai Aura (Sedan 4+1 @ ₹11-12/KM), Maruti Ertiga (SUV 6+1 @ ₹14-15/KM), and Toyota Innova Crysta (Luxury 7+1 @ ₹18-20/KM) with verified chauffeurs.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do you provide airport and railway station pickup in Bhuj?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, we provide 24 hours guaranteed doorstep pickup from Kutch Rann Utsav & Bhuj Airport and all major residential and corporate zones with live flight tracking.'
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(bhujSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
 
       <section className="bg-gradient-to-b from-amber-50/60 via-slate-50/40 to-white text-slate-900 pt-8 sm:pt-10 pb-12 sm:pb-16 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

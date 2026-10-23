@@ -7,7 +7,7 @@ export const metadata = {
   alternates: {
     canonical: 'https://rajvee-cab.github.io/rajkot-to-jamnagar-cab/',
   },
-  title: 'Rajkot to Jamnagar Cab | Best One-Way Taxi Fare Starting @ ₹1299 - Rajvee Cab',
+  title: 'Rajkot to Jamnagar Cab @ ₹1,599 | One-Way Taxi - Rajvee Cab',
   description: 'Book Rajkot to Jamnagar Cab & Jamnagar to Rajkot taxi with Rajvee Cab. Lowest one-way fare starting @ ₹1299. Clean AC Swift Dzire, Hyundai Aura, Ertiga, and Innova Crysta. Direct drops to Reliance Greens & City.',
   keywords: [
     'Rajkot to Jamnagar cab',
@@ -21,7 +21,7 @@ export const metadata = {
 export default function RajkotToJamnagarPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': 'TaxiService',
+    '@type': ['LocalBusiness', 'AutoRental'],
     name: 'Rajkot to Jamnagar Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-jamnagar-cab/',
     provider: {
@@ -42,12 +42,71 @@ export default function RajkotToJamnagarPage() {
     },
   };
 
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rajvee-cab.github.io/' },
+      { '@type': 'ListItem', position: 2, name: 'Routes', item: 'https://rajvee-cab.github.io/#routes' },
+      { '@type': 'ListItem', position: 3, name: 'Rajkot to Jamnagar Cab', item: 'https://rajvee-cab.github.io/rajkot-to-jamnagar-cab/' }
+    ]
+  };
+
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is the taxi fare from Rajkot to Jamnagar?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'One-way AC Sedan taxi from Rajkot to Jamnagar starts at ₹1,599 with zero return fare charges. SUVs like Maruti Ertiga and Innova Crysta are also available.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the travel distance from Rajkot to Jamnagar?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The approximate highway distance from Rajkot to Jamnagar is ~92 KM, taking around 1.5 - 2 Hours of comfortable driving.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Do I have to pay return charges for a one-way cab?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No, you pay only for the one-sided journey from Rajkot to Jamnagar. There are zero hidden fees or return kms.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I book a cab from Rajkot to Jamnagar?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Instant booking is available by calling +91 97378 72972 or messaging on WhatsApp for immediate vehicle confirmation.'
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(routeSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
 
       <section className="bg-gradient-to-b from-amber-50/60 via-slate-50/40 to-white text-slate-900 pt-8 sm:pt-10 pb-12 sm:pb-16 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

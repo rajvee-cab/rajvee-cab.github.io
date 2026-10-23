@@ -37,8 +37,8 @@ export async function generateMetadata({ params }) {
   const route = getRouteBySlug(params.slug);
   if (!route) return {};
 
-  const title = `${route.origin} to ${route.destination} Cab Service | One Way Taxi & Car Rental - Rajvee Cab`;
-  const description = `Book verified ${route.origin} to ${route.destination} cab with Rajvee Cab. One-way taxi fare starting ${route.fares.sedan}. AC Dzire & Ertiga, zero return fare, doorstep pickup, 24x7 booking.`;
+  const title = `${route.origin} to ${route.destination} Cab @ ${route.fares.sedan} | One Way Taxi - Rajvee Cab`;
+  const description = `Book verified ${route.origin} to ${route.destination} cab with Rajvee Cab starting @ ${route.fares.sedan}. AC Swift Dzire & Ertiga, zero return fare, doorstep pickup, 24x7 booking. Call/WhatsApp +91 97378 72972.`;
   const canonical = `https://rajvee-cab.github.io/${route.slug}/`;
 
   return {
@@ -244,15 +244,11 @@ export default function DynamicRoutePage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
-      {/* 1. Hero Section */}
-      <section
-        className="relative py-10 sm:py-16 lg:py-20 bg-slate-950 text-white bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.96)), url('/frontend/imgs/Banner1.webp')",
-        }}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* 1. Hero Section - Executive Styling */}
+      <section className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white border-b border-slate-800/80 overflow-hidden">
+        {/* Subtle decorative ambient glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(245,158,11,0.12),rgba(15,23,42,0))] pointer-events-none" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
           {/* Breadcrumb */}
           <nav className="flex items-center gap-2 text-xs text-slate-400 mb-6">
