@@ -34,10 +34,9 @@ export default function Navbar() {
 
   const navLinks = [
     { label: 'Home', href: '/' },
-    { label: 'About', href: '/#about' },
     { label: 'Fleet & Rates', href: '/#cars' },
-    { label: 'Services', href: '/#services' },
     { label: 'Routes (500+)', href: '/routes' },
+    { label: 'Travel Guides', href: '/blog' },
     { label: 'Gujarat Network', href: '/#coverage' },
     { label: 'Reviews', href: '/#reviews' },
     { label: 'FAQ', href: '/#faq' },

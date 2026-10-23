@@ -221,6 +221,40 @@ export default function Footer() {
 
         </div>
 
+        {/* Gujarat Tourism & Highway Travel Guides */}
+        <div className="pt-8 pb-8 border-t border-slate-800">
+          <div className="flex items-center justify-between mb-3">
+            <p className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider m-0">
+              Gujarat Tourism &amp; Outstation Travel Guides
+            </p>
+            <Link href="/blog" className="text-xs text-amber-400 hover:text-amber-300 font-bold transition">
+              View All Guides →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-xs">
+            <Link href="/blog/rajkot-to-hirasar-airport-cab-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+              <span className="font-bold text-slate-200 block mb-0.5">Hirasar Airport Cab Guide</span>
+              <span className="text-[11px] text-slate-400">Distance, time &amp; flat ₹899 fare</span>
+            </Link>
+            <Link href="/blog/dwarka-somnath-3-day-pilgrim-tour-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+              <span className="font-bold text-slate-200 block mb-0.5">Dwarka &amp; Somnath Tour</span>
+              <span className="text-[11px] text-slate-400">3-Day darshan itinerary &amp; cabs</span>
+            </Link>
+            <Link href="/blog/ahmedabad-to-statue-of-unity-cab-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+              <span className="font-bold text-slate-200 block mb-0.5">Statue of Unity Day Trip</span>
+              <span className="text-[11px] text-slate-400">Ahmedabad to Kevadia guide</span>
+            </Link>
+            <Link href="/blog/rajkot-to-sasan-gir-safari-cab-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+              <span className="font-bold text-slate-200 block mb-0.5">Sasan Gir Safari Cab Guide</span>
+              <span className="text-[11px] text-slate-400">Lion safari shifts &amp; taxi route</span>
+            </Link>
+            <Link href="/blog/ahmedabad-to-mumbai-cab-travel-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+              <span className="font-bold text-slate-200 block mb-0.5">Ahmedabad to Mumbai Cab</span>
+              <span className="text-[11px] text-slate-400">NH-48 highway route &amp; stops</span>
+            </Link>
+          </div>
+        </div>
+
         {/* Popular Searches & Car Rental Silo in Gujarat */}
         <div className="pt-8 pb-8 border-t border-slate-800">
           <p className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider mb-3">

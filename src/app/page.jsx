@@ -7,6 +7,7 @@ import ReviewsSection from '@/components/ReviewsSection';
 import FaqSection from '@/components/FaqSection';
 import PopularRoutesSection from '@/components/PopularRoutesSection';
 import OfficeLocationMap from '@/components/OfficeLocationMap';
+import TravelGuidesSection from '@/components/TravelGuidesSection';
 import { formatWhatsAppGeneral, formatWhatsAppCar } from '@/utils/whatsapp';
 import {
   Check,
@@ -447,6 +448,9 @@ export default function HomePage() {
 
       {/* 9. FAQ Section */}
       <FaqSection />
+
+      {/* 9.5 Gujarat Travel Guides & Tourism Desk */}
+      <TravelGuidesSection />
 
       {/* 10. Call to Action Banner */}
       <section className="py-12 sm:py-16 bg-slate-950 text-white text-center border-t border-slate-800">

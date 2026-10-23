@@ -1,4 +1,5 @@
 import { dynamicRoutesData } from '@/data/allRoutesData';
+import { blogPosts } from '@/data/blogData';
 
 export default function sitemap() {
   const baseUrl = 'https://rajvee-cab.github.io';
@@ -9,6 +10,13 @@ export default function sitemap() {
     lastModified: now,
     changeFrequency: 'weekly',
     priority: 0.85,
+  }));
+
+  const blogEntries = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}/`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.88,
   }));
 
   return [
@@ -27,6 +35,17 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.98,
     },
+
+    // Travel Guides & Blog Hub
+    {
+      url: `${baseUrl}/blog/`,
+      lastModified: now,
+      changeFrequency: 'daily',
+      priority: 0.95,
+    },
+
+    // Travel Guides & Articles
+    ...blogEntries,
 
     // Priority Departure Hubs & Cities
     {
