@@ -49,7 +49,7 @@ export default function RajkotToVadodaraPage() {
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://rajvee-cab.github.io/' },
-      { '@type': 'ListItem', position: 2, name: 'Routes', item: 'https://rajvee-cab.github.io/#routes' },
+      { '@type': 'ListItem', position: 2, name: 'Routes', item: 'https://rajvee-cab.github.io/routes/' },
       { '@type': 'ListItem', position: 3, name: 'Rajkot to Vadodara Cab', item: 'https://rajvee-cab.github.io/rajkot-to-vadodara-cab/' }
     ]
   };

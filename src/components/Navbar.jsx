@@ -37,7 +37,7 @@ export default function Navbar() {
     { label: 'About', href: '/#about' },
     { label: 'Fleet & Rates', href: '/#cars' },
     { label: 'Services', href: '/#services' },
-    { label: 'Popular Routes', href: '/#routes' },
+    { label: 'Routes (500+)', href: '/routes' },
     { label: 'Gujarat Network', href: '/#coverage' },
     { label: 'Reviews', href: '/#reviews' },
     { label: 'FAQ', href: '/#faq' },

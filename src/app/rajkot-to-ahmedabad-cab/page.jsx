@@ -73,7 +73,7 @@ export default function RajkotToAhmedabadPage() {
         '@type': 'ListItem',
         position: 2,
         name: 'Routes',
-        item: 'https://rajvee-cab.github.io/#routes',
+        item: 'https://rajvee-cab.github.io/routes/',
       },
       {
         '@type': 'ListItem',
@@ -156,7 +156,7 @@ export default function RajkotToAhmedabadPage() {
           <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium">
             <Link href="/" className="hover:text-amber-600 transition">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <Link href="/#routes" className="hover:text-amber-600 transition">Routes</Link>
+            <Link href="/routes" className="hover:text-amber-600 transition">Routes</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             <span className="text-amber-700 font-bold">Rajkot to Ahmedabad Cab</span>
           </nav>

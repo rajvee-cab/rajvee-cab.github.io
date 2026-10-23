@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown, ChevronUp, MapPin, Navigation } from 'lucide-react';
+import { ChevronDown, ChevronRight, ChevronUp, MapPin, Navigation } from 'lucide-react';
 import { allRoutesData } from '@/data/allRoutesData';
 
 const popularCities = [
@@ -104,18 +104,16 @@ export default function PopularRoutesSection() {
           </div>
         </div>
 
-        {/* Second View More button at bottom if collapsed */}
-        {!isExpanded && (
-          <div className="flex justify-center mt-6">
-            <button
-              onClick={() => setIsExpanded(true)}
-              className="px-6 py-2.5 bg-slate-950 text-white font-black text-xs uppercase tracking-wider rounded-full shadow hover:bg-slate-800 transition flex items-center gap-1.5 cursor-pointer"
-            >
-              <span>View All 500+ Gujarat Routes</span>
-              <ChevronDown className="w-4 h-4 text-amber-400" />
-            </button>
-          </div>
-        )}
+        {/* View All Routes Page Link */}
+        <div className="flex justify-center mt-6">
+          <Link
+            href="/routes"
+            className="px-6 py-2.5 bg-slate-950 text-white font-black text-xs uppercase tracking-wider rounded-full shadow hover:bg-slate-800 transition flex items-center gap-1.5 cursor-pointer"
+          >
+            <span>Explore All 500+ Gujarat Routes Directory</span>
+            <ChevronRight className="w-4 h-4 text-amber-400" />
+          </Link>
+        </div>
 
       </div>
     </section>

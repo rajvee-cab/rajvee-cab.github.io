@@ -20,6 +20,14 @@ export default function sitemap() {
       priority: 1.0,
     },
 
+    // All Routes Directory
+    {
+      url: `${baseUrl}/routes/`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.98,
+    },
+
     // Priority Departure Hubs & Cities
     {
       url: `${baseUrl}/cab-service-rajkot/`,

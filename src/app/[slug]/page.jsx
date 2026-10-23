@@ -187,7 +187,7 @@ export default function DynamicRoutePage({ params }) {
         '@type': 'ListItem',
         position: 2,
         name: 'Gujarat Cab Routes',
-        item: 'https://rajvee-cab.github.io/#coverage',
+        item: 'https://rajvee-cab.github.io/routes/',
       },
       {
         '@type': 'ListItem',
@@ -254,7 +254,7 @@ export default function DynamicRoutePage({ params }) {
           <nav className="flex items-center gap-2 text-xs text-slate-400 mb-6">
             <Link href="/" className="hover:text-amber-400 transition">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
-            <Link href="/#coverage" className="hover:text-amber-400 transition">Routes</Link>
+            <Link href="/routes" className="hover:text-amber-400 transition">Routes</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
             <span className="text-amber-400 font-semibold">{route.origin} to {route.destination}</span>
           </nav>
