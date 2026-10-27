@@ -1,5 +1,6 @@
 import BookingForm from '@/components/BookingForm';
 import FleetSection from '@/components/FleetSection';
+import HyperLocalSection from '@/components/HyperLocalSection';
 import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
@@ -57,10 +58,17 @@ export default function AhmedabadCabPage() {
         longitude: 72.5714,
       },
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Ahmedabad',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Ahmedabad' },
+      { '@type': 'AdministrativeArea', name: 'SG Highway, Ahmedabad' },
+      { '@type': 'AdministrativeArea', name: 'Bopal & South Bopal, Ahmedabad' },
+      { '@type': 'AdministrativeArea', name: 'Satellite & Vastrapur, Ahmedabad' },
+      { '@type': 'AdministrativeArea', name: 'SVPI Airport Terminal 1 & 2' },
+      { '@type': 'AdministrativeArea', name: 'Kalupur Railway Station, Ahmedabad' },
+      { '@type': 'AdministrativeArea', name: 'GIFT City, Gandhinagar' },
+      { '@type': 'AdministrativeArea', name: 'Sanand & Changodar GIDC' },
+      { '@type': 'AdministrativeArea', name: 'Maninagar & Kankaria, Ahmedabad' },
+    ],
   };
 
 
@@ -214,6 +222,8 @@ export default function AhmedabadCabPage() {
           </div>
         </div>
       </section>
+
+      <HyperLocalSection cityKey="ahmedabad" />
 
       <FleetSection />
     </>

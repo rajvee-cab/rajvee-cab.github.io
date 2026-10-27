@@ -1,5 +1,6 @@
 import BookingForm from '@/components/BookingForm';
 import FleetSection from '@/components/FleetSection';
+import HyperLocalSection from '@/components/HyperLocalSection';
 import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Landmark } from 'lucide-react';
 
@@ -56,10 +57,15 @@ export default function VadodaraCabPage() {
         longitude: 73.1812,
       },
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Vadodara',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Vadodara' },
+      { '@type': 'AdministrativeArea', name: 'Alkapuri & RC Dutt Road, Vadodara' },
+      { '@type': 'AdministrativeArea', name: 'Vadodara Airport (Harni)' },
+      { '@type': 'AdministrativeArea', name: 'Vadodara Railway Station' },
+      { '@type': 'AdministrativeArea', name: 'Gotri & Vasna-Bhayli Road, Vadodara' },
+      { '@type': 'AdministrativeArea', name: 'Makarpura GIDC, Vadodara' },
+      { '@type': 'AdministrativeArea', name: 'Waghodia Road & Ajwa Road, Vadodara' },
+    ],
   };
 
 
@@ -212,6 +218,8 @@ export default function VadodaraCabPage() {
           </div>
         </div>
       </section>
+
+      <HyperLocalSection cityKey="vadodara" />
 
       <FleetSection />
     </>

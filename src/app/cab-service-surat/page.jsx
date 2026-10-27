@@ -1,5 +1,6 @@
 import BookingForm from '@/components/BookingForm';
 import FleetSection from '@/components/FleetSection';
+import HyperLocalSection from '@/components/HyperLocalSection';
 import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
@@ -56,10 +57,15 @@ export default function SuratCabPage() {
         longitude: 72.8311,
       },
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Surat',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Surat' },
+      { '@type': 'AdministrativeArea', name: 'Varachha & Katargam, Surat' },
+      { '@type': 'AdministrativeArea', name: 'Ring Road Textile Market, Surat' },
+      { '@type': 'AdministrativeArea', name: 'Vesu & VIP Road, Surat' },
+      { '@type': 'AdministrativeArea', name: 'Surat International Airport' },
+      { '@type': 'AdministrativeArea', name: 'Hazira Industrial Belt, Surat' },
+      { '@type': 'AdministrativeArea', name: 'Adajan & Pal, Surat' },
+    ],
   };
 
 
@@ -212,6 +218,8 @@ export default function SuratCabPage() {
           </div>
         </div>
       </section>
+
+      <HyperLocalSection cityKey="surat" />
 
       <FleetSection />
     </>

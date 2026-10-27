@@ -1,5 +1,6 @@
 import BookingForm from '@/components/BookingForm';
 import FleetSection from '@/components/FleetSection';
+import HyperLocalSection from '@/components/HyperLocalSection';
 import { formatWhatsAppCity } from '@/utils/whatsapp';
 import { Phone, MessageCircle, MapPin, CheckCircle2, Plane, Building2, Train } from 'lucide-react';
 
@@ -60,10 +61,19 @@ export default function RajkotCabPage() {
         longitude: 70.8022,
       },
     },
-    areaServed: {
-      '@type': 'City',
-      name: 'Rajkot',
-    },
+    areaServed: [
+      { '@type': 'City', name: 'Rajkot' },
+      { '@type': 'AdministrativeArea', name: 'Kalawad Road, Rajkot' },
+      { '@type': 'AdministrativeArea', name: '150 Feet Ring Road, Rajkot' },
+      { '@type': 'AdministrativeArea', name: 'Greenland Chokdi, Rajkot' },
+      { '@type': 'AdministrativeArea', name: 'Yagnik Road, Rajkot' },
+      { '@type': 'AdministrativeArea', name: 'Metoda GIDC, Rajkot' },
+      { '@type': 'AdministrativeArea', name: 'Shapar-Veraval GIDC, Rajkot' },
+      { '@type': 'AdministrativeArea', name: 'Hirasar International Airport' },
+      { '@type': 'AdministrativeArea', name: 'Rajkot Junction Railway Station' },
+      { '@type': 'AdministrativeArea', name: 'Railnagar, Rajkot' },
+      { '@type': 'AdministrativeArea', name: 'Kuvadva Road, Rajkot' },
+    ],
   };
 
 
@@ -217,6 +227,8 @@ export default function RajkotCabPage() {
           </div>
         </div>
       </section>
+
+      <HyperLocalSection cityKey="rajkot" />
 
       <FleetSection />
     </>
