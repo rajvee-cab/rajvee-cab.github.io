@@ -26,7 +26,7 @@ const popularCities = [
   { name: 'Sasan Gir', link: '/rajkot-to-sasan-gir-cab/' },
   { name: 'Somnath', link: '/cab-service-somnath/' },
   { name: 'Surat', link: '/cab-service-surat/' },
-  { name: 'Surendranagar', link: '/rajkot-to-surendranagar-cab/' },
+  { name: 'Surendranagar', link: '/hirasar-airport-rajkot-to-surendranagar-cab/' },
   { name: 'Vadodara', link: '/cab-service-vadodara/' },
 ];
 
