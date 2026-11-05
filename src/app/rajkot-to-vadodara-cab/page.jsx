@@ -22,7 +22,7 @@ export const metadata = {
 export default function RajkotToVadodaraPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajkot to Vadodara Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-vadodara-cab/',
     provider: {

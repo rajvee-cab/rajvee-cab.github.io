@@ -29,18 +29,11 @@ export const metadata = {
 export default function VadodaraCabPage() {
   const vadodaraSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajvee Cab Vadodara',
     serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Vadodara',
     url: 'https://rajvee-cab.github.io/cab-service-vadodara/',
     description: 'Premier 24x7 cab service and car rental with driver in Vadodara covering Alkapuri, Vadodara Airport, Railway Station, Statue of Unity, and expressway rides to Ahmedabad and Surat.',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '610',
-    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

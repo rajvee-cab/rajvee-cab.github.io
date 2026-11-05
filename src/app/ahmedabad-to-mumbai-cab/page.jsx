@@ -21,7 +21,7 @@ export const metadata = {
 export default function AhmedabadToMumbaiPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Ahmedabad to Mumbai Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/ahmedabad-to-mumbai-cab/',
     provider: {

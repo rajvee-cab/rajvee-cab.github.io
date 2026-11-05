@@ -1,13 +1,14 @@
 'use client';
 import { useEffect } from 'react';
 import { recordLeadToGoogleSheet } from '@/utils/leads';
-import { trackWhatsAppClick } from '@/utils/analytics';
+import { trackWhatsAppClick, trackCallClick } from '@/utils/analytics';
 
 /**
- * Global WhatsApp Click Tracker for Rajvee Cab
- * Captures 100% of WhatsApp clicks across the entire site (Navbar, Hero, Fleet,
- * Routes, City pages, Sticky Bar, Footer) and automatically records each lead
- * into Google Sheets and Google Analytics 4 in real time!
+ * Global Lead & Click Tracker for Rajvee Cab
+ * Captures 100% of Phone Calls & WhatsApp clicks across the entire site
+ * (Navbar, Hero, Fleet, Routes, City pages, Sticky Bar, Footer)
+ * and automatically records each lead into Google Analytics 4 (click_to_call, click_to_whatsapp)
+ * and Google Sheets in real time!
  */
 export default function GlobalWhatsAppTracker() {
   useEffect(() => {
@@ -17,8 +18,19 @@ export default function GlobalWhatsAppTracker() {
       if (!anchor) return;
 
       const href = anchor.getAttribute('href') || '';
+      const btnLabel = (anchor.innerText || anchor.getAttribute('aria-label') || '').trim();
+      const pageTitle = typeof document !== 'undefined' ? document.title.split('|')[0].trim() : '';
 
-      // Match WhatsApp links
+      // 1. Match Phone Call links (tel:+919737872972)
+      if (href.startsWith('tel:')) {
+        try {
+          const source = btnLabel ? `${btnLabel} (${pageTitle || window.location.pathname})` : (pageTitle || 'Phone Button');
+          trackCallClick(source);
+        } catch (_) {}
+        return;
+      }
+
+      // 2. Match WhatsApp links
       if (href.includes('wa.me') || href.includes('whatsapp.com')) {
         try {
           let text = '';
@@ -69,15 +81,13 @@ export default function GlobalWhatsAppTracker() {
             tripType = `WhatsApp: ${purposeMatch[1].trim()}`;
           }
 
-          const btnLabel = (anchor.innerText || anchor.getAttribute('aria-label') || '').trim();
           if (btnLabel && tripType === 'WhatsApp Click') {
             tripType = `WhatsApp (${btnLabel.replace(/\s+/g, ' ').slice(0, 30)})`;
           }
 
           // If on a specific route or city page, use page context for fallback
-          if (typeof document !== 'undefined' && document.title && pickup === 'Rajkot / Gujarat') {
-            const pageName = document.title.split('|')[0].trim();
-            if (pageName) pickup = pageName;
+          if (typeof document !== 'undefined' && pageTitle && pickup === 'Rajkot / Gujarat') {
+            pickup = pageTitle;
           }
 
           // 1. Record lead to Google Sheets (Google Excel)

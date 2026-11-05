@@ -22,7 +22,7 @@ export const metadata = {
 export default function RajkotToDwarkaPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajkot to Dwarka Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-dwarka-cab/',
     provider: {

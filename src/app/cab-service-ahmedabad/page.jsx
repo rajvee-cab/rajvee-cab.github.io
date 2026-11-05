@@ -30,18 +30,11 @@ export const metadata = {
 export default function AhmedabadCabPage() {
   const ahmedabadSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajvee Cab Ahmedabad',
     serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Ahmedabad',
     url: 'https://rajvee-cab.github.io/cab-service-ahmedabad/',
     description: 'Premier cab service, taxi booking, and car rental with driver in Ahmedabad covering SVPI Airport, SG Highway, Kalupur Railway Station, Bopal, Prahlad Nagar, and outstation trips.',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '820',
-    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

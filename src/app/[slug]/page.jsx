@@ -83,10 +83,10 @@ export default function DynamicRoutePage({ params }) {
     notFound();
   }
 
-  // Structured Data: TaxiService + AggregateRating Schema
+  // Structured Data: TaxiService Schema
   const taxiSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: `Rajvee Cab - ${route.origin} to ${route.destination} Cab Service`,
     provider: {
       '@type': 'LocalBusiness',
@@ -99,13 +99,6 @@ export default function DynamicRoutePage({ params }) {
         addressLocality: route.origin,
         addressRegion: 'Gujarat',
         addressCountry: 'IN',
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        bestRating: '5',
-        worstRating: '1',
-        ratingCount: '1850',
       },
     },
     serviceType: [

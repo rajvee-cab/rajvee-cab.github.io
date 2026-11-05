@@ -22,7 +22,7 @@ export const metadata = {
 export default function RajkotToSomnathPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajkot to Somnath Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-somnath-cab/',
     provider: {

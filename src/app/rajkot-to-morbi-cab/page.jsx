@@ -21,7 +21,7 @@ export const metadata = {
 export default function RajkotToMorbiPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajkot to Morbi Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-morbi-cab/',
     provider: {

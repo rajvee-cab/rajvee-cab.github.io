@@ -22,7 +22,7 @@ export const metadata = {
 export default function AhmedabadToStatueOfUnityPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Ahmedabad to Statue of Unity Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/ahmedabad-to-statue-of-unity-cab/',
     provider: {

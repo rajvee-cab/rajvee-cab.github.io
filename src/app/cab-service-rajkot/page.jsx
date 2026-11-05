@@ -31,18 +31,11 @@ export const metadata = {
 export default function RajkotCabPage() {
   const rajkotSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajvee Cab Rajkot',
     serviceType: 'Cab Service, Taxi Booking, and Car Rental with Driver in Rajkot',
     url: 'https://rajvee-cab.github.io/cab-service-rajkot/',
     description: 'Premier cab service, taxi booking, and car rental with driver in Rajkot covering Hirasar Airport, Kalawad Road, Greenland Chokdi, and outstation trips.',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      bestRating: '5',
-      worstRating: '1',
-      ratingCount: '940',
-    },
     provider: {
       '@type': 'LocalBusiness',
       name: 'Rajvee Cab',

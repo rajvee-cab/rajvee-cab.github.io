@@ -22,7 +22,7 @@ export const metadata = {
 export default function SuratToMumbaiPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Surat to Mumbai Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/surat-to-mumbai-cab/',
     provider: {

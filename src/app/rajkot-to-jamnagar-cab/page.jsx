@@ -21,7 +21,7 @@ export const metadata = {
 export default function RajkotToJamnagarPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajkot to Jamnagar Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-jamnagar-cab/',
     provider: {

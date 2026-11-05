@@ -24,7 +24,7 @@ export const metadata = {
 export default function RajkotToAhmedabadPage() {
   const routeSchema = {
     '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'AutoRental'],
+    '@type': 'TaxiService',
     name: 'Rajkot to Ahmedabad Cab Service - Rajvee Cab',
     url: 'https://rajvee-cab.github.io/rajkot-to-ahmedabad-cab/',
     telephone: '+919737872972',
@@ -41,13 +41,6 @@ export default function RajkotToAhmedabadPage() {
         addressRegion: 'Gujarat',
         postalCode: '360003',
         addressCountry: 'IN',
-      },
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.9',
-        bestRating: '5',
-        worstRating: '1',
-        ratingCount: '1850',
       },
     },
     offers: {
