@@ -221,6 +221,24 @@ export default function DynamicRoutePage({ params }) {
     },
   ];
 
+  const originZones = [
+    `${route.origin} City Center & Commercial Markets`,
+    `${route.origin} Railway Junction & Central Bus Stand`,
+    `All Residential Areas, Societies & Ring Roads in ${route.origin}`,
+    `${route.origin} GIDC & Industrial Parks`,
+    `Major Highway Bypass Points & Entry Circles`,
+    `Local Airport / Air Strip Pickup (where available)`,
+  ];
+
+  const destinationZones = [
+    `${route.destination} City Center & Business Hubs`,
+    `All Major Hotels, Resorts & Dharamshalas in ${route.destination}`,
+    `${route.destination} Railway Station & Key Terminals`,
+    `Famous Religious Shrines & Tourist Attractions in ${route.destination}`,
+    `Direct Doorstep Drop at Any Home or Office Address`,
+    `Connecting Highway Junctions & Outer Ring Roads`,
+  ];
+
   return (
     <div className="w-full max-w-full overflow-x-hidden">
       {/* Schemas */}
@@ -393,6 +411,108 @@ export default function DynamicRoutePage({ params }) {
             ))}
           </div>
 
+        </div>
+      </section>
+
+      {/* 2B. Rajvee Cab vs Public Transit / Bus Comparison */}
+      <section className="py-12 sm:py-16 bg-slate-50 border-b border-slate-200">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-10">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Rajvee Cab vs Bus &amp; Shared Transit ({route.origin} to {route.destination})
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+              Why thousands of travelers choose private doorstep cab hire over crowded public transit.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+            <table className="w-full text-left text-xs sm:text-sm">
+              <thead className="bg-slate-900 text-white uppercase text-[11px] font-bold tracking-wider">
+                <tr>
+                  <th className="p-3.5 sm:p-4">Feature</th>
+                  <th className="p-3.5 sm:p-4 text-amber-400">Rajvee Cab (Private AC)</th>
+                  <th className="p-3.5 sm:p-4 text-slate-400">GSRTC / Private Bus</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-200 text-slate-700">
+                <tr>
+                  <td className="p-3.5 sm:p-4 font-bold text-slate-900">Pickup &amp; Drop</td>
+                  <td className="p-3.5 sm:p-4 font-bold text-emerald-600">100% Doorstep Pickup &amp; Direct Drop</td>
+                  <td className="p-3.5 sm:p-4">Travel to bus station with luggage</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="p-3.5 sm:p-4 font-bold text-slate-900">Travel Time</td>
+                  <td className="p-3.5 sm:p-4 font-bold text-emerald-600">{route.durationText} direct highway drive</td>
+                  <td className="p-3.5 sm:p-4">1.5x longer with multi-city stops</td>
+                </tr>
+                <tr>
+                  <td className="p-3.5 sm:p-4 font-bold text-slate-900">Comfort &amp; AC</td>
+                  <td className="p-3.5 sm:p-4 font-bold text-emerald-600">Chilled private AC car, family privacy</td>
+                  <td className="p-3.5 sm:p-4">Shared crowded seats &amp; fixed stops</td>
+                </tr>
+                <tr className="bg-slate-50">
+                  <td className="p-3.5 sm:p-4 font-bold text-slate-900">Return Fare Policy</td>
+                  <td className="p-3.5 sm:p-4 font-bold text-emerald-600">Pay only one-way: {route.fares.sedan} (Zero return)</td>
+                  <td className="p-3.5 sm:p-4">Individual tickets per seat + local autos</td>
+                </tr>
+                <tr>
+                  <td className="p-3.5 sm:p-4 font-bold text-slate-900">Departure Flexibility</td>
+                  <td className="p-3.5 sm:p-4 font-bold text-emerald-600">24x7 instant dispatch at your chosen time</td>
+                  <td className="p-3.5 sm:p-4">Strict fixed bus timetable</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* 2C. Hyper-Local Pickup & Drop Coverage */}
+      <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase bg-emerald-100 text-emerald-900 mb-2">
+              Door-To-Door Service
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Doorstep Pickup in {route.origin} ➔ Direct Drop in {route.destination}
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+              No need to drag bags to a central taxi stand. Our chauffeur reaches directly at your home, hotel, or office.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-amber-50/50 p-6 rounded-2xl border border-amber-200 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-amber-600" />
+                <span>Pickup Across {route.origin} (24x7)</span>
+              </h3>
+              <div className="space-y-2 text-xs font-medium text-slate-700">
+                {originZones.map((zone, i) => (
+                  <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-white border border-slate-200/70">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-amber-600 shrink-0" />
+                    <span>{zone}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-emerald-50/50 p-6 rounded-2xl border border-emerald-200 shadow-sm">
+              <h3 className="text-base font-bold text-slate-900 mb-3 flex items-center gap-2">
+                <MapPin className="w-4 h-4 text-emerald-600" />
+                <span>Direct Drops Across {route.destination}</span>
+              </h3>
+              <div className="space-y-2 text-xs font-medium text-slate-700">
+                {destinationZones.map((zone, i) => (
+                  <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-white border border-slate-200/70">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span>{zone}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
