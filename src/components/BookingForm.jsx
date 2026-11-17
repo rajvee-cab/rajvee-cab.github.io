@@ -5,8 +5,6 @@ import { formatWhatsAppBooking } from '@/utils/whatsapp';
 import { trackLeadSubmission } from '@/utils/analytics';
 import { recordLeadToGoogleSheet } from '@/utils/leads';
 
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzzV3ecNe2LvlUYMgDxBuMphd6Z5y1uYAIwPHfuzORcUNk7EFVE0kLjDl8TKxU_972aig/exec';
-
 export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'Ahmedabad' }) {
   const [tripType, setTripType] = useState('one_way');
   const [pickup, setPickup] = useState(defaultPickup);
@@ -74,6 +72,7 @@ export default function BookingForm({ defaultPickup = 'Rajkot', defaultDrop = 'A
       drop,
       date: date || 'Immediate / Today',
       contactNo: phone || 'WhatsApp Lead',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '',
     };
 
     try {

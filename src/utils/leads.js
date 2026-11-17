@@ -14,6 +14,11 @@ export function recordLeadToGoogleSheet(payload = {}) {
         ? localStorage.getItem('rajvee_user_phone') || ''
         : '';
 
+    const pageUrl =
+      payload.pageUrl ||
+      payload.pageLink ||
+      (typeof window !== 'undefined' ? window.location.href : '');
+
     const enrichedPayload = {
       timestamp:
         payload.timestamp ||
@@ -24,6 +29,8 @@ export function recordLeadToGoogleSheet(payload = {}) {
       drop: payload.drop || payload.to || 'Ahmedabad',
       date: payload.date || 'Immediate / Today',
       contactNo: payload.contactNo || payload.phone || savedPhone || 'WhatsApp Lead',
+      pageUrl: pageUrl,
+      pageLink: pageUrl,
     };
 
     const data = JSON.stringify(enrichedPayload);

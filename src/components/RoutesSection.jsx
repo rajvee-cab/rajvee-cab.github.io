@@ -264,6 +264,7 @@ export default function RoutesSection() {
                       pickup: route.from,
                       drop: route.to,
                       carType: route.fare,
+                      pageUrl: typeof window !== 'undefined' ? window.location.href : '',
                     })
                   }
                   target="_blank"

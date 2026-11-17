@@ -68,6 +68,7 @@ export default function BookingBoxRenax({ defaultPickup = 'Rajkot', defaultDrop 
       drop,
       date: date || 'Immediate / Today',
       contactNo: contactNo || 'WhatsApp Lead',
+      pageUrl: typeof window !== 'undefined' ? window.location.href : '',
     };
 
     // 1. Record lead to Google Sheet (Google Excel)

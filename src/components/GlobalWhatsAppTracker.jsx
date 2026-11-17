@@ -97,6 +97,7 @@ export default function GlobalWhatsAppTracker() {
             drop,
             carType,
             date,
+            pageUrl: typeof window !== 'undefined' ? window.location.href : '',
           });
 
           // 2. Track event in Google Analytics 4
