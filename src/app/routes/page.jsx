@@ -3,6 +3,7 @@ import RoutesDirectory from '@/components/RoutesDirectory';
 import ReviewsSection from '@/components/ReviewsSection';
 import { MapPin, ArrowRightLeft, ShieldCheck, Clock, Award, ChevronRight, Phone, MessageCircle } from 'lucide-react';
 import { formatWhatsAppGeneral } from '@/utils/whatsapp';
+import { allRoutesData } from '@/data/allRoutesData';
 
 export const metadata = {
   alternates: {
@@ -31,6 +32,23 @@ export const metadata = {
 };
 
 export default function RoutesPage() {
+  const vadodaraRoutes = allRoutesData.filter((r) => r.origin.toLowerCase().includes('vadodara'));
+  const suratRoutes = allRoutesData.filter((r) => r.origin.toLowerCase().includes('surat'));
+  const rajkotRoutes = allRoutesData.filter((r) => r.origin.toLowerCase().includes('rajkot'));
+  const ahmedabadRoutes = allRoutesData.filter((r) => r.origin.toLowerCase().includes('ahmedabad'));
+  const airportRoutes = allRoutesData.filter(
+    (r) => r.origin.toLowerCase().includes('airport') || r.origin.toLowerCase().includes('hirasar')
+  );
+  const otherRoutes = allRoutesData.filter(
+    (r) =>
+      !r.origin.toLowerCase().includes('vadodara') &&
+      !r.origin.toLowerCase().includes('surat') &&
+      !r.origin.toLowerCase().includes('rajkot') &&
+      !r.origin.toLowerCase().includes('ahmedabad') &&
+      !r.origin.toLowerCase().includes('airport') &&
+      !r.origin.toLowerCase().includes('hirasar')
+  );
+
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -123,6 +141,171 @@ export default function RoutesPage() {
 
       {/* Interactive Routes Directory with live search & filters */}
       <RoutesDirectory />
+
+      {/* Complete Crawlable HTML Route Index for Search Engines & Quick Navigation */}
+      <section className="py-16 bg-slate-950 text-white border-t border-slate-800" id="complete-directory">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-3xl mx-auto mb-12">
+            <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-amber-500/20 text-amber-400 border border-amber-500/30 mb-3">
+              100% Crawlable Complete Index
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-black text-white">
+              Complete Directory of 500+ Gujarat Cab Corridors
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-400 mt-2.5">
+              Direct links to every verified one-way and outstation taxi route in Gujarat. Click any route for detailed door-to-door pricing, highway distance, and instant WhatsApp booking.
+            </p>
+          </div>
+
+          {/* Group 1: Vadodara Hub */}
+          <div className="mb-10 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <h3 className="text-base sm:text-lg font-black text-amber-400 flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Cabs from Vadodara (Baroda) Hub ({vadodaraRoutes.length} Routes)</span>
+              </h3>
+              <Link href="/cab-service-vadodara/" className="text-xs font-bold text-slate-400 hover:text-white transition">
+                City Profile →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 text-xs">
+              {vadodaraRoutes.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/${r.slug}/`}
+                  className="text-slate-300 hover:text-amber-400 hover:underline transition truncate py-1"
+                  title={`${r.origin} to ${r.destination} Cab`}
+                >
+                  {r.origin} → {r.destination}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Group 2: Surat Hub */}
+          <div className="mb-10 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <h3 className="text-base sm:text-lg font-black text-amber-400 flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Cabs from Surat Hub ({suratRoutes.length} Routes)</span>
+              </h3>
+              <Link href="/cab-service-surat/" className="text-xs font-bold text-slate-400 hover:text-white transition">
+                City Profile →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 text-xs">
+              {suratRoutes.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/${r.slug}/`}
+                  className="text-slate-300 hover:text-amber-400 hover:underline transition truncate py-1"
+                  title={`${r.origin} to ${r.destination} Cab`}
+                >
+                  {r.origin} → {r.destination}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Group 3: Rajkot Hub */}
+          <div className="mb-10 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <h3 className="text-base sm:text-lg font-black text-amber-400 flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Cabs from Rajkot Headquarters ({rajkotRoutes.length} Routes)</span>
+              </h3>
+              <Link href="/cab-service-rajkot/" className="text-xs font-bold text-slate-400 hover:text-white transition">
+                City Profile →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 text-xs">
+              {rajkotRoutes.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/${r.slug}/`}
+                  className="text-slate-300 hover:text-amber-400 hover:underline transition truncate py-1"
+                  title={`${r.origin} to ${r.destination} Cab`}
+                >
+                  {r.origin} → {r.destination}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Group 4: Ahmedabad Hub */}
+          <div className="mb-10 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <h3 className="text-base sm:text-lg font-black text-amber-400 flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Cabs from Ahmedabad Hub ({ahmedabadRoutes.length} Routes)</span>
+              </h3>
+              <Link href="/cab-service-ahmedabad/" className="text-xs font-bold text-slate-400 hover:text-white transition">
+                City Profile →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 text-xs">
+              {ahmedabadRoutes.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/${r.slug}/`}
+                  className="text-slate-300 hover:text-amber-400 hover:underline transition truncate py-1"
+                  title={`${r.origin} to ${r.destination} Cab`}
+                >
+                  {r.origin} → {r.destination}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Group 5: Hirasar Airport Hub */}
+          <div className="mb-10 p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <h3 className="text-base sm:text-lg font-black text-amber-400 flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Cabs from Hirasar Airport Rajkot ({airportRoutes.length} Routes)</span>
+              </h3>
+              <Link href="/rajkot-to-hirasar-airport-cab/" className="text-xs font-bold text-slate-400 hover:text-white transition">
+                Airport Guide →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 text-xs">
+              {airportRoutes.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/${r.slug}/`}
+                  className="text-slate-300 hover:text-amber-400 hover:underline transition truncate py-1"
+                  title={`${r.origin} to ${r.destination} Cab`}
+                >
+                  {r.origin} → {r.destination}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Group 6: Saurashtra & Other Gujarat Cities */}
+          <div className="p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+            <div className="flex items-center justify-between border-b border-slate-800 pb-3 mb-4">
+              <h3 className="text-base sm:text-lg font-black text-amber-400 flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Saurashtra &amp; Interstate Routes ({otherRoutes.length} Routes)</span>
+              </h3>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 text-xs">
+              {otherRoutes.map((r) => (
+                <Link
+                  key={r.slug}
+                  href={`/${r.slug}/`}
+                  className="text-slate-300 hover:text-amber-400 hover:underline transition truncate py-1"
+                  title={`${r.origin} to ${r.destination} Cab`}
+                >
+                  {r.origin} → {r.destination}
+                </Link>
+              ))}
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       {/* Reviews Section */}
       <ReviewsSection />

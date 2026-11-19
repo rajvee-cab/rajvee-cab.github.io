@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link';
 import { MapPin, Navigation, ArrowRight, ShieldCheck, Phone, MessageCircle } from 'lucide-react';
 import { formatWhatsAppCity, formatWhatsAppGeneral } from '@/utils/whatsapp';
 
@@ -7,47 +8,47 @@ const regionsData = [
   {
     region: 'Saurashtra & Kutch Hubs',
     cities: [
-      { name: 'Rajkot (Headquarters)', tag: 'Main Hub', popularTo: 'Ahmedabad, Somnath, Dwarka' },
-      { name: 'Jamnagar', tag: 'High Frequency', popularTo: 'Rajkot, Ahmedabad, Dwarka' },
-      { name: 'Junagadh', tag: 'Girnar Special', popularTo: 'Rajkot, Somnath, Sasan Gir' },
-      { name: 'Bhavnagar', tag: 'Daily Commute', popularTo: 'Ahmedabad, Surat, Rajkot' },
-      { name: 'Morbi', tag: 'Ceramic Hub', popularTo: 'Rajkot, Ahmedabad, Gandhidham' },
-      { name: 'Porbandar', tag: 'Coastal Connect', popularTo: 'Rajkot, Dwarka, Somnath' },
-      { name: 'Bhuj & Gandhidham', tag: 'Kutch Hub', popularTo: 'Ahmedabad, Rajkot, Morbi' },
-      { name: 'Surendranagar', tag: 'Highway Route', popularTo: 'Ahmedabad, Rajkot' },
+      { name: 'Rajkot (Headquarters)', tag: 'Main Hub', popularTo: 'Ahmedabad, Somnath, Dwarka', link: '/cab-service-rajkot/' },
+      { name: 'Jamnagar', tag: 'High Frequency', popularTo: 'Rajkot, Ahmedabad, Dwarka', link: '/cab-service-jamnagar/' },
+      { name: 'Junagadh', tag: 'Girnar Special', popularTo: 'Rajkot, Somnath, Sasan Gir', link: '/cab-service-junagadh/' },
+      { name: 'Bhavnagar', tag: 'Daily Commute', popularTo: 'Ahmedabad, Surat, Rajkot', link: '/cab-service-bhavnagar/' },
+      { name: 'Morbi', tag: 'Ceramic Hub', popularTo: 'Rajkot, Ahmedabad, Gandhidham', link: '/cab-service-morbi/' },
+      { name: 'Porbandar', tag: 'Coastal Connect', popularTo: 'Rajkot, Dwarka, Somnath', link: '/rajkot-to-porbandar-cab/' },
+      { name: 'Bhuj & Gandhidham', tag: 'Kutch Hub', popularTo: 'Ahmedabad, Rajkot, Morbi', link: '/cab-service-bhuj/' },
+      { name: 'Surendranagar', tag: 'Highway Route', popularTo: 'Ahmedabad, Rajkot', link: '/hirasar-airport-rajkot-to-surendranagar-cab/' },
     ],
   },
   {
     region: 'Central & South Gujarat',
     cities: [
-      { name: 'Ahmedabad', tag: 'Airport Hub', popularTo: 'Rajkot, Surat, Mumbai, Udaipur' },
-      { name: 'Surat', tag: 'Diamond City', popularTo: 'Mumbai, Ahmedabad, Shirdi' },
-      { name: 'Vadodara (Baroda)', tag: 'Cultural Capital', popularTo: 'Ahmedabad, Surat, Statue of Unity' },
-      { name: 'Anand & Nadiad', tag: 'Charotar Hub', popularTo: 'Ahmedabad, Vadodara, Mumbai' },
-      { name: 'Bharuch & Ankleshwar', tag: 'Industrial Corridor', popularTo: 'Surat, Vadodara, Ahmedabad' },
-      { name: 'Vapi & Valsad', tag: 'South Gate', popularTo: 'Surat, Mumbai, Nashik' },
-      { name: 'Navsari', tag: 'Express Highway', popularTo: 'Surat, Mumbai, Vapi' },
+      { name: 'Ahmedabad', tag: 'Airport Hub', popularTo: 'Rajkot, Surat, Mumbai, Udaipur', link: '/cab-service-ahmedabad/' },
+      { name: 'Surat', tag: 'Diamond City', popularTo: 'Mumbai, Ahmedabad, Shirdi', link: '/cab-service-surat/' },
+      { name: 'Vadodara (Baroda)', tag: 'Cultural Capital', popularTo: 'Ahmedabad, Surat, Statue of Unity', link: '/cab-service-vadodara/' },
+      { name: 'Anand & Nadiad', tag: 'Charotar Hub', popularTo: 'Ahmedabad, Vadodara, Mumbai', link: '/ahmedabad-to-vadodara-cab/' },
+      { name: 'Bharuch & Ankleshwar', tag: 'Industrial Corridor', popularTo: 'Surat, Vadodara, Ahmedabad', link: '/ahmedabad-to-surat-cab/' },
+      { name: 'Vapi & Valsad', tag: 'South Gate', popularTo: 'Surat, Mumbai, Nashik', link: '/surat-to-mumbai-cab/' },
+      { name: 'Navsari', tag: 'Express Highway', popularTo: 'Surat, Mumbai, Vapi', link: '/surat-to-mumbai-cab/' },
     ],
   },
   {
     region: 'North Gujarat & Capital',
     cities: [
-      { name: 'Gandhinagar', tag: 'GIFT City Hub', popularTo: 'Ahmedabad, Rajkot, Udaipur' },
-      { name: 'Mehsana', tag: 'Highway Connect', popularTo: 'Ahmedabad, Patan, Palanpur' },
-      { name: 'Palanpur & Deesa', tag: 'Border Hub', popularTo: 'Ahmedabad, Mount Abu, Ambaji' },
-      { name: 'Patan', tag: 'Heritage City', popularTo: 'Ahmedabad, Mehsana' },
-      { name: 'Himatnagar', tag: 'Sabarkantha Hub', popularTo: 'Ahmedabad, Shamlaji, Udaipur' },
+      { name: 'Gandhinagar', tag: 'GIFT City Hub', popularTo: 'Ahmedabad, Rajkot, Udaipur', link: '/cab-service-gandhinagar/' },
+      { name: 'Mehsana', tag: 'Highway Connect', popularTo: 'Ahmedabad, Patan, Palanpur', link: '/cab-service-gandhinagar/' },
+      { name: 'Palanpur & Deesa', tag: 'Border Hub', popularTo: 'Ahmedabad, Mount Abu, Ambaji', link: '/cab-service-gandhinagar/' },
+      { name: 'Patan', tag: 'Heritage City', popularTo: 'Ahmedabad, Mehsana', link: '/cab-service-gandhinagar/' },
+      { name: 'Himatnagar', tag: 'Sabarkantha Hub', popularTo: 'Ahmedabad, Shamlaji, Udaipur', link: '/cab-service-gandhinagar/' },
     ],
   },
   {
     region: 'Pilgrimage & Tourist Corridors',
     cities: [
-      { name: 'Somnath Temple', tag: 'Jyotirlinga Tour', popularTo: 'Rajkot, Dwarka, Ahmedabad' },
-      { name: 'Dwarka Dham', tag: 'Char Dham Route', popularTo: 'Rajkot, Somnath, Jamnagar' },
-      { name: 'Statue of Unity (Kevadia)', tag: 'Top Tourist Spot', popularTo: 'Vadodara, Ahmedabad, Surat' },
-      { name: 'Sasan Gir (Gir Safari)', tag: 'Wildlife Sanctuary', popularTo: 'Rajkot, Junagadh, Somnath' },
-      { name: 'Mount Abu (Rajasthan)', tag: 'Hill Station', popularTo: 'Ahmedabad, Palanpur, Mehsana' },
-      { name: 'Ambaji Shaktipeeth', tag: 'Devotional Tour', popularTo: 'Ahmedabad, Gandhinagar' },
+      { name: 'Somnath Temple', tag: 'Jyotirlinga Tour', popularTo: 'Rajkot, Dwarka, Ahmedabad', link: '/cab-service-somnath/' },
+      { name: 'Dwarka Dham', tag: 'Char Dham Route', popularTo: 'Rajkot, Somnath, Jamnagar', link: '/cab-service-dwarka/' },
+      { name: 'Statue of Unity (Kevadia)', tag: 'Top Tourist Spot', popularTo: 'Vadodara, Ahmedabad, Surat', link: '/ahmedabad-to-statue-of-unity-cab/' },
+      { name: 'Sasan Gir (Gir Safari)', tag: 'Wildlife Sanctuary', popularTo: 'Rajkot, Junagadh, Somnath', link: '/rajkot-to-sasan-gir-cab/' },
+      { name: 'Mount Abu (Rajasthan)', tag: 'Hill Station', popularTo: 'Ahmedabad, Palanpur, Mehsana', link: '/cab-service-gandhinagar/' },
+      { name: 'Ambaji Shaktipeeth', tag: 'Devotional Tour', popularTo: 'Ahmedabad, Gandhinagar', link: '/cab-service-gandhinagar/' },
     ],
   },
 ];
@@ -113,17 +114,25 @@ export default function GujaratNetworkSection() {
                 </p>
               </div>
 
-              <div className="pt-3 mt-3 border-t border-slate-100">
+              <div className="pt-3 mt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+                <Link
+                  href={city.link || '/routes/'}
+                  prefetch={false}
+                  className="inline-flex items-center gap-1 text-xs font-bold text-slate-900 hover:text-amber-600 transition"
+                  title={`View taxi & cab services in ${city.name}`}
+                >
+                  <span>Explore Cabs</span>
+                  <ArrowRight className="w-3 h-3 text-amber-500" />
+                </Link>
                 <a
                   href={formatWhatsAppCity(city.name)}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={`Book cab pickup in ${city.name} on WhatsApp`}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-amber-700 hover:text-amber-800 transition"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition"
                 >
                   <MessageCircle className="w-3.5 h-3.5" />
-                  <span>Book Pickup</span>
-                  <ArrowRight className="w-3 h-3" />
+                  <span>WhatsApp</span>
                 </a>
               </div>
             </div>

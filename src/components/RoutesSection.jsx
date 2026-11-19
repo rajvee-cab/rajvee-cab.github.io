@@ -171,9 +171,102 @@ const ahmedabadRoutes = [
   },
 ];
 
+const suratRoutes = [
+  {
+    from: 'Surat',
+    to: 'Mumbai (BOM Airport)',
+    time: '4.5 - 5 Hours',
+    tag: 'Top Highway Corridor',
+    fare: '₹4,499 Onwards',
+    desc: 'Direct drops to Mumbai Airport, Borivali, Andheri & BKC business center.',
+    highlight: true,
+    link: '/surat-to-mumbai-cab/',
+  },
+  {
+    from: 'Surat',
+    to: 'Ahmedabad',
+    time: '4.5 Hours',
+    tag: 'Industrial Hub',
+    fare: '₹3,499 Onwards',
+    desc: 'Direct taxi via NH 48 to Ahmedabad Airport, SG Highway & Gandhinagar.',
+    highlight: false,
+    link: '/ahmedabad-to-surat-cab/',
+  },
+  {
+    from: 'Surat',
+    to: 'Vadodara (Baroda)',
+    time: '2.5 Hours',
+    tag: 'Fast Highway Route',
+    fare: '₹2,299 Onwards',
+    desc: 'Express commute to Alkapuri, Sayajigunj & Vadodara Railway Station.',
+    highlight: false,
+    link: '/cab-service-vadodara/',
+  },
+  {
+    from: 'Surat',
+    to: 'Rajkot (Saurashtra)',
+    time: '7.5 Hours',
+    tag: 'Saurashtra Direct',
+    fare: '₹4,699 Onwards',
+    desc: 'Doorstep pickup in Surat Varachha/Adajan to Rajkot Greenland Chokdi.',
+    highlight: false,
+    link: '/rajkot-to-surat-cab/',
+  },
+];
+
+const vadodaraRoutes = [
+  {
+    from: 'Vadodara',
+    to: 'Statue of Unity (Kevadia)',
+    time: '90 Mins',
+    tag: 'Top Tourist Route',
+    fare: '₹1,999 Onwards',
+    desc: 'Same-day round trip to Ekta Nagar, Valley of Flowers & Laser show.',
+    highlight: true,
+    link: '/ahmedabad-to-statue-of-unity-cab/',
+  },
+  {
+    from: 'Vadodara',
+    to: 'Ahmedabad (NE-1)',
+    time: '90 Mins',
+    tag: 'Express Corridor',
+    fare: '₹1,499 Onwards',
+    desc: 'Fast National Expressway 1 taxi to Ahmedabad Airport & Railway Station.',
+    highlight: false,
+    link: '/ahmedabad-to-vadodara-cab/',
+  },
+  {
+    from: 'Vadodara',
+    to: 'Mumbai',
+    time: '6.5 Hours',
+    tag: 'Interstate Highway',
+    fare: '₹5,999 Onwards',
+    desc: 'Doorstep pickup in Vadodara to Mumbai Airport & Western Suburbs.',
+    highlight: false,
+    link: '/ahmedabad-to-mumbai-cab/',
+  },
+  {
+    from: 'Vadodara',
+    to: 'Rajkot',
+    time: '5 Hours',
+    tag: 'Saurashtra Connect',
+    fare: '₹3,499 Onwards',
+    desc: 'Comfortable highway taxi from Alkapuri to Rajkot with transparent per-km rates.',
+    highlight: false,
+    link: '/rajkot-to-vadodara-cab/',
+  },
+];
+
 export default function RoutesSection() {
   const [activeHub, setActiveHub] = useState('rajkot');
-  const currentRoutes = activeHub === 'rajkot' ? rajkotRoutes : ahmedabadRoutes;
+  const currentRoutes =
+    activeHub === 'rajkot'
+      ? rajkotRoutes
+      : activeHub === 'ahmedabad'
+      ? ahmedabadRoutes
+      : activeHub === 'surat'
+      ? suratRoutes
+      : vadodaraRoutes;
 
   return (
     <section className="py-20 bg-white" id="routes">
@@ -188,33 +281,57 @@ export default function RoutesSection() {
             Top Outstation Cab Routes
           </h2>
           <p className="mt-3 text-base text-slate-600">
-            Headquartered in <strong className="text-slate-900">Rajkot</strong> with full operational hub in <strong className="text-slate-900">Ahmedabad</strong>. Pay strictly for one-way drops with zero return fare!
+            Operating across <strong className="text-slate-900">Rajkot</strong>, <strong className="text-slate-900">Ahmedabad</strong>, <strong className="text-slate-900">Surat</strong> &amp; <strong className="text-slate-900">Vadodara</strong>. Pay strictly for one-way drops with zero return fare!
           </p>
 
           {/* Interactive Hub Switcher Tabs */}
-          <div className="flex flex-col sm:inline-flex sm:flex-row w-full sm:w-auto p-1.5 bg-slate-100 rounded-2xl mt-6 sm:mt-8 border border-slate-200 shadow-inner gap-1 sm:gap-0">
+          <div className="grid grid-cols-2 lg:inline-flex lg:flex-row w-full lg:w-auto p-1.5 bg-slate-100 rounded-2xl mt-6 sm:mt-8 border border-slate-200 shadow-inner gap-1">
             <button
               onClick={() => setActiveHub('rajkot')}
-              className={`px-4 sm:px-8 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 transition ${
+              className={`px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-1.5 transition cursor-pointer ${
                 activeHub === 'rajkot'
                   ? 'bg-slate-900 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
               }`}
             >
-              <MapPin className={`w-4 h-4 ${activeHub === 'rajkot' ? 'text-amber-400' : 'text-slate-400'}`} />
-              <span>Cabs from Rajkot (HQ)</span>
+              <MapPin className={`w-3.5 h-3.5 ${activeHub === 'rajkot' ? 'text-amber-400' : 'text-slate-400'}`} />
+              <span>Rajkot (HQ)</span>
             </button>
 
             <button
               onClick={() => setActiveHub('ahmedabad')}
-              className={`px-4 sm:px-8 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-2 transition ${
+              className={`px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-1.5 transition cursor-pointer ${
                 activeHub === 'ahmedabad'
                   ? 'bg-slate-900 text-white shadow-md'
                   : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
               }`}
             >
-              <MapPin className={`w-4 h-4 ${activeHub === 'ahmedabad' ? 'text-amber-400' : 'text-slate-400'}`} />
-              <span>Cabs from Ahmedabad (Hub)</span>
+              <MapPin className={`w-3.5 h-3.5 ${activeHub === 'ahmedabad' ? 'text-amber-400' : 'text-slate-400'}`} />
+              <span>Ahmedabad Hub</span>
+            </button>
+
+            <button
+              onClick={() => setActiveHub('surat')}
+              className={`px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-1.5 transition cursor-pointer ${
+                activeHub === 'surat'
+                  ? 'bg-slate-900 text-white shadow-md'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+              }`}
+            >
+              <MapPin className={`w-3.5 h-3.5 ${activeHub === 'surat' ? 'text-amber-400' : 'text-slate-400'}`} />
+              <span>Surat Hub</span>
+            </button>
+
+            <button
+              onClick={() => setActiveHub('vadodara')}
+              className={`px-3 sm:px-6 py-2.5 sm:py-3 rounded-xl font-black text-xs sm:text-sm flex items-center justify-center gap-1.5 transition cursor-pointer ${
+                activeHub === 'vadodara'
+                  ? 'bg-slate-900 text-white shadow-md'
+                  : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/70'
+              }`}
+            >
+              <MapPin className={`w-3.5 h-3.5 ${activeHub === 'vadodara' ? 'text-amber-400' : 'text-slate-400'}`} />
+              <span>Vadodara Hub</span>
             </button>
           </div>
         </div>
