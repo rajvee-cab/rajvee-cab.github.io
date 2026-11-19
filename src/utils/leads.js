@@ -5,7 +5,7 @@
  */
 
 const GOOGLE_SCRIPT_URL =
-  'https://script.google.com/macros/s/AKfycbzzV3ecNe2LvlUYMgDxBuMphd6Z5y1uYAIwPHfuzORcUNk7EFVE0kLjDl8TKxU_972aig/exec';
+  'https://script.google.com/macros/s/AKfycbwoaEXOm-0jOjo_4T_tcfg5slMBHE2XFTMOHLkPFBFe_n5BB2ZJnE99Qd7RmgIVIKiNMg/exec';
 
 export function recordLeadToGoogleSheet(payload = {}) {
   try {
