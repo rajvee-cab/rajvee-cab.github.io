@@ -107,7 +107,7 @@ export default function PopularRoutesSection() {
         {/* View All Routes Page Link */}
         <div className="flex justify-center mt-6">
           <Link
-            href="/routes"
+            href="/routes/"
             className="px-6 py-2.5 bg-slate-950 text-white font-black text-xs uppercase tracking-wider rounded-full shadow hover:bg-slate-800 transition flex items-center gap-1.5 cursor-pointer"
           >
             <span>Explore All 500+ Gujarat Routes Directory</span>

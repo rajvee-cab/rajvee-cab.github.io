@@ -127,42 +127,42 @@ export default function Footer() {
             </p>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
-                <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-rajkot/" className="hover:text-amber-400 transition">
                   Cab Service in Rajkot
                 </Link>
               </li>
               <li>
-                <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-ahmedabad/" className="hover:text-amber-400 transition">
                   Cab Service in Ahmedabad
                 </Link>
               </li>
               <li>
-                <Link href="/cab-service-surat" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-surat/" className="hover:text-amber-400 transition">
                   Cab Service in Surat
                 </Link>
               </li>
               <li>
-                <Link href="/cab-service-vadodara" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-vadodara/" className="hover:text-amber-400 transition">
                   Cab Service in Vadodara
                 </Link>
               </li>
               <li>
-                <Link href="/cab-service-gandhinagar" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-gandhinagar/" className="hover:text-amber-400 transition">
                   Cab Service in Gandhinagar / GIFT City
                 </Link>
               </li>
               <li>
-                <Link href="/cab-service-jamnagar" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-jamnagar/" className="hover:text-amber-400 transition">
                   Cab Service in Jamnagar
                 </Link>
               </li>
               <li>
-                <Link href="/cab-service-morbi" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-morbi/" className="hover:text-amber-400 transition">
                   Cab Service in Morbi
                 </Link>
               </li>
               <li>
-                <Link href="/cab-service-somnath" className="hover:text-amber-400 transition">
+                <Link href="/cab-service-somnath/" className="hover:text-amber-400 transition">
                   Cab Service in Somnath / Dwarka
                 </Link>
               </li>
@@ -175,40 +175,40 @@ export default function Footer() {
               Top Rajkot & Ahmedabad Routes
             </p>
             <div className="grid grid-cols-2 gap-2 text-xs">
-              <Link href="/rajkot-to-ahmedabad-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-ahmedabad-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Ahmedabad
               </Link>
-              <Link href="/rajkot-to-surat-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-surat-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Surat
               </Link>
-              <Link href="/rajkot-to-vadodara-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-vadodara-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Vadodara
               </Link>
-              <Link href="/rajkot-to-hirasar-airport-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-hirasar-airport-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Hirasar Airport
               </Link>
-              <Link href="/rajkot-to-somnath-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-somnath-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Somnath
               </Link>
-              <Link href="/rajkot-to-dwarka-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-dwarka-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Dwarka
               </Link>
-              <Link href="/rajkot-to-jamnagar-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-jamnagar-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Jamnagar
               </Link>
-              <Link href="/rajkot-to-morbi-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/rajkot-to-morbi-cab/" className="hover:text-amber-400 transition py-1">
                 Rajkot ➔ Morbi
               </Link>
-              <Link href="/ahmedabad-to-surat-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/ahmedabad-to-surat-cab/" className="hover:text-amber-400 transition py-1">
                 Ahmedabad ➔ Surat
               </Link>
-              <Link href="/ahmedabad-to-vadodara-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/ahmedabad-to-vadodara-cab/" className="hover:text-amber-400 transition py-1">
                 Ahmedabad ➔ Vadodara
               </Link>
-              <Link href="/ahmedabad-to-statue-of-unity-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/ahmedabad-to-statue-of-unity-cab/" className="hover:text-amber-400 transition py-1">
                 Ahmedabad ➔ Statue of Unity
               </Link>
-              <Link href="/ahmedabad-to-mumbai-cab" className="hover:text-amber-400 transition py-1">
+              <Link href="/ahmedabad-to-mumbai-cab/" className="hover:text-amber-400 transition py-1">
                 Ahmedabad ➔ Mumbai
               </Link>
             </div>
@@ -227,28 +227,28 @@ export default function Footer() {
             <p className="text-white text-xs sm:text-sm font-bold uppercase tracking-wider m-0">
               Gujarat Tourism &amp; Outstation Travel Guides
             </p>
-            <Link href="/blog" className="text-xs text-amber-400 hover:text-amber-300 font-bold transition">
+            <Link href="/blog/" className="text-xs text-amber-400 hover:text-amber-300 font-bold transition">
               View All Guides →
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 text-xs">
-            <Link href="/blog/rajkot-to-hirasar-airport-cab-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+            <Link href="/blog/rajkot-to-hirasar-airport-cab-guide/" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
               <span className="font-bold text-slate-200 block mb-0.5">Hirasar Airport Cab Guide</span>
               <span className="text-[11px] text-slate-400">Distance, time &amp; flat ₹899 fare</span>
             </Link>
-            <Link href="/blog/dwarka-somnath-3-day-pilgrim-tour-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+            <Link href="/blog/dwarka-somnath-3-day-pilgrim-tour-guide/" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
               <span className="font-bold text-slate-200 block mb-0.5">Dwarka &amp; Somnath Tour</span>
               <span className="text-[11px] text-slate-400">3-Day darshan itinerary &amp; cabs</span>
             </Link>
-            <Link href="/blog/ahmedabad-to-statue-of-unity-cab-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+            <Link href="/blog/ahmedabad-to-statue-of-unity-cab-guide/" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
               <span className="font-bold text-slate-200 block mb-0.5">Statue of Unity Day Trip</span>
               <span className="text-[11px] text-slate-400">Ahmedabad to Kevadia guide</span>
             </Link>
-            <Link href="/blog/rajkot-to-sasan-gir-safari-cab-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+            <Link href="/blog/rajkot-to-sasan-gir-safari-cab-guide/" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
               <span className="font-bold text-slate-200 block mb-0.5">Sasan Gir Safari Cab Guide</span>
               <span className="text-[11px] text-slate-400">Lion safari shifts &amp; taxi route</span>
             </Link>
-            <Link href="/blog/ahmedabad-to-mumbai-cab-travel-guide" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
+            <Link href="/blog/ahmedabad-to-mumbai-cab-travel-guide/" className="p-2.5 rounded-xl bg-slate-900 border border-slate-800/80 hover:border-amber-500/50 hover:text-amber-400 transition block">
               <span className="font-bold text-slate-200 block mb-0.5">Ahmedabad to Mumbai Cab</span>
               <span className="text-[11px] text-slate-400">NH-48 highway route &amp; stops</span>
             </Link>
@@ -261,41 +261,41 @@ export default function Footer() {
             Popular Searches &amp; Car Rental in Gujarat
           </p>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-2 text-[11px] sm:text-xs text-slate-400 leading-relaxed">
-            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Car Rental in Rajkot</Link>
+            <Link href="/cab-service-rajkot/" className="hover:text-amber-400 transition">Car Rental in Rajkot</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Rent a Car with Driver Rajkot</Link>
+            <Link href="/cab-service-rajkot/" className="hover:text-amber-400 transition">Rent a Car with Driver Rajkot</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Rent Taxi in Rajkot</Link>
+            <Link href="/cab-service-rajkot/" className="hover:text-amber-400 transition">Rent Taxi in Rajkot</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">Car Rental in Ahmedabad</Link>
+            <Link href="/cab-service-ahmedabad/" className="hover:text-amber-400 transition">Car Rental in Ahmedabad</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">Rent Cab in Ahmedabad</Link>
+            <Link href="/cab-service-ahmedabad/" className="hover:text-amber-400 transition">Rent Cab in Ahmedabad</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-surat" className="hover:text-amber-400 transition">Car Rental in Surat</Link>
+            <Link href="/cab-service-surat/" className="hover:text-amber-400 transition">Car Rental in Surat</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-vadodara" className="hover:text-amber-400 transition">Car Rental in Vadodara</Link>
+            <Link href="/cab-service-vadodara/" className="hover:text-amber-400 transition">Car Rental in Vadodara</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Ertiga on Rent in Rajkot</Link>
+            <Link href="/cab-service-rajkot/" className="hover:text-amber-400 transition">Ertiga on Rent in Rajkot</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-ahmedabad" className="hover:text-amber-400 transition">Innova Crysta on Rent Ahmedabad</Link>
+            <Link href="/cab-service-ahmedabad/" className="hover:text-amber-400 transition">Innova Crysta on Rent Ahmedabad</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-rajkot" className="hover:text-amber-400 transition">Swift Dzire on Rent</Link>
+            <Link href="/cab-service-rajkot/" className="hover:text-amber-400 transition">Swift Dzire on Rent</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/rajkot-to-hirasar-airport-cab" className="hover:text-amber-400 transition">Hirasar Airport Cab Contact Number</Link>
+            <Link href="/rajkot-to-hirasar-airport-cab/" className="hover:text-amber-400 transition">Hirasar Airport Cab Contact Number</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/rajkot-to-ahmedabad-cab" className="hover:text-amber-400 transition">Rajkot to Ahmedabad One Way Taxi</Link>
+            <Link href="/rajkot-to-ahmedabad-cab/" className="hover:text-amber-400 transition">Rajkot to Ahmedabad One Way Taxi</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-gandhinagar" className="hover:text-amber-400 transition">Cab Booking Gandhinagar GIFT City</Link>
+            <Link href="/cab-service-gandhinagar/" className="hover:text-amber-400 transition">Cab Booking Gandhinagar GIFT City</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-jamnagar" className="hover:text-amber-400 transition">Taxi Service Jamnagar</Link>
+            <Link href="/cab-service-jamnagar/" className="hover:text-amber-400 transition">Taxi Service Jamnagar</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-bhuj" className="hover:text-amber-400 transition">Bhuj Kutch Car Rental</Link>
+            <Link href="/cab-service-bhuj/" className="hover:text-amber-400 transition">Bhuj Kutch Car Rental</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-somnath" className="hover:text-amber-400 transition">Somnath Dwarka Tour Taxi</Link>
+            <Link href="/cab-service-somnath/" className="hover:text-amber-400 transition">Somnath Dwarka Tour Taxi</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/ahmedabad-to-statue-of-unity-cab" className="hover:text-amber-400 transition">Statue of Unity Cab Booking</Link>
+            <Link href="/ahmedabad-to-statue-of-unity-cab/" className="hover:text-amber-400 transition">Statue of Unity Cab Booking</Link>
             <span className="text-slate-700">•</span>
-            <Link href="/cab-service-morbi" className="hover:text-amber-400 transition">Morbi Ceramic Zone Taxi</Link>
+            <Link href="/cab-service-morbi/" className="hover:text-amber-400 transition">Morbi Ceramic Zone Taxi</Link>
           </div>
         </div>
 

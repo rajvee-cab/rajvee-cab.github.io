@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import BookingForm from '@/components/BookingForm';
 import FleetSection from '@/components/FleetSection';
+import ConnectedRoutesSilo from '@/components/ConnectedRoutesSilo';
 import { formatWhatsAppRoute, formatWhatsAppRouteCar, formatWhatsAppGeneral } from '@/utils/whatsapp';
 import { Phone, MessageCircle, ArrowRightLeft, Clock, MapPin, CheckCircle2, ShieldCheck, Car, ChevronRight, HelpCircle, Navigation, Sparkles, Compass, Sun } from 'lucide-react';
 
@@ -197,7 +198,7 @@ export default function RajkotToSomnathPage() {
           <nav className="flex items-center gap-2 text-xs text-slate-500 mb-6 font-medium">
             <Link href="/" className="hover:text-amber-600 transition">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <Link href="/routes" className="hover:text-amber-600 transition">Routes</Link>
+            <Link href="/routes/" className="hover:text-amber-600 transition">Routes</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             <span className="text-amber-700 font-bold">Rajkot to Somnath Cab</span>
           </nav>
@@ -566,6 +567,7 @@ export default function RajkotToSomnathPage() {
         </div>
       </section>
 
+      <ConnectedRoutesSilo currentSlug="rajkot-to-somnath-cab" />
       <FleetSection />
     </>
   );

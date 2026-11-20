@@ -14,6 +14,7 @@ import {
   HelpCircle,
   ShieldCheck,
   ChevronRight,
+  ChevronDown,
   Facebook,
   Instagram,
 } from 'lucide-react';
@@ -35,11 +36,19 @@ export default function Navbar() {
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Fleet & Rates', href: '/#cars' },
-    { label: 'Routes (500+)', href: '/routes' },
-    { label: 'Travel Guides', href: '/blog' },
+    { label: 'Routes (500+)', href: '/routes/' },
+    { label: 'Travel Guides', href: '/blog/' },
     { label: 'Gujarat Network', href: '/#coverage' },
     { label: 'Reviews', href: '/#reviews' },
     { label: 'FAQ', href: '/#faq' },
+  ];
+
+  const cityHubs = [
+    { name: 'Rajkot (HQ)', href: '/cab-service-rajkot/' },
+    { name: 'Ahmedabad', href: '/cab-service-ahmedabad/' },
+    { name: 'Surat', href: '/cab-service-surat/' },
+    { name: 'Vadodara', href: '/cab-service-vadodara/' },
+    { name: 'Gandhinagar', href: '/cab-service-gandhinagar/' },
   ];
 
   return (
@@ -67,8 +76,38 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links (xl screens: >= 1280px) */}
-            <nav className="hidden xl:flex items-center gap-5 2xl:gap-7 text-[13px] 2xl:text-[14px] font-semibold text-slate-200">
-              {navLinks.map((link, idx) => (
+            <nav className="hidden xl:flex items-center gap-4 2xl:gap-6 text-[13px] 2xl:text-[14px] font-semibold text-slate-200">
+              <Link
+                href="/"
+                className="hover:text-amber-400 transition-colors py-1 relative group"
+              >
+                <span>Home</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-400 transition-all duration-200 group-hover:w-full"></span>
+              </Link>
+
+              {/* Major City Hubs Dropdown */}
+              <div className="relative group py-2">
+                <button
+                  type="button"
+                  className="flex items-center gap-1 hover:text-amber-400 transition-colors text-[13px] 2xl:text-[14px] font-semibold text-slate-200 cursor-pointer"
+                >
+                  <span>Cities</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-amber-400 group-hover:rotate-180 transition-transform duration-200" />
+                </button>
+                <div className="absolute top-full -left-2 w-52 py-2 bg-slate-900 border border-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  {cityHubs.map((city, cIdx) => (
+                    <Link
+                      key={cIdx}
+                      href={city.href}
+                      className="block px-4 py-2 text-xs font-semibold text-slate-300 hover:text-amber-400 hover:bg-slate-800/80 transition"
+                    >
+                      {city.name} Cab Service
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {navLinks.slice(1).map((link, idx) => (
                 <Link
                   key={idx}
                   href={link.href}
@@ -176,6 +215,25 @@ export default function Navbar() {
                     <ChevronRight className="w-4 h-4 text-slate-600" />
                   </Link>
                 ))}
+
+                {/* Major Gujarat Cities Links */}
+                <div className="pt-3 pb-1 border-t border-slate-800/80 mt-2">
+                  <p className="px-3 text-[11px] font-bold uppercase tracking-wider text-amber-400 mb-2">
+                    Gujarat City Cabs
+                  </p>
+                  <div className="grid grid-cols-2 gap-1.5 px-1">
+                    {cityHubs.map((city, cIdx) => (
+                      <Link
+                        key={cIdx}
+                        href={city.href}
+                        onClick={() => setIsOpen(false)}
+                        className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-xs font-semibold text-slate-300 hover:text-amber-400 transition text-center"
+                      >
+                        {city.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
               </nav>
             </div>
 

@@ -26,7 +26,7 @@ export default function TravelGuidesSection() {
           </div>
 
           <Link
-            href="/blog"
+            href="/blog/"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-amber-400 font-bold text-xs uppercase tracking-wider hover:bg-slate-700 hover:text-amber-300 transition shrink-0 self-start md:self-auto"
           >
             <span>Explore All Travel Guides</span>

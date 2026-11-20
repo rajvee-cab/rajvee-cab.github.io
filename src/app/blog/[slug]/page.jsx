@@ -152,7 +152,7 @@ export default function BlogPostPage({ params }) {
                   <ChevronRight className="w-3.5 h-3.5 text-slate-600" />
                 </li>
                 <li>
-                  <Link href="/blog" className="hover:text-amber-400 transition">
+                  <Link href="/blog/" className="hover:text-amber-400 transition">
                     Travel Guides
                   </Link>
                 </li>
@@ -351,7 +351,7 @@ export default function BlogPostPage({ params }) {
               </div>
               <div className="mt-5 text-center">
                 <Link
-                  href="/routes"
+                  href="/routes/"
                   className="text-xs font-extrabold text-amber-600 hover:text-amber-700 transition inline-flex items-center gap-1"
                 >
                   <span>Explore all 500+ Gujarat commercial routes directory</span>
@@ -364,7 +364,7 @@ export default function BlogPostPage({ params }) {
           {/* Back to Guides link */}
           <div className="mt-8 text-center">
             <Link
-              href="/blog"
+              href="/blog/"
               className="text-xs sm:text-sm font-bold text-slate-600 hover:text-amber-600 transition inline-flex items-center gap-1.5"
             >
               <span>← Back to all Gujarat Travel Guides</span>
